@@ -17,14 +17,20 @@ body {
   margin: 0;
 }
 
+ul,
+li {
+  padding: 0;
+  list-style-type: none;
+}
+
 .font-serif {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: 400;
 }
 
 .font-mono {
-  font-family: 'Share Tech Mono', monospace;
+  font-family: "Share Tech Mono", monospace;
   font-style: normal;
   font-weight: 400;
 }

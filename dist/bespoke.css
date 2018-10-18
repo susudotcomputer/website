@@ -1,30 +1,30 @@
 .bg-gridient {
   background: linear-gradient(90deg, #eee 1px, transparent 0px) 0px 0px, #fff;
-  background-size: 8.3333333% 1px;
+  background-size: 10% 1px;
   border-right: 1px solid #eee;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(10, 1fr);
 }
-
-/*  */
 
 .archive-card {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    'logo primary-info'
-    'logo tactics';
+    "logo primary-info"
+    "logo tactics";
 }
 
 .archive-card__primary-info {
   display: grid;
   grid-area: primary-info;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: min-content 1fr;
+  grid-column-gap: 1rem;
+  grid-auto-rows: min-content;
   grid-template-areas:
-    'project project'
-    'budget medium'
-    'date location';
+    "project project"
+    "budget medium"
+    "date location";
 }
 
 .archive-card__project {
@@ -58,4 +58,8 @@
 .archive-card__tactics-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.border-black_50 {
+  border-color: rgba(0, 0, 0, 0.5) !important;
 }
