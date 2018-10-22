@@ -25,7 +25,7 @@ const InfoItem = ({ label, text, className }) => {
 
 const ArchiveCard = ({ project, location, medium, date, budget, tactics }) => {
   return (
-    <div className="archive-card bg-archive-beige h40vh p5 col-10 col-offset-1 col-6-md col-offset-2-md my-auto">
+    <div className="archive-card bg-archive-beige p5 col-10 col-6-md col-offset-2-md self-center z1">
       <div className="archive-card__logo flex">
         <img src={logoSrc} className="o10p m-auto" alt="SuSu Logo" />
       </div>

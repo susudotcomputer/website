@@ -7,7 +7,7 @@
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
-    "@battery/webpack-plugin": "^0.0.3",
+    "@battery/webpack-plugin": "^0.0.4",
     "@mdx-js/loader": "^0.15.3",
     "@mdx-js/mdx": "^0.15.3",
     "babel-loader": "^8.0.2",
