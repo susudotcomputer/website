@@ -15,7 +15,7 @@ const TabItem = ({ title, onClick, active }) => {
 
 export const TabSection = ({ children, active = true }) => {
   const classes = styles(
-    "border-x border-top border-archive-brown-900 w100p px5 pt5 bg-white relative z1",
+    "border-x border-top border-archive-brown-400 w100p px5 pt5 bg-white relative z1",
     active ? "block" : "hide"
   );
   return <div className={classes}>{children}</div>;

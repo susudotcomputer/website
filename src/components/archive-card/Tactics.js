@@ -19,7 +19,7 @@ const TACTICS = [
 ];
 
 const dotPositions = [
-  styles("t1px l3px"),
+  styles("t1px l2px"),
   styles("b-1px r2px"),
   styles("b1px l1px"),
   styles("b2px l2px"),
@@ -39,7 +39,7 @@ const TacticStamp = ({ stamped }) => {
   const direction = dotPositions[randomNumber(dotPositions.length)];
   const dotClasses = styles(
     direction,
-    "relative w10px h10px circle m-auto",
+    "relative w12px h12px circle m-auto",
     stamped ? "bg-archive-brown-400" : ""
   );
   return (

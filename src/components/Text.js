@@ -3,8 +3,8 @@ import styles from "../utils/css";
 
 const TEXT_STYLES = {
   H100: styles("fz40px font-mono"),
-  H200: styles("fz32px font-mono ls-1px"),
-  H300: styles("fz18px font-mono ls0px"),
+  H200: styles("fz28px font-mono ls-1px"),
+  H300: styles("fz16px font-mono ls0px"),
   P100: styles("fz18px font-serif"),
   P200: styles("fz16px font-serif")
 };

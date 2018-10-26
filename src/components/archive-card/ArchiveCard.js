@@ -3,6 +3,7 @@ import styles from "../../utils/css";
 import logoSrc from "./assets/susu-logo.svg";
 import { Heading, Span } from "../Text";
 import Tactics from "./Tactics";
+import speckles from "../../assets/speckled_30.png";
 
 const InfoItem = ({ label, text, className }) => {
   return (
@@ -25,11 +26,14 @@ const InfoItem = ({ label, text, className }) => {
 
 const ArchiveCard = ({ project, location, medium, date, budget, tactics }) => {
   return (
-    <div className="archive-card bg-archive-beige p5 col-10 col-6-md col-offset-2-md self-center z1">
+    <div
+      className="archive-card bg-archive-beige p5 col-10 col-6-md col-offset-2-md self-center z1"
+      style={{ backgroundImage: `url(${speckles})` }}
+    >
       <div className="archive-card__logo flex">
         <img src={logoSrc} className="o10p m-auto" alt="SuSu Logo" />
       </div>
-      <div className="archive-card__primary-info">
+      <div className="archive-card__primary-info mb4">
         <InfoItem label="Project" text={project} />
         <InfoItem label="Location" text={location} />
         <InfoItem label="Medium" text={medium} />

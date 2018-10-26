@@ -1,21 +1,14 @@
 import React from "react";
-import { Heading, Paragraph } from "../components/Text";
 import Filled from "../components/Filled";
+import { Paragraph, Heading } from "../components/Text";
 import Grid from "../components/Grid";
 
-const Branding = ({ className }) => {
+const Poster = ({ className }) => {
   return (
     <Grid className={className}>
-      <div className="col-6">
-        <div className="aspect-ratio aspect-ratio--4x3">
-          <div className="aspect-ratio__object bg-black_05 flex">
-            <span className="m-auto">SNACKALONG LOGO CAROUSEL</span>
-          </div>
-        </div>
-      </div>
       <Filled className="col-4">
         <Heading style="H200" className="mb4">
-          Flexible event branding
+          A new movie poster
         </Heading>
         <Paragraph style="P200" className="mb4">
           Nullam ac velit consectetur, laoreet elit eu, euismod ex. Curabitur
@@ -29,13 +22,16 @@ const Branding = ({ className }) => {
           felis eget leo venenatis accumsan a eu lectus. Duis ullamcorper
           tincidunt venenatis.
         </Paragraph>
-        <Paragraph style="P200" className="mb4">
-          Donec accumsan mauris id sapien luctus, sed suscipit nulla fermentum.
-          Suspendisse ultricies nisi ut.
-        </Paragraph>
       </Filled>
+      <div className="col-offset-5 col-5 px10">
+        <div className="aspect-ratio aspect-ratio--2x3">
+          <div className="aspect-ratio__object bg-black_05 flex">
+            <span className="m-auto">SNACKALONG LOGO CAROUSEL</span>
+          </div>
+        </div>
+      </div>
     </Grid>
   );
 };
 
-export default Branding;
+export default Poster;

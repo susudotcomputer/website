@@ -1,9 +1,16 @@
 .bg-gridient {
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 0px)
+  background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.05) 0.125rem,
+        transparent 0rem
+      )
       0px 0px,
     #fff;
-  background-size: 10% 1px;
-  border-right: 1px solid #eee;
+  background-size: 10% 0.125rem;
+  border-right: 0.125rem solid #eee;
+}
+
+.grid {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
 }
@@ -14,11 +21,11 @@
 
 .archive-card {
   display: grid;
-  grid-template-columns: 1fr 3fr;
   grid-column-gap: 2rem;
   grid-template-areas:
     "logo primary-info"
     "logo tactics";
+  box-shadow: 0 60px 70px -70px rgba(0, 0, 0, 0.4);
 }
 
 .archive-card__primary-info {
@@ -31,6 +38,13 @@
     "project project"
     "budget medium"
     "date location";
+}
+
+.snackalong__snacks {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-flow: rows;
+  grid-gap: 1px;
 }
 
 .archive-card__project {
@@ -66,6 +80,36 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.border-black_50 {
-  border-color: rgba(0, 0, 0, 0.5) !important;
+.snack {
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  grid-template-areas:
+    "title title title"
+    "clip clip photo"
+    "timestamp timestamp photo"
+    "kind vessel photo";
+}
+
+.snack__title {
+  grid-area: title;
+}
+
+.snack__clip {
+  grid-area: clip;
+}
+
+.snack__photo {
+  grid-area: photo;
+}
+
+.snack__timestamp {
+  grid-area: timestamp;
+}
+
+.snack__kind {
+  grid-area: kind;
+}
+
+.snack__vessel {
+  grid-area: vessel;
 }

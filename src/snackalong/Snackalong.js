@@ -1,18 +1,21 @@
 import React from "react";
-import GridLines from "../components/GridLines";
+import Grid from "../components/Grid";
 import ArchiveCard from "../components/archive-card/ArchiveCard";
 import WhatIs from "./WhatIs";
 import Tabs from "../components/Tabs";
 import Branding from "./Branding";
+import Poster from "./Poster";
+import SnacksGrid from "./SnacksGrid";
+import Snacks from "./Snacks";
 
-const Tab = ({ title, children }) => {
+const Tab = ({ children }) => {
   return children;
 };
 
 const Snackalong = () => {
   return (
     <>
-      <GridLines className="h100vh relative">
+      <Grid className="h100vh relative">
         <div className="w101p absolute t0 h50vh fade-white-transparent" />
         <ArchiveCard
           project="Snackalong:Ocean's Eleven"
@@ -32,10 +35,10 @@ const Snackalong = () => {
             "print"
           ]}
         />
-      </GridLines>
-      <GridLines>
+      </Grid>
+      <Grid>
         <WhatIs />
-        <Tabs className="mb40vh">
+        <Tabs className="mb20">
           <Tab title="Some of it">
             <div className="aspect-ratio aspect-ratio--16x9">
               <div className="aspect-ratio__object bg-black_10 inline-flex">
@@ -55,8 +58,11 @@ const Snackalong = () => {
             </div>
           </Tab>
         </Tabs>
-        <Branding />
-      </GridLines>
+      </Grid>
+      <Branding className="pb10" />
+      <Poster className="pb10" />
+      <SnacksGrid className="pb40vh" />
+      <Snacks />
     </>
   );
 };
