@@ -31,7 +31,7 @@ const ArchiveCard = ({ project, location, medium, date, budget, tactics }) => {
       style={{ backgroundImage: `url(${speckles})` }}
     >
       <div className="archive-card__logo flex">
-        <img src={logoSrc} className="o10p m-auto" alt="SuSu Logo" />
+        <img src={logoSrc} className="o10p m-auto w100px" alt="SuSu Logo" />
       </div>
       <div className="archive-card__primary-info mb4">
         <InfoItem label="Project" text={project} />
