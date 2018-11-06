@@ -53,12 +53,13 @@
 
 .snack {
   display: grid;
-  grid-template-columns: 1fr 1fr 3fr;
+  grid-template-columns: 25rem 3fr;
+  grid-template-rows: auto minmax(auto, 20rem) 60px auto;
   grid-template-areas:
-    "title title title"
-    "clip clip photo"
-    "timestamp timestamp photo"
-    "kind vessel photo";
+    'title title'
+    'clip photo'
+    'timestamp photo'
+    'details photo';
 }
 
 .snack__title {
@@ -77,10 +78,6 @@
   grid-area: timestamp;
 }
 
-.snack__kind {
-  grid-area: kind;
-}
-
-.snack__vessel {
-  grid-area: vessel;
+.snack__details {
+  grid-area: details;
 }
