@@ -14,8 +14,8 @@
   bottom: 0rem;
 }
 .aspect-ratio--4x3 { padding-bottom: 75%; }
-.aspect-ratio--1x1 { padding-bottom: 100%; }
 .aspect-ratio--2x3 { padding-bottom: 150%; }
+.aspect-ratio--1x1 { padding-bottom: 100%; }
 .col-6 { grid-column-end: span 6; }
 .col-offset-2 { grid-column-start: 3; }
 .col-4 { grid-column-end: span 4; }
