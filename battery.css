@@ -17,10 +17,10 @@
 .aspect-ratio--2x3 { padding-bottom: 150%; }
 .aspect-ratio--1x1 { padding-bottom: 100%; }
 .col-6 { grid-column-end: span 6; }
+.col-offset-2 { grid-column-start: 3; }
 .col-4 { grid-column-end: span 4; }
 .col-offset-5 { grid-column-start: 6; }
 .col-5 { grid-column-end: span 5; }
-.col-offset-2 { grid-column-start: 3; }
 .col-10 { grid-column-end: span 10; }
 .grid-1 { grid-template-columns: repeat(1, 1fr); }
 .border { border: 1px solid #DCDEDD; }
