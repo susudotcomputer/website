@@ -6,19 +6,22 @@ const config = require('./battery.config').default;
 
 module.exports = {
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
     filename: 'main.js',
     publicPath: '/'
   },
   devServer: {
-    contentBase: './dist',
+    contentBase: './build',
     historyApiFallback: {
       index: 'index.html'
     }
   },
   mode: 'development',
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx'],
+    alias: {
+      assets: path.resolve(__dirname, 'src/assets/')
+    }
   },
   module: {
     rules: [

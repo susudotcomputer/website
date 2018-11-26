@@ -1,7 +1,7 @@
-import React from "react";
-import Filled from "../components/Filled";
-import { Paragraph, Heading } from "../components/Text";
-import Grid from "../components/Grid";
+import React from 'react';
+import Filled from '../components/Filled';
+import { Paragraph, Heading } from '../components/Text';
+import Grid from '../components/Grid';
 
 const Poster = ({ className }) => {
   return (

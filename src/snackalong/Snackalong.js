@@ -1,12 +1,13 @@
-import React from "react";
-import Grid from "../components/Grid";
-import ArchiveCard from "../components/archive-card/ArchiveCard";
-import WhatIs from "./WhatIs";
-import Tabs from "../components/Tabs";
-import Branding from "./Branding";
-import Poster from "./Poster";
-import SnacksGrid from "./SnacksGrid";
-import Snacks from "./Snacks";
+import React from 'react';
+import Grid from '../components/Grid';
+import ArchiveCard from '../components/archive-card/ArchiveCard';
+import WhatIs from './WhatIs';
+import Tabs from '../components/Tabs';
+import Branding from './Branding';
+import Poster from './Poster';
+import SnacksGrid from './SnacksGrid';
+import Snacks from './Snacks';
+import './styles.css';
 
 const Tab = ({ children }) => {
   return children;
@@ -24,15 +25,15 @@ const Snackalong = () => {
           date="2018&#8209;06&#8209;30"
           budget="n/a"
           tactics={[
-            "visualDesign",
-            "webDevelopment",
-            "cooking",
-            "branding",
-            "photography",
-            "copyWriting",
-            "video",
-            "illustration",
-            "print"
+            'visualDesign',
+            'webDevelopment',
+            'cooking',
+            'branding',
+            'photography',
+            'copyWriting',
+            'video',
+            'illustration',
+            'print'
           ]}
         />
       </Grid>

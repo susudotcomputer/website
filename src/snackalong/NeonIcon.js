@@ -3,7 +3,7 @@ import React from 'react';
 const addIntensity = num => {
   const arr = [];
   while (num) {
-    arr.push(<feMergeNode in="blurred" />);
+    arr.push(<feMergeNode in="blurred" key={num} />);
     num--;
   }
 
@@ -15,14 +15,14 @@ const RenderedNeon = ({ colorMap }) => {
   return groups.map((group, i) => {
     const [color1, color2] = colorMap[group].split(' ');
     return (
-      <>
+      <React.Fragment key={`${i}-main`}>
         <use xlinkHref={`#${group}`} className={color1} />
         <use
           xlinkHref={`#${group}`}
           className={color2 ? color2 : color1}
           filter="url(#glow)"
         />
-      </>
+      </React.Fragment>
     );
   });
 };

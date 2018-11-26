@@ -10,7 +10,7 @@
   border-right: 0.125rem solid #eee;
 }
 
-.grid {
+.archive-grid {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
 }

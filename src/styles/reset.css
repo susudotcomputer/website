@@ -18,19 +18,24 @@ body {
 }
 
 ul,
+ol,
 li {
   padding: 0;
   list-style-type: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 .font-serif {
-  font-family: "Merriweather", serif;
+  font-family: 'Merriweather', serif;
   font-style: normal;
   font-weight: 400;
 }
 
 .font-mono {
-  font-family: "Share Tech Mono", monospace;
+  font-family: 'Share Tech Mono', monospace;
   font-style: normal;
   font-weight: 400;
 }
