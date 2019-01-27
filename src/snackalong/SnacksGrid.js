@@ -4,6 +4,25 @@ import Grid from '../components/Grid';
 import styles from '../utils/css';
 import speckles from '../assets/speckled_30.png';
 
+import Nachos from './Snacks/svg/NachosSVG';
+import BrownDrink from './Snacks/svg/BrownDrinkSVG';
+import Tea from './Snacks/svg/TeaSVG';
+import NicoiseSalad from './Snacks/svg/NicoiseSaladSVG';
+import Espresso from './Snacks/svg/EspressoSVG';
+import Cigarette from './Snacks/svg/CigaretteSVG';
+import BigSoda from './Snacks/svg/BigSodaSVG';
+import CottonCandy from './Snacks/svg/CottonCandySVG';
+import Sorbet from './Snacks/svg/SorbetSVG';
+import Martini from './Snacks/svg/MartiniSVG';
+import MysterySalad from './Snacks/svg/MysterySaladSVG';
+import Lollipop from './Snacks/svg/LollipopSVG';
+import GingerAle from './Snacks/svg/GingerAleSVG';
+import Shrimp from './Snacks/svg/ShrimpSVG';
+import RedBull from './Snacks/svg/RedBullSVG';
+import IceCream from './Snacks/svg/IceCreamSVG';
+import JellyBeans from './Snacks/svg/JellybeansSVG';
+import Burger from './Snacks/svg/BurgerSVG';
+
 const snacksArr = [
   'nachos',
   'brown-drink',

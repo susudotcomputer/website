@@ -1,3 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+code,
+pre,
+ul,
+ol,
+body {
+  margin: 0;
+}
+
+ul,
+ol,
+li {
+  padding: 0;
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.font-helvetica {
+  font-family: sans-serif;
+}
+
+.font-serif {
+  font-family: 'Merriweather', serif;
+}
+
+.font-mono {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
 .bg-gridient {
   background: linear-gradient(
         90deg,
@@ -20,8 +66,18 @@
 }
 
 .archive-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10rem;
+  grid-column-gap: 5%;
   box-shadow: 0 60px 70px -70px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (min-width: 800px) {
+  .archive-card {
+    grid-template-columns: minmax(4rem, 8rem) 1fr;
+    grid-template-rows: auto auto;
+  }
 }
 
 .archive-card__logo {
@@ -46,9 +102,7 @@
 }
 
 .archive-card__tactics-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-  justify-content: space-between;
+  columns: 9em;
 }
 
 .snack {
@@ -83,64 +137,10 @@
 }
 
 .sususunday-red {
-  color: #933333;
+  color: #a12727;
 }
 
 .bg-sususunday-red {
-  background-color: #933333;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-code,
-pre,
-ul,
-ol,
-body {
-  margin: 0;
-}
-
-ul,
-ol,
-li {
-  padding: 0;
-  list-style-type: none;
-}
-
-img {
-  max-width: 100%;
-}
-
-.font-serif {
-  font-family: 'Merriweather', serif;
-  font-style: normal;
-  font-weight: 400;
-}
-
-.font-mono {
-  font-family: 'Share Tech Mono', monospace;
-  font-style: normal;
-  font-weight: 400;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.font-black {
-  font-weight: 900;
-}
-
-.font-italic {
-  font-style: italic;
+  background-color: #a12727;
 }
 

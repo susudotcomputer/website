@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from '@reach/router';
 import shadowBoys from './assets/shadow-boys.jpg';
+import './assets/reset.css';
 
 const Home = () => {
   return (
-    <div>
+    <div className="font-helvetica">
       <div className="w100vw h100vh flex p4 p7-md p20-lg relative z2">
         <h2 className="m-auto fz10vw fz5vw-lg">
           Hello, I am{' '}
@@ -25,10 +26,6 @@ const Home = () => {
           backgroundImage: `url(${shadowBoys})`
         }}
       />
-      <div className="hide">
-        <Link to="/snackalong">Snackalong</Link>
-        <Link to="/sundays">Sundays</Link>
-      </div>
     </div>
   );
 };
