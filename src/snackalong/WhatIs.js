@@ -1,12 +1,12 @@
-import React from "react";
-import { Paragraph, Heading } from "../components/Text";
-import Filled from "../components/Filled";
+import React from 'react';
+import { Paragraph, Heading } from '../components/Text';
+import Filled from '../components/Filled';
 
 const WhatIs = () => {
   return (
     <Filled className="col-6 col-offset-2 mb20">
       <Heading style="H200" className="mb4">
-        What is a Snackalong?
+        What is a Snackalong???
       </Heading>
       <Paragraph style="P200" className="mb4">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
