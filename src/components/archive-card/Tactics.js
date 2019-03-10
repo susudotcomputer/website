@@ -53,7 +53,7 @@ const TacticItem = ({ stamped, title }) => {
   return (
     <li>
       <TacticStamp stamped={stamped} />
-      <Span style="chromesparks">{camelToSentence(title)}</Span>
+      <Span kind="vulfpeck">{camelToSentence(title)}</Span>
     </li>
   );
 };
@@ -68,7 +68,7 @@ const Tactics = ({ markedTactics }) => {
 
   return (
     <div className="archive-card__tactics">
-      <Heading level="3" style="H300" className="text-uppercase black_50">
+      <Heading level="3" kind="vulfpeck" className="text-uppercase black_50">
         Tactics used:
       </Heading>
       <ul className="archive-card__tactics-list">

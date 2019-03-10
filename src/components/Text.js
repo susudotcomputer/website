@@ -2,31 +2,71 @@ import React from 'react';
 import styles from '../utils/css';
 
 const TEXT_STYLES = {
-  H100: styles('fz40px font-mono'), // deprecated
-  H200: styles('fz28px font-mono ls-1px'), // deprecated
-  H300: styles('fz16px font-mono ls0px'), // deprecated
-  P100: styles('fz18px font-serif'), // deprecated
-  P200: styles('fz16px font-serif'), // deprecated
-  vulfpeck: styles('fz18px font-mono ls-1px'),
-  dasracist: styles('fz28px font-mono ls-3px'),
-  bigfreedia: styles(''),
-  chromesparks: styles(''),
-  sherwood: styles(''),
-  bigredmachine: styles(''),
-  mapsandatlases: styles(''),
-  jonhopkins: styles(''),
-  kishibashi: styles(''),
-  kishibashi: styles(''),
-  danny: styles(''),
-  saul: styles(''),
-  rusty: styles(''),
-  reuben: styles(''),
-  linus: styles('')
+  vulfpeck: {
+    classes: styles('font-mono fz18px ls-1px'),
+    bold: styles('weight-600'),
+    normal: styles('weight-400')
+  },
+  chromesparks: {
+    classes: styles('font-mono fz28px ls-3px'),
+    bold: styles('weight-600'),
+    normal: styles('weight-400')
+  },
+  bigfreedia: {
+    classes: styles('font-mono fz38px ls-2px'),
+    bold: styles('weight-600'),
+    normal: styles('weight-400')
+  },
+  jonhopkins: {
+    classes: styles('font-mono fz60px ls-2px'),
+    bold: styles('weight-600'),
+    normal: styles('weight-400')
+  },
+  kishibashi: {
+    classes: styles('font-mono fz156px'),
+    bold: styles('weight-600'),
+    normal: styles('weight-400')
+  },
+  danny: {
+    classes: styles('font-serif fz20px'),
+    bold: styles('weight-600'),
+    normal: styles('weight-300')
+  },
+  reuben: {
+    classes: styles('font-serif fz16px'),
+    bold: styles('weight-600'),
+    normal: styles('weight-300')
+  },
+  linus: {
+    classes: styles('font-serif fz12px'),
+    bold: styles('weight-600'),
+    normal: styles('weight-300')
+  },
+  moon: {
+    classes: styles('font-cursive fz30px lh30px'),
+    bold: styles('weight-600'),
+    normal: styles('weight-400')
+  }
 };
 
-export const Text = ({ tag: Tag = 'span', style, children, className }) => {
-  const classes = styles(TEXT_STYLES[style], className);
-  return <Tag className={classes}>{children}</Tag>;
+export const Text = ({
+  tag: Tag = 'span',
+  kind = 'vulfpeck',
+  children,
+  style,
+  className,
+  bold = false
+}) => {
+  const classes = styles(
+    TEXT_STYLES[kind].classes,
+    bold ? TEXT_STYLES[kind].bold : TEXT_STYLES[kind].normal,
+    className
+  );
+  return (
+    <Tag className={classes} style={style}>
+      {children}
+    </Tag>
+  );
 };
 
 export const Paragraph = props => <Text tag="p" {...props} />;

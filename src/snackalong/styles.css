@@ -59,15 +59,30 @@
   columns: 9em;
 }
 
+.quiz-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
+  grid-gap: 2em;
+}
+
 .snack {
   display: grid;
-  grid-template-columns: 25rem 3fr;
-  grid-template-rows: auto minmax(auto, 20rem) 60px auto;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    'title title'
-    'clip photo'
-    'timestamp photo'
-    'details photo';
+    'snack-main clip'
+    'snack-main neon';
+}
+
+.snack__main {
+  display: grid;
+  grid-area: snack-main;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: auto auto auto; */
+  grid-template-areas:
+    'title title title'
+    'photo photo photo'
+    'timestamp food vessel';
 }
 
 .snack__title {
@@ -86,6 +101,14 @@
   grid-area: timestamp;
 }
 
-.snack__details {
-  grid-area: details;
+.snack__food {
+  grid-area: food;
+}
+
+.snack__vessel {
+  grid-area: vessel;
+}
+
+.snack__neon {
+  grid-area: neon;
 }

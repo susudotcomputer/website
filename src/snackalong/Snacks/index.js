@@ -1,5 +1,7 @@
 import React from 'react';
+import Note from '../Note';
 import Grid from '../../components/Grid';
+
 import Nachos from './Nachos';
 import BrownDrink from './BrownDrink';
 import Tea from './Tea';
@@ -24,6 +26,12 @@ const Snacks = () => {
     <div className="bg-archive-brown-900 py40vh clip">
       <Grid lines={false}>
         <Nachos />
+        <div className="col-2 col-offset-2">
+          <Note direction="rightAbove">
+            This is the only item that was consumed twice. And it was neat. No
+            diultion baby!
+          </Note>
+        </div>
         <BrownDrink />
         <Tea />
         <NicoiseSalad />

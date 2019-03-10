@@ -7,7 +7,7 @@
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
-    "@battery/webpack-plugin": "^0.0.4",
+    "@battery/webpack-plugin": "^0.0.5",
     "@mdx-js/loader": "^0.15.3",
     "@mdx-js/mdx": "^0.15.3",
     "babel-loader": "^8.0.2",
@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "@reach/router": "^1.2.0",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react": "^16.8.x",
+    "react-dom": "^16.8.x"
   }
 }

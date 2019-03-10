@@ -15,10 +15,10 @@ const InfoItem = ({ label, text, className }) => {
         className
       )}
     >
-      <Span className="black_50 text-uppercase mr1" style="vulfpeck">
+      <Span className="black_50 text-uppercase mr1" kind="vulfpeck">
         {label}:
       </Span>
-      <Span style="dasracist">{text}</Span>
+      <Span kind="chromesparks">{text}</Span>
     </Heading>
   );
 };

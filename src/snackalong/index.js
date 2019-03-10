@@ -6,8 +6,12 @@ import Tabs from '../components/Tabs';
 import Branding from './Branding';
 import Poster from './Poster';
 import SnacksGrid from './SnacksGrid';
-import Snacks from './Snacks/';
+import Snacks from './Snacks';
+import GiftPack from './GiftPack';
+import VideoGraphics from './VideoGraphics';
 import './styles.css';
+import TheInvitation from './TheInvitation';
+import MiscTabs from './MiscTabs';
 
 const Tab = ({ children }) => {
   return children;
@@ -64,6 +68,12 @@ const Snackalong = () => {
       <Poster className="pb10" />
       <SnacksGrid className="pb40vh" />
       <Snacks />
+      <GiftPack className="py20" />
+      <VideoGraphics />
+      <TheInvitation />
+      <Grid>
+        <MiscTabs />
+      </Grid>
     </>
   );
 };

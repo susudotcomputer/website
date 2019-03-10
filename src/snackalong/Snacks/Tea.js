@@ -6,7 +6,7 @@ import image from './assets/04-tea.jpg';
 const Tea = () => (
   <Snack
     title="Tea"
-    index="4"
+    index="04"
     timeStamp="0:00:00"
     kind="Drink"
     kindList={['English Breakfast Tea']}

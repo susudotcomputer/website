@@ -1,51 +1,62 @@
 import React from 'react';
 import { Heading } from '../../components/Text';
-import Neon from '../NeonIcon';
+import nachooooooo from '../assets/nachooooooo.png';
+import stopwatch from '../assets/stopwatch.svg';
 
-const NeonSnack = ({ svgColorMap, svgGroups: NeonSVG }) => {
-  return (
-    <div className="absolute t-100px r-100px w400px mr-100px">
-      <Neon colorMap={svgColorMap}>
-        <NeonSVG />
-      </Neon>
+const Vessel = ({ vesselList }) => (
+  <div className="snack__vessel archive-beige border-top border-right border-archive-brown-400 border-medium">
+    <div className="pl2 pt2">
+      <Heading kind="danny" className="text-uppercase" bold>
+        Vessel
+      </Heading>
+      <ul>
+        {vesselList.map((item, i) => (
+          <li key={i}>{item}</li>
+        ))}
+      </ul>
     </div>
-  );
-};
+  </div>
+);
 
-const Details = ({ kind, kindList, vesselList }) => {
+const Food = ({ kindList, kind }) => (
+  <div className="snack__food archive-beige border-top border-x border-archive-brown-400 border-medium">
+    <div className="border-archive-brown-400 pt2 pl2">
+      <Heading kind="danny" className="text-uppercase" bold>
+        {kind}
+      </Heading>
+      <ul>
+        {kindList.map((item, i) => (
+          <li key={i}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  </div>
+);
+
+const TimeStamp = ({ time }) => (
+  <div className="snack__timestamp border-top border-archive-brown-400 border-medium">
+    <div className="flex items-center">
+      <img src={stopwatch} className="h40px w40px relative t-2px" />
+      <Heading kind="bigfreedia" level={3} className="archive-beige py2">
+        {time}
+      </Heading>
+    </div>
+  </div>
+);
+
+const NeonSnack = () => {
   return (
-    <div className="snack__details archive-beige flex">
-      <div className="basis50p border-right border-archive-brown-400 border-medium pt2">
-        <Heading style="P100" className="text-bold">
-          {kind}
-        </Heading>
-        <ul>
-          {kindList.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
-      </div>
-      <div className="basis50p border-right border-archive-brown-400 border-medium pl2 pt2">
-        <Heading style="P100" className="text-bold">
-          Vessel
-        </Heading>
-        <ul>
-          {vesselList.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
-      </div>
+    <div className="snack__neon py2 pl2">
+      <img className="max-w100p h100p fit-contain" src={nachooooooo} />
     </div>
   );
 };
 
 const Clip = ({ clip, clipPosition }) => {
   return (
-    <div className="snack__clip pb2 pt2 pr2 border-right border-archive-brown-400 border-medium clip">
+    <div className="snack__clip pb2 pt2 pl2 border-bottom border-archive-brown-400 border-medium clip">
       <video
         muted
-        autoPlay
-        loop
         src={clip}
         className="w100p h100p"
         style={{ objectFit: 'cover', objectPosition: clipPosition }}
@@ -54,6 +65,24 @@ const Clip = ({ clip, clipPosition }) => {
   );
 };
 
+const Photo = ({ image }) => (
+  <div className="snack__photo pr2 py2 border-right border-archive-brown-400 border-medium">
+    <img className="max-w100p fit-cover h100p" src={image} />
+  </div>
+);
+
+const Title = ({ text, index }) => (
+  <Heading
+    kind="jonhopkins"
+    className="py2 archive-beige snack__title border-bottom border-right border-archive-brown-400 border-medium flex items-center"
+  >
+    <span className="self-stretch flex items-center bg-archive-brown-400 px1 mr3">
+      {`#${index}`}
+    </span>
+    <span>{text}</span>
+  </Heading>
+);
+
 const Snack = ({
   title,
   index,
@@ -61,29 +90,21 @@ const Snack = ({
   clip,
   clipPosition,
   image,
-  svgColorMap,
-  svgGroups,
   kind,
   kindList,
   vesselList
 }) => {
   return (
-    <div className="snack col-10 relative mb20">
-      <Heading
-        style="H100"
-        className="archive-beige snack__title border-bottom border-archive-brown-400 border-medium"
-      >{`#${index} ${title}`}</Heading>
+    <div className="snack col-10 relative border-y border-archive-brown-400 border-medium">
+      <div className="snack__main">
+        <Title text={title} index={index} />
+        <Photo image={image} />
+        <TimeStamp time={timeStamp} />
+        <Food kind={kind} kindList={kindList} />
+        <Vessel vesselList={vesselList} />
+      </div>
       <Clip clip={clip} clipPosition={clipPosition} />
-      <div className="snack__timestamp border-y border-right border-archive-brown-400 border-medium">
-        <Heading style="H200" level={3} className="archive-beige py2">
-          {timeStamp}
-        </Heading>
-      </div>
-      <Details vesselList={vesselList} kind={kind} kindList={kindList} />
-      <div className="snack__photo pl2 pt2">
-        <img className="max-w100p" src={image} className="max-w100p" />
-      </div>
-      <NeonSnack svgColorMap={svgColorMap} svgGroups={svgGroups} />
+      <NeonSnack />
     </div>
   );
 };

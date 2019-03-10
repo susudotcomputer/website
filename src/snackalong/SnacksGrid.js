@@ -1,60 +1,56 @@
 import React from 'react';
 import { Heading, Paragraph } from '../components/Text';
-import Grid from '../components/Grid';
+import Speckled from '../components/Speckled';
 import styles from '../utils/css';
-import speckles from '../assets/speckled_30.png';
+import { RenderSvg } from './NeonIcon';
 
-import Nachos from './Snacks/svg/NachosSVG';
-import BrownDrink from './Snacks/svg/BrownDrinkSVG';
-import Tea from './Snacks/svg/TeaSVG';
-import NicoiseSalad from './Snacks/svg/NicoiseSaladSVG';
-import Espresso from './Snacks/svg/EspressoSVG';
-import Cigarette from './Snacks/svg/CigaretteSVG';
-import BigSoda from './Snacks/svg/BigSodaSVG';
-import CottonCandy from './Snacks/svg/CottonCandySVG';
-import Sorbet from './Snacks/svg/SorbetSVG';
-import Martini from './Snacks/svg/MartiniSVG';
-import MysterySalad from './Snacks/svg/MysterySaladSVG';
-import Lollipop from './Snacks/svg/LollipopSVG';
-import GingerAle from './Snacks/svg/GingerAleSVG';
-import Shrimp from './Snacks/svg/ShrimpSVG';
-import RedBull from './Snacks/svg/RedBullSVG';
-import IceCream from './Snacks/svg/IceCreamSVG';
-import JellyBeans from './Snacks/svg/JellybeansSVG';
-import Burger from './Snacks/svg/BurgerSVG';
+import * as Nachos from './Snacks/svg/NachosSVG';
+import * as BrownDrink from './Snacks/svg/BrownDrinkSVG';
+import * as Tea from './Snacks/svg/TeaSVG';
+import * as NicoiseSalad from './Snacks/svg/NicoiseSaladSVG';
+import * as Espresso from './Snacks/svg/EspressoSVG';
+import * as Cigarette from './Snacks/svg/CigaretteSVG';
+import * as BigSoda from './Snacks/svg/BigSodaSVG';
+import * as CottonCandy from './Snacks/svg/CottonCandySVG';
+import * as Sorbet from './Snacks/svg/SorbetSVG';
+import * as Martini from './Snacks/svg/MartiniSVG';
+import * as MysterySalad from './Snacks/svg/MysterySaladSVG';
+import * as Lollipop from './Snacks/svg/LollipopSVG';
+import * as GingerAle from './Snacks/svg/GingerAleSVG';
+import * as Shrimp from './Snacks/svg/ShrimpSVG';
+import * as RedBull from './Snacks/svg/RedBullSVG';
+import * as IceCream from './Snacks/svg/IceCreamSVG';
+import * as JellyBeans from './Snacks/svg/JellybeansSVG';
+import * as Burger from './Snacks/svg/BurgerSVG';
 
 const snacksArr = [
-  'nachos',
-  'brown-drink',
-  'tea',
-  'nicoise',
-  'espresso',
-  'cigarette',
-  'big-soda',
-  'cotton-cnady',
-  'sorbet',
-  'martini',
-  'ceasar',
-  'lollipop',
-  'ginger-ale',
-  'shrimp',
-  'red-bull',
-  'gelato',
-  'jellybeans',
-  'cheese-burger',
-  '',
-  ''
+  { title: 'nachos', svg: Nachos },
+  { title: 'brown-drink', svg: BrownDrink },
+  { title: 'tea', svg: Tea },
+  { title: 'nicoise', svg: NicoiseSalad },
+  { title: 'espresso', svg: Espresso },
+  { title: 'cigarette', svg: Cigarette },
+  { title: 'big-soda', svg: BigSoda },
+  { title: 'cotton-cnady', svg: CottonCandy },
+  { title: 'sorbet', svg: Sorbet },
+  { title: 'martini', svg: Martini },
+  { title: 'ceasar', svg: MysterySalad },
+  { title: 'lollipop', svg: Lollipop },
+  { title: 'ginger-ale', svg: GingerAle },
+  { title: 'shrimp', svg: Shrimp },
+  { title: 'red-bull', svg: RedBull },
+  { title: 'gelato', svg: IceCream },
+  { title: 'jellybeans', svg: JellyBeans },
+  { title: 'cheese-burger', svg: Burger },
+  { title: '', svg: {} },
+  { title: '', svg: {} }
 ];
 
 const SnacksGrid = ({ className }) => {
-  const classes = styles(
-    className,
-    'bg-archive-beige bg-repeat pt15vh mt-15vh'
-  );
   return (
-    <div className={classes} style={{ backgroundImage: `url(${speckles})` }}>
-      <Grid lines={false} className="mb10">
-        <Heading style="H200" className="col-6 col-offset-2">
+    <>
+      <Speckled>
+        <Heading kind="bigfreedia" className="col-6 col-offset-2">
           Brad was a hungry boy, below are the 19 items Rusty oraly interacts
           with…
         </Heading>
@@ -62,20 +58,33 @@ const SnacksGrid = ({ className }) => {
           That… is a weird way to say that right? Well, some of the items below
           aren't exactly "food"—sometimes he just puts them to his mouth.
         </Paragraph>
-      </Grid>
-      <ul className="max-w1200px mx-auto snackalong__snacks bg-archive-brown-400">
-        {snacksArr.map((snack, i) => (
-          <li
-            key={i}
-            className="aspect-ratio aspect-ratio--1x1 bg-archive-beige"
-          >
-            <div className="aspect-ratio__object flex items-center justify-center">
-              {snack}
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
+
+        <div className="col-10">
+          <ul className="max-w1200px mx-auto snackalong__snacks bg-archive-brown-400">
+            {snacksArr.map(({ title, svg }, i) => {
+              const { SVG: SvgData, colorMap } = svg;
+              return (
+                <li
+                  key={i}
+                  className="aspect-ratio aspect-ratio--1x1 bg-archive-beige"
+                >
+                  <div className="aspect-ratio__object flex items-center justify-center">
+                    {SvgData && (
+                      <RenderSvg
+                        colorMap={colorMap}
+                        fillColor={styles('fill-archive-brown-400')}
+                      >
+                        <SvgData />
+                      </RenderSvg>
+                    )}
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </Speckled>
+    </>
   );
 };
 

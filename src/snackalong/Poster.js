@@ -7,15 +7,15 @@ const Poster = ({ className }) => {
   return (
     <Grid className={className}>
       <Filled className="col-4">
-        <Heading style="H200" className="mb4">
+        <Heading kind="bigfreedia" className="mb4">
           A new movie poster
         </Heading>
-        <Paragraph style="P200" className="mb4">
+        <Paragraph kind="reuben" className="mb4">
           Nullam ac velit consectetur, laoreet elit eu, euismod ex. Curabitur
           vitae nisi porta, feugiat nisl id, luctus ante. Pellentesque commodo
           convallis nulla dapibus maximus.
         </Paragraph>
-        <Paragraph style="P200" className="mb4">
+        <Paragraph kind="reuben" className="mb4">
           Sed maximus cursus mi, et dictum magna venenatis et. Orci varius
           natoque penatibus et magnis dis parturient montes, nascetur ridiculus
           mus. Duis sed velit mi. Nam sagittis ullamcorper augue. Nunc quis

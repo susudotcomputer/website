@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Home from './Home';
-import Snackalong from './snackalong/Snackalong';
+import Snackalong from './snackalong/';
 import Sundays from './projects/Sundays';
+import Archive from './archive/';
 import { Router } from '@reach/router';
 
 class App extends Component {
@@ -11,6 +12,7 @@ class App extends Component {
         <Home path="/" />
         <Snackalong path="/snackalong" />
         <Sundays path="/sundays" />
+        <Archive path="/archive" />
       </Router>
     );
   }

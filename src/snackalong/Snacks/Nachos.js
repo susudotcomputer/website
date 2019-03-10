@@ -6,7 +6,7 @@ import image from './assets/01-nachos.jpg';
 const Nachos = () => (
   <Snack
     title="Cheese Nachos"
-    index="1"
+    index="01"
     timeStamp="0:05:12"
     kind="Food"
     kindList={['Shredded cheese', 'Tortilla chips']}

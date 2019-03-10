@@ -19,6 +19,6 @@ export const SVG = () => {
 };
 
 export const colorMap = {
-  'cotton-candy': styles('fill-neon-white-warm'),
-  'cotton-cone': styles('fill-neon-white-pink')
+  'cotton-candy': styles('fill-neon-pink'),
+  'cotton-cone': styles('fill-neon-white-warm')
 };
