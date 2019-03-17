@@ -51,12 +51,12 @@ const SnacksGrid = ({ className }) => {
     <>
       <Speckled>
         <Heading kind="bigfreedia" className="col-6 col-offset-2">
-          Brad was a hungry boy, below are the 19 items Rusty oraly interacts
-          with…
+          Below are the 19 items Rusty orally interacts with…
         </Heading>
         <Paragraph className="mb4 col-6 col-offset-2">
-          That… is a weird way to say that right? Well, some of the items below
-          aren't exactly "food"—sometimes he just puts them to his mouth.
+          That is a weird way to say that right? It’s just that some of the
+          items below aren’t exactly “food”—sometimes he just puts items to his
+          mouth and we counted every. single. one.
         </Paragraph>
 
         <div className="col-10">

@@ -28,6 +28,11 @@ img {
   max-width: 100%;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 .font-sans {
   font-family: sans-serif;
 }

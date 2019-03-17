@@ -95,7 +95,7 @@ const Snack = ({
   vesselList
 }) => {
   return (
-    <div className="snack col-10 relative border-y border-archive-brown-400 border-medium">
+    <div className="snack col-10 relative border-y border-archive-brown-400 border-medium mb2 mt10vh">
       <div className="snack__main">
         <Title text={title} index={index} />
         <Photo image={image} />

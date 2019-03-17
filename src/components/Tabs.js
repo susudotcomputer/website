@@ -1,14 +1,17 @@
 import React from 'react';
 import styles from '../utils/css';
+import { Heading } from './Text';
 
 const TabItem = ({ title, onClick, active }) => {
   const classes = styles(
-    'border border-medium border-archive-brown-400 bg-white p3 mr2 inline-block relative pointer fz18px',
+    'border border-medium border-archive-brown-400 archive-brown-400 bg-white p3 mr2 inline-block relative pointer fz18px',
     active ? 'border-bottom-none z2' : 'z0'
   );
   return (
     <button className={classes} onClick={onClick}>
-      {title}
+      <Heading level="3" kind="chromesparks" className="text-uppercase">
+        {title}
+      </Heading>
     </button>
   );
 };

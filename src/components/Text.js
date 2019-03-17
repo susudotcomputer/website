@@ -23,7 +23,7 @@ const TEXT_STYLES = {
     normal: styles('weight-400')
   },
   kishibashi: {
-    classes: styles('font-mono fz156px'),
+    classes: styles('font-mono fz130px ls-6px'),
     bold: styles('weight-600'),
     normal: styles('weight-400')
   },

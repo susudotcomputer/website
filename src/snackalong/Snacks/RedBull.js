@@ -6,8 +6,8 @@ import image from './assets/16-redbull.jpg';
 const RedBull = () => (
   <Snack
     title="RedBull"
-    index="09"
-    timeStamp="0:00:00"
+    index="16"
+    timeStamp="0:56:27"
     kind="Drink"
     kindList={['Red bull']}
     vesselList={['Can']}

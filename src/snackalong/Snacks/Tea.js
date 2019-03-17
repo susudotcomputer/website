@@ -7,7 +7,7 @@ const Tea = () => (
   <Snack
     title="Tea"
     index="04"
-    timeStamp="0:00:00"
+    timeStamp="0:11:56"
     kind="Drink"
     kindList={['English Breakfast Tea']}
     vesselList={['Strawberry Hill, Syracuse cup']}

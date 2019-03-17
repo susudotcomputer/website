@@ -7,7 +7,7 @@ const BigSoda = () => (
   <Snack
     title="Big Soda"
     index="08"
-    timeStamp="0:00:00"
+    timeStamp="0:22:59"
     kind="Drink"
     kindList={['Coke']}
     vesselList={['Custom cup']}

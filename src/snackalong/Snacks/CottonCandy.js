@@ -7,7 +7,7 @@ const CottonCandy = () => (
   <Snack
     title="CottonCandy"
     index="09"
-    timeStamp="0:00:00"
+    timeStamp="0:23:10"
     kind="Food"
     kindList={['Cotton candy']}
     vesselList={['Plastic bag']}

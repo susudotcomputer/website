@@ -48,6 +48,10 @@ module.exports = {
         use: ['babel-loader', '@mdx-js/loader']
       },
       {
+        test: /inline.svg$/,
+        loader: 'svg-inline-loader'
+      },
+      {
         test: /\.(png|svg|jpg|gif|mp4)$/,
         use: ['file-loader']
       }

@@ -2,17 +2,17 @@ import React from 'react';
 import { Heading, Paragraph } from '../components/Text';
 import Grid from '../components/Grid';
 
-const TheInvitation = ({ className }) => {
+const TheInvitation = () => {
   return (
     <Grid className="py20">
-      <div className="col-4 col-offset-3">
-        <Heading kind="bigfreedia" className="col-6 col-offset-2 mb2">
+      <div className="col-6 col-offset-2 text-center mb10">
+        <Heading kind="bigfreedia" className="mb2">
           The Invitation
         </Heading>
-        <Paragraph kind="danny" className="mb4 col-6 col-offset-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-          dignissim odio ac ullamcorper auctor. Nulla a orci pulvinar, ultricies
-          ante nec, finibus mauris. Morbi sit amet purus quam.
+        <Paragraph kind="danny" className="mb4">
+          After receiving a personalized audio invitation, the attendees were
+          sent a URL to RSVP. It was modeled after Ocean’s business card he
+          gives Linus when rounding up the crew.
         </Paragraph>
       </div>
       <div className="col-10 flex justify-end">

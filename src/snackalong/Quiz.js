@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Span } from '../components/Text';
+import { Span, Paragraph } from '../components/Text';
+import styles from '../utils/css';
 
 const quiztions = [
   {
@@ -47,7 +48,7 @@ const quiztions = [
   {
     q:
       'Danny asks Rusty whether the job can be done. Rusty then lists a series of cons to pull it off. Name two of them.',
-    a: 'Bowski, Jim Brown, Miss Daisy, Jethro Leon Spinks, Ella Fitzgerald'
+    a: 'Bowski, Jim Brown, Miss Daisy, Jethro, Leon Spinks, Ella Fitzgerald'
   },
   {
     q: 'What is the scent of the air freshener in the S.W.A.T. van?',
@@ -62,24 +63,52 @@ const Quiz = () => {
         const itemIndex = idx + 1;
         const qNumber =
           itemIndex.toString().length === 1 ? `0${itemIndex}` : itemIndex;
+        const [answerHidden, setAnswerVisibility] = useState(true);
+        const wrapperClasses = styles(
+          'min-h150px',
+          answerHidden ? 'hov-target' : undefined
+        );
 
         return (
-          <li className="hov-target" key={`qanda-${idx}`}>
-            <div className="relative">
+          <li className={wrapperClasses} key={`qanda-${idx}`}>
+            <div className="relative h100p">
               <div className="hide hov-item-flex absolute bg-white_85 h100p w100p">
-                <button onClick={} className="pointer m-auto bg-archive-beige p3 border-none rounded-medium">
-                  <Span className="" kind="vulfpeck">
-                    Show answer
-                  </Span>
+                <button
+                  onClick={() => setAnswerVisibility(!answerHidden)}
+                  className="pointer m-auto bg-archive-beige p3 border-none rounded-medium"
+                >
+                  <Span kind="vulfpeck">Show answer</Span>
                 </button>
               </div>
-              <Span className="block text-uppercase mb2" kind="reuben">
-                Question {qNumber}
-                <span className="block w15p h3px mt1 bg-archive-brown-900" />
-              </Span>
-              <Span className="" kind="vulfpeck">
-                {item.q}
-              </Span>
+              {answerHidden ? (
+                <div>
+                  <Span className="block text-uppercase mb2" kind="reuben">
+                    Question {qNumber}
+                    <span className="block w15p h3px mt1 bg-archive-brown-900" />
+                  </Span>
+                  <Span className="" kind="vulfpeck">
+                    {item.q}
+                  </Span>
+                </div>
+              ) : (
+                <button
+                  className="pointer border-none bg-archive-brown-400 archive-beige block h100p w100p relative text-left p3 flex flex-column justify-between"
+                  onClick={() => setAnswerVisibility(!answerHidden)}
+                >
+                  <div className="flex justify-between">
+                    <Paragraph>{item.a}</Paragraph>
+                    <Span className="o5p mt-3" kind="kishibashi">
+                      {qNumber}
+                    </Span>
+                  </div>
+                  <div>
+                    <hr className="border-none w15p h3px bg-archive-beige m0 mb2" />
+                    <Paragraph className="archive-brown-900" kind="reuben">
+                      {item.q}
+                    </Paragraph>
+                  </div>
+                </button>
+              )}
             </div>
           </li>
         );
