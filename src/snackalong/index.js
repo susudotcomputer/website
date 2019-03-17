@@ -11,6 +11,7 @@ import VideoGraphics from './VideoGraphics';
 import './styles.css';
 import TheInvitation from './TheInvitation';
 import MiscTabs from './MiscTabs';
+import Ending from './Ending';
 
 const Snackalong = () => {
   return (
@@ -58,6 +59,7 @@ const Snackalong = () => {
       <Grid>
         <MiscTabs />
       </Grid>
+      <Ending />
     </div>
   );
 };

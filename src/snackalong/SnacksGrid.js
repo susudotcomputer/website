@@ -46,7 +46,7 @@ const snacksArr = [
   { title: '', svg: {} }
 ];
 
-const SnacksGrid = ({ className }) => {
+const SnacksGrid = () => {
   return (
     <>
       <Speckled>
@@ -61,7 +61,7 @@ const SnacksGrid = ({ className }) => {
 
         <div className="col-10">
           <ul className="max-w1200px mx-auto snackalong__snacks bg-archive-brown-400">
-            {snacksArr.map(({ title, svg }, i) => {
+            {snacksArr.map(({ svg }, i) => {
               const { SVG: SvgData, colorMap } = svg;
               return (
                 <li
