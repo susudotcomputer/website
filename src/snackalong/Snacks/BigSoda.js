@@ -1,7 +1,8 @@
 import React from 'react';
 import Snack from './Snack';
 import { SVG, colorMap } from './svg/BigSodaSVG';
-import image from './assets/08-bigsoda.jpg';
+import image from './assets/08-bigsoda-photo.jpg';
+import neonImage from './assets/08-bigsoda-min.png';
 
 const BigSoda = () => (
   <Snack
@@ -14,6 +15,7 @@ const BigSoda = () => (
     clip="https://s3.amazonaws.com/susuassets/08-bigsoda.mp4"
     clipPosition={'center'}
     image={image}
+    neonImage={neonImage}
     svgColorMap={colorMap}
     svgGroups={SVG}
   />

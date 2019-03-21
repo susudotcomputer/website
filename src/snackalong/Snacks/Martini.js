@@ -1,7 +1,8 @@
 import React from 'react';
 import Snack from './Snack';
 import { SVG, colorMap } from './svg/MartiniSVG';
-import image from './assets/11-martini.jpg';
+import image from './assets/11-martini-photo.jpg';
+import neonImage from './assets/11-martini-min.png';
 
 const Martini = () => (
   <Snack
@@ -14,6 +15,7 @@ const Martini = () => (
     clip="https://s3.amazonaws.com/susuassets/11-martini.mp4"
     clipPosition={'left'}
     image={image}
+    neonImage={neonImage}
     svgColorMap={colorMap}
     svgGroups={SVG}
   />

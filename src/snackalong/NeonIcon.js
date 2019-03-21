@@ -50,7 +50,10 @@ const Neon = ({ children, colorMap }) => {
 
 export const RenderSvg = ({ children, colorMap, fillColor }) => {
   return (
-    <svg className="w100p" viewBox="-200 -200 1000 1000">
+    <svg
+      className="w100p relative z1 click-through"
+      viewBox="-200 -200 1000 1000"
+    >
       <defs>{children}</defs>
       {Object.keys(colorMap).map((group, i) => (
         <use key={i} xlinkHref={`#${group}`} className={fillColor} />

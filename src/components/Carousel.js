@@ -76,7 +76,7 @@ export const Carousel = (theme = baseTheme) => ({
             {children.map((child, i) => {
               if (activeImage === i) {
                 const baseChildClasses = styles(
-                  'fit-cover w100p h100p',
+                  'o-fit-cover w100p h100p',
                   child.props.className
                 );
                 return (

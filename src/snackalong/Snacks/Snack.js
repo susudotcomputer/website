@@ -1,6 +1,5 @@
 import React from 'react';
 import { Heading } from '../../components/Text';
-import nachooooooo from '../assets/nachooooooo.png';
 import stopwatch from '../assets/stopwatch.svg';
 
 const Vessel = ({ vesselList }) => (
@@ -44,10 +43,10 @@ const TimeStamp = ({ time }) => (
   </div>
 );
 
-const NeonSnack = () => {
+const NeonSnack = ({ image }) => {
   return (
     <div className="snack__neon py2 pl2">
-      <img className="max-w100p h100p fit-contain" src={nachooooooo} />
+      <img className="max-w100p h100p o-fit-contain" src={image} />
     </div>
   );
 };
@@ -67,7 +66,7 @@ const Clip = ({ clip, clipPosition }) => {
 
 const Photo = ({ image }) => (
   <div className="snack__photo pr2 py2 border-right border-archive-brown-400 border-medium">
-    <img className="max-w100p fit-cover h100p" src={image} />
+    <img className="max-w100p o-fit-cover h100p" src={image} />
   </div>
 );
 
@@ -90,6 +89,7 @@ const Snack = ({
   clip,
   clipPosition,
   image,
+  neonImage,
   kind,
   kindList,
   vesselList
@@ -104,7 +104,7 @@ const Snack = ({
         <Vessel vesselList={vesselList} />
       </div>
       <Clip clip={clip} clipPosition={clipPosition} />
-      <NeonSnack />
+      <NeonSnack image={neonImage} />
     </div>
   );
 };

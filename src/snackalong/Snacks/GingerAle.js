@@ -1,7 +1,8 @@
 import React from 'react';
 import Snack from './Snack';
 import { SVG, colorMap } from './svg/GingerAleSVG';
-import image from './assets/14-gingerale.jpg';
+import image from './assets/14-gingerale-photo.jpg';
+import neonImage from './assets/14-gingerale-min.png';
 
 const GingerAle = () => (
   <Snack
@@ -14,6 +15,7 @@ const GingerAle = () => (
     clip="https://s3.amazonaws.com/susuassets/14-gingerale.mp4"
     clipPosition={'right'}
     image={image}
+    neonImage={neonImage}
     svgColorMap={colorMap}
     svgGroups={SVG}
   />
