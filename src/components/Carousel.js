@@ -14,12 +14,13 @@ const baseTheme = {
     inactive: styles('')
   },
   arrowStyles: {
-    base: styles('border-none bg-white fill-archive-brown-400'),
+    base: styles('border-none fill-archive-brown-400'),
     active: styles('o100p'),
     inactive: styles('o25p')
   },
   arrowLeft: () => <SVG className="w4 block" src={leftArrow} />,
-  arrowRight: () => <SVG className="w4 block" src={rightArrow} />
+  arrowRight: () => <SVG className="w4 block" src={rightArrow} />,
+  bgColor: 'bg-black'
 };
 
 const NavButton = ({ className, onClick, children }) => {
@@ -35,8 +36,12 @@ export const Carousel = (theme = baseTheme) => ({
   showDots = true,
   showArrows = true,
   aspectRatio,
+  childClassNames,
+  wrapperClassNames,
+  overlayComponent,
   children
 }) => {
+  const OverlayComponent = overlayComponent;
   const [activeImage, setActiveImage] = useState(0);
   const ArrowLeft = theme.arrowLeft;
   const ArrowRight = theme.arrowRight;
@@ -59,12 +64,16 @@ export const Carousel = (theme = baseTheme) => ({
 
   const imageContainerStyles = styles(
     aspectRatio ? `aspect-ratio ${aspectRatio}` : '',
-    'bg-black'
+    theme.bgColor
   );
 
+  const wrapperStyles = styles('relative', wrapperClassNames);
+
   return (
-    <div>
-      <div className="flex">
+    <div className={wrapperStyles}>
+      {overlayComponent && <OverlayComponent />}
+
+      <div className="flex relative z0">
         {showArrows && (
           <NavButton className={theme.arrowStyles.base} onClick={previousImage}>
             <ArrowLeft />
@@ -76,7 +85,7 @@ export const Carousel = (theme = baseTheme) => ({
             {children.map((child, i) => {
               if (activeImage === i) {
                 const baseChildClasses = styles(
-                  'o-fit-cover w100p h100p',
+                  childClassNames,
                   child.props.className
                 );
                 return (

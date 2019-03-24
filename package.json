@@ -39,6 +39,7 @@
   "dependencies": {
     "@reach/router": "^1.2.0",
     "react": "^16.8.x",
-    "react-dom": "^16.8.x"
+    "react-dom": "^16.8.x",
+    "react-visibility-sensor": "^5.0.2"
   }
 }

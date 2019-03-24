@@ -4,9 +4,9 @@ import { Paragraph, Heading } from '../components/Text';
 import Grid from '../components/Grid';
 import Carousel from '../components/Carousel';
 
-import img1 from '../components/assets/carousel-1.jpg';
-import img2 from '../components/assets/carousel-2.jpg';
-import img3 from '../components/assets/carousel-3.jpg';
+import img1 from './assets/poster/movie-poster1.jpg';
+import img2 from './assets/poster/movie-poster2.jpg';
+import img3 from './assets/poster/movie-poster3.jpg';
 import styles from '../utils/css';
 
 const Poster = ({ className }) => {
@@ -42,10 +42,10 @@ const Poster = ({ className }) => {
           project and ended up using it in various collateral.
         </Paragraph>
       </Filled>
-      <div className="col-offset-5 col-5 px10">
+      <div className="col-offset-5 col-5">
         <Carousel aspectRatio={styles('aspect-ratio--2x3')}>
-          <img src={img2} />
           <img src={img1} />
+          <img src={img2} />
           <img src={img3} />
         </Carousel>
       </div>
