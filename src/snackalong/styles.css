@@ -112,3 +112,7 @@
 .snack__neon {
   grid-area: neon;
 }
+
+.snackalong-projector-gradient {
+  background: linear-gradient(#da861b, #ba6000);
+}

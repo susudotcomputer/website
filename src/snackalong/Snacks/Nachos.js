@@ -1,6 +1,5 @@
 import React from 'react';
 import Snack from './Snack';
-import { SVG, colorMap } from './svg/NachosSVG';
 import image from './assets/01-nachos-photo.jpg';
 import neonImage from './assets/01-nachos-min.png';
 
@@ -16,8 +15,6 @@ const Nachos = () => (
     clipPosition={'left'}
     image={image}
     neonImage={neonImage}
-    svgColorMap={colorMap}
-    svgGroups={SVG}
   />
 );
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import Snack from './Snack';
-import { SVG, colorMap } from './svg/ShrimpSVG';
 import image from './assets/15-shrimp-photo.jpg';
 import neonImage from './assets/15-shrimp-min.png';
 
@@ -16,8 +15,6 @@ const Shrimp = () => (
     clipPosition={'center'}
     image={image}
     neonImage={neonImage}
-    svgColorMap={colorMap}
-    svgGroups={SVG}
   />
 );
 

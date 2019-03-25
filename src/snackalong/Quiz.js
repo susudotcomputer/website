@@ -65,7 +65,7 @@ const Quiz = () => {
           itemIndex.toString().length === 1 ? `0${itemIndex}` : itemIndex;
         const [answerHidden, setAnswerVisibility] = useState(true);
         const wrapperClasses = styles(
-          'min-h150px',
+          'min-h120px',
           answerHidden ? 'hov-target' : undefined
         );
 

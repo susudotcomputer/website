@@ -1,6 +1,5 @@
 import React from 'react';
 import Snack from './Snack';
-import { SVG, colorMap } from './svg/LollipopSVG';
 import image from './assets/13-lollipop-photo.jpg';
 import neonImage from './assets/13-lollipop-min.png';
 
@@ -16,8 +15,6 @@ const Lollipop = () => (
     clipPosition={'center'}
     image={image}
     neonImage={neonImage}
-    svgColorMap={colorMap}
-    svgGroups={SVG}
   />
 );
 

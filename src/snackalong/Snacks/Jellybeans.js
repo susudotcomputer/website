@@ -1,6 +1,5 @@
 import React from 'react';
 import Snack from './Snack';
-import { SVG, colorMap } from './svg/JellybeansSVG';
 import image from './assets/18-jellybeans-photo.jpg';
 import neonImage from './assets/18-jellybeans-min.png';
 
@@ -16,8 +15,6 @@ const Jellybeans = () => (
     clipPosition={'center'}
     image={image}
     neonImage={neonImage}
-    svgColorMap={colorMap}
-    svgGroups={SVG}
   />
 );
 

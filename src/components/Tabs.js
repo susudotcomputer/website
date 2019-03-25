@@ -2,10 +2,11 @@ import React from 'react';
 import styles from '../utils/css';
 import { Heading } from './Text';
 
-const TabItem = ({ title, onClick, active }) => {
+const TabItem = ({ title, onClick, active, last }) => {
   const classes = styles(
-    'border border-medium border-archive-brown-400 archive-brown-400 bg-white p3 mr2 inline-block relative pointer fz18px',
-    active ? 'border-bottom-none z2' : 'z0'
+    'border border-medium border-archive-brown-400 archive-brown-400 bg-white p3 mr2 relative pointer fz18px flex1',
+    active ? 'border-bottom-none z2' : 'z0',
+    last ? 'mr5' : ''
   );
   return (
     <button className={classes} onClick={onClick}>
@@ -31,7 +32,7 @@ export const TabSection = ({ children, active = true }) => {
 class Tabs extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { activeTab: 1 };
+    this.state = { activeTab: this.props.activeTab - 1 || 1 };
   }
 
   isActive(idx) {
@@ -48,14 +49,17 @@ class Tabs extends React.Component {
       'col-10 flex flex-column items-center mb10',
       this.props.className
     );
+
+    const allChildren = React.Children;
     return (
       <div className={classes}>
-        <div className="relative b-6px">
+        <div className="relative b-3px flex w100p px5">
           {React.Children.map(children, (child, i) => (
             <TabItem
               title={child.props.title}
               onClick={() => this.setActiveTab(i)}
               active={this.isActive(i)}
+              last={allChildren.length === i + 1}
             />
           ))}
         </div>

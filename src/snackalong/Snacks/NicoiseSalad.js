@@ -1,6 +1,5 @@
 import React from 'react';
 import Snack from './Snack';
-import { SVG, colorMap } from './svg/NicoiseSaladSVG';
 import image from './assets/05-nicoisesalad-photo.jpg';
 import neonImage from './assets/05-nicoisesalad-min.png';
 
@@ -16,8 +15,6 @@ const NicoiseSalad = () => (
     clipPosition={'right'}
     image={image}
     neonImage={neonImage}
-    svgColorMap={colorMap}
-    svgGroups={SVG}
   />
 );
 

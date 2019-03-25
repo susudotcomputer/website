@@ -1,8 +1,38 @@
 import React from 'react';
 import { Heading, Paragraph } from '../components/Text';
 import Speckled from '../components/Speckled';
+import projector from './assets/snackalong-film-projector.png';
+import orange from './assets/circle-foods/orange.png';
 
-const VideoGraphics = ({ className }) => {
+const SnackalongProjector = () => {
+  return (
+    <div className="aspect-ratio aspect-ratio--1x1 snackalong-projector-gradient flex">
+      <div className="aspect-ratio__object">
+        <div className="flex items-center h100p">
+          <div>
+            <div className="flex w60p mb-6 z1 relative mx-auto l-8">
+              <img
+                className="snack-rotate-360"
+                src={orange}
+                alt="Roatating Orange to look like film atop a projector"
+              />
+              <img
+                className="snack-rotate-360"
+                src={orange}
+                alt="Roatating Orange to look like film atop a projector"
+              />
+            </div>
+            <div className="w80p mx-auto relative">
+              <img src={projector} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const VideoGraphics = () => {
   return (
     <Speckled className="py20">
       <div className="col-5 pr3">
@@ -27,9 +57,7 @@ const VideoGraphics = ({ className }) => {
           dignissim odio ac ullamcorper auctor. Nulla a orci pulvinar, ultricies
           ante nec, finibus mauris. Morbi sit amet purus quam.
         </Paragraph>
-        <div className="aspect-ratio aspect-ratio--1x1">
-          <img className="bg-archive-brown-900 aspect-ratio__object" />
-        </div>
+        <SnackalongProjector />
       </div>
     </Speckled>
   );

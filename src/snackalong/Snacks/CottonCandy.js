@@ -1,6 +1,5 @@
 import React from 'react';
 import Snack from './Snack';
-import { SVG, colorMap } from './svg/CottonCandySVG';
 import image from './assets/09-cottoncandy-photo.jpg';
 import neonImage from './assets/09-cottoncandy-min.png';
 
@@ -16,8 +15,6 @@ const CottonCandy = () => (
     clipPosition={'right'}
     image={image}
     neonImage={neonImage}
-    svgColorMap={colorMap}
-    svgGroups={SVG}
   />
 );
 

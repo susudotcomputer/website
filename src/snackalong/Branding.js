@@ -48,7 +48,7 @@ const Branding = ({ className }) => {
           showArrows={false}
           showDots={false}
           autoAdvanceInterval={10000}
-          childClassNames={styles('w100p h100p rotate-360')}
+          childClassNames={styles('w100p h100p snack-rotate-360')}
           overlayComponent={SnackalongLogo}
         >
           <SpinningSnack image={donutImg} />

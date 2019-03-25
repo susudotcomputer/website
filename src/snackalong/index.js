@@ -50,7 +50,7 @@ const Snackalong = () => {
         </div>
       </Grid>
       <Branding className="pb10" />
-      <Poster className="pb10" />
+      <Poster className="pb10 mb-20" />
       <SnacksGrid className="pb40vh" />
       <Snacks />
       <GiftPack className="py20" />

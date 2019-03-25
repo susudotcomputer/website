@@ -1,6 +1,5 @@
 import React from 'react';
 import Snack from './Snack';
-import { SVG, colorMap } from './svg/GingerAleSVG';
 import image from './assets/14-gingerale-photo.jpg';
 import neonImage from './assets/14-gingerale-min.png';
 
@@ -16,8 +15,6 @@ const GingerAle = () => (
     clipPosition={'right'}
     image={image}
     neonImage={neonImage}
-    svgColorMap={colorMap}
-    svgGroups={SVG}
   />
 );
 

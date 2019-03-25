@@ -23,7 +23,7 @@ import Burger from './Burger';
 
 const Snacks = () => {
   return (
-    <div className="bg-archive-brown-900 py40vh clip">
+    <div className="bg-archive-brown-900 pb40vh clip">
       <Grid lines={false}>
         <Nachos />
         <div className="col-6 col-offset-1">

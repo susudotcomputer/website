@@ -1,7 +1,7 @@
 import React from 'react';
 import { Heading } from '../../components/Text';
 import stopwatch from '../assets/stopwatch.svg';
-import VisibilitySensor from 'react-visibility-sensor';
+import AutoplayVideo from '../../components/AutoplayVideo';
 
 const Vessel = ({ vesselList }) => (
   <div className="snack__vessel archive-beige border-top border-right border-archive-brown-400 border-medium">
@@ -53,27 +53,18 @@ const NeonSnack = ({ image }) => {
 };
 
 const Clip = ({ clip, clipPosition }) => {
-  let videoEl = React.createRef();
-
-  const visibilityChange = isVisible => {
-    isVisible ? videoEl.current.play() : videoEl.current.pause();
-  };
-
   return (
-    <VisibilitySensor onChange={visibilityChange}>
-      <div className="snack__clip pb2 pt2 pl2 border-bottom border-archive-brown-400 border-medium clip">
-        <div className="aspect-ratio aspect-ratio--16x9">
-          <video
-            ref={videoEl}
-            loop
-            muted
-            src={clip}
-            className="w100p h100p aspect-ratio__object"
-            style={{ objectFit: 'cover', objectPosition: clipPosition }}
-          />
-        </div>
+    <div className="snack__clip pb2 pt2 pl2 border-bottom border-archive-brown-400 border-medium clip">
+      <div className="aspect-ratio aspect-ratio--16x9">
+        <AutoplayVideo
+          loop
+          muted
+          src={clip}
+          className="w100p h100p aspect-ratio__object"
+          style={{ objectFit: 'cover', objectPosition: clipPosition }}
+        />
       </div>
-    </VisibilitySensor>
+    </div>
   );
 };
 

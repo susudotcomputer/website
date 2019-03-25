@@ -1,6 +1,5 @@
 import React from 'react';
 import Snack from './Snack';
-import { SVG, colorMap } from './svg/MysterySaladSVG';
 import image from './assets/12-mysterysalad-photo.jpg';
 import neonImage from './assets/12-mysterysalad-min.png';
 
@@ -16,8 +15,6 @@ const MysterySalad = () => (
     clipPosition={'center'}
     image={image}
     neonImage={neonImage}
-    svgColorMap={colorMap}
-    svgGroups={SVG}
   />
 );
 
