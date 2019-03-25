@@ -29,12 +29,12 @@
     "svg-inline-react": "^3.1.0",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.1",
-    "webpack-dev-server": "^3.1.8"
+    "webpack-dev-server": "^3.1.11"
   },
   "scripts": {
     "batteryconfig": "cp ~/Sites/susudotcomputer/susustyle/dist/battery.config.js .",
     "start": "npm run batteryconfig && webpack-dev-server --config ./webpack.config.js --mode development",
-    "build": "npm run batteryconfig && webpack --config ./webpack.config.js && cp ./build/index.html ./build/404.html"
+    "build": "webpack --config ./webpack.config.js && cp ./build/index.html ./build/404.html"
   },
   "dependencies": {
     "@reach/router": "^1.2.0",
