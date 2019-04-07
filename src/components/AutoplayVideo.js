@@ -10,7 +10,7 @@ const AutoplayVideo = props => {
 
   return (
     <VisibilitySensor onChange={visibilityChange}>
-      <video ref={videoEl} {...props} />
+      <video loop muted ref={videoEl} {...props} />
     </VisibilitySensor>
   );
 };

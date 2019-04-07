@@ -83,23 +83,25 @@ export const Carousel = (theme = baseTheme) => ({
         <div className="w100p">
           <div className={imageContainerStyles}>
             {children.map((child, i) => {
-              if (activeImage === i) {
-                const baseChildClasses = styles(
-                  childClassNames,
-                  child.props.className
-                );
-                return (
-                  <div
-                    key={`carousel-image-${i}`}
-                    className={aspectRatio ? 'aspect-ratio__object' : ''}
-                  >
-                    {React.cloneElement(child, {
-                      ...child.props,
-                      className: baseChildClasses
-                    })}
-                  </div>
-                );
-              }
+              const baseChildClasses = styles(
+                childClassNames,
+                child.props.className
+              );
+              return (
+                <div
+                  key={`carousel-image-${i}`}
+                  className={styles(
+                    'transition-all transition-ease-in-out transition300',
+                    activeImage === i ? 'o100p' : 'o0p',
+                    aspectRatio ? 'aspect-ratio__object' : 'l0 t0 absolute'
+                  )}
+                >
+                  {React.cloneElement(child, {
+                    ...child.props,
+                    className: baseChildClasses
+                  })}
+                </div>
+              );
             })}
           </div>
         </div>

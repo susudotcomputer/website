@@ -50,13 +50,7 @@ const TheInvitation = () => {
       </div>
       <div className="col-6">
         <WebBrowser className="w100p">
-          <AutoplayVideo
-            className="max-w100p"
-            muted
-            loop
-            autoPlay
-            src={deetsVideo}
-          />
+          <AutoplayVideo className="max-w100p" src={deetsVideo} />
         </WebBrowser>
       </div>
     </Grid>

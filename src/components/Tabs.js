@@ -32,7 +32,10 @@ export const TabSection = ({ children, active = true }) => {
 class Tabs extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { activeTab: this.props.activeTab - 1 || 1 };
+    this.state = {
+      activeTab:
+        this.props.activeTab === undefined ? 1 : this.props.activeTab - 1
+    };
   }
 
   isActive(idx) {

@@ -10,7 +10,7 @@ const Tab = ({ children }) => {
 
 const MiscTabs = () => {
   return (
-    <Tabs activeTab={3} className="mb20">
+    <Tabs activeTab={1} className="mb20">
       <Tab title="Trivia">
         <Trivia />
       </Tab>

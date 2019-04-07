@@ -5,6 +5,8 @@ import Button from '../components/Buttons';
 import castImage from '../assets/oceans-cast-transparent.png';
 import balloons from './assets/balloons.png';
 import bff from './assets/bff.jpg';
+import email from './assets/email.svg';
+import SVG from 'react-inlinesvg';
 
 const Ending = () => {
   return (
@@ -18,8 +20,8 @@ const Ending = () => {
         <div className="absolute w100p t0 r0 b0 l0 z-1 px5">
           <div className="max-w1200px bg-gridient h100p mx-auto" />
         </div>
-        <div className="lh0">
-          <img src={balloons} />
+        <div className="mx-auto max-w1400px lh0">
+          <img className="" src={balloons} />
         </div>
       </div>
       <Grid className="py20">
@@ -34,7 +36,13 @@ const Ending = () => {
           </Paragraph>
         </div>
         <div className="col-6 col-offset-2 flex justify-center">
-          <Button>Concact Us</Button>
+          <Button className="relative px10" size="medium">
+            <SVG
+              className="fill-archive-brown-900 w40px h40px inline-block l2 t-3 absolute"
+              src={email}
+            />
+            Contact us
+          </Button>
         </div>
       </Grid>
 
@@ -43,18 +51,8 @@ const Ending = () => {
           <div className="max-w1200px bg-gridient h100p mx-auto " />
         </div>
         <div className="lh0">
-          <img src={castImage} />
+          <img className="w100p" src={castImage} />
         </div>
-      </div>
-      <div className="bg-archive-brown-900">
-        <iframe
-          src="https://open.spotify.com/embed/track/3Vo5NwAezmRMP2aH2xQVm1"
-          width="300"
-          height="380"
-          frameBorder="0"
-          allowTransparency="true"
-          allow="encrypted-media"
-        />
       </div>
     </>
   );

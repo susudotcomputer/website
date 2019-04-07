@@ -58,7 +58,7 @@ const quiztions = [
 
 const Quiz = () => {
   return (
-    <ol className="quiz-list">
+    <ol className="quiz-list p3">
       {quiztions.map((item, idx) => {
         const itemIndex = idx + 1;
         const qNumber =

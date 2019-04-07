@@ -12,11 +12,14 @@ import './styles.css';
 import TheInvitation from './TheInvitation';
 import MiscTabs from './MiscTabs';
 import Ending from './Ending';
+import SiteLogo from '../components/SiteLogo';
+import Footer from './Footer';
 
 const Snackalong = () => {
   return (
     <div className="archive-brown-900">
       <Grid className="h100vh relative">
+        <SiteLogo className="col-1 relative z1" />
         <div className="w101p absolute t0 h50vh fade-white-transparent" />
         <ArchiveCard
           project="Snackalong: Ocean's Eleven"
@@ -60,6 +63,7 @@ const Snackalong = () => {
         <MiscTabs />
       </Grid>
       <Ending />
+      <Footer />
     </div>
   );
 };

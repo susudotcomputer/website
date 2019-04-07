@@ -3,6 +3,8 @@ import { Heading, Paragraph } from '../components/Text';
 import Speckled from '../components/Speckled';
 import projector from './assets/snackalong-film-projector.png';
 import orange from './assets/circle-foods/orange.png';
+import AutoplayVideo from '../components/AutoplayVideo';
+import tadaLoop from './assets/tada-loop.mp4';
 
 const SnackalongProjector = () => {
   return (
@@ -45,7 +47,7 @@ const VideoGraphics = () => {
           ante nec, finibus mauris. Morbi sit amet purus quam.
         </Paragraph>
         <div className="aspect-ratio aspect-ratio--1x1">
-          <img className="bg-archive-brown-900 aspect-ratio__object" />
+          <AutoplayVideo className="aspect-ratio__object" src={tadaLoop} />
         </div>
       </div>
       <div className="col-5 pl3">

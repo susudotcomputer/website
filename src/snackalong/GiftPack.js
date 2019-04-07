@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Filled from '../components/Filled';
 import { Paragraph, Heading } from '../components/Text';
 import Grid from '../components/Grid';
@@ -12,6 +12,34 @@ import menu2 from './assets/pack/menu2.png';
 import poster from './assets/pack/poster.png';
 import ring from './assets/pack/ring.png';
 import sticker from './assets/pack/sticker.png';
+import styles from '../utils/css';
+
+const Toggle = props => {
+  const [visibleItem, setIsVisible] = useState(0);
+  const toggleVisibility = () => {
+    setIsVisible(visibleItem === 0 ? 1 : 0);
+  };
+
+  const allClasses = styles('relative', props.className);
+
+  return (
+    <div className={allClasses}>
+      {props.children.map((child, i) => {
+        const combinedClasses = styles(
+          child.props.className,
+          't0 l0 pointer',
+          visibleItem === i ? 'o100p' : 'absolute o0p'
+        );
+        return React.cloneElement(child, {
+          ...child.props,
+          key: `toggle-item-${i}`,
+          className: combinedClasses,
+          onClick: toggleVisibility
+        });
+      })}
+    </div>
+  );
+};
 
 const Poster = ({ className }) => {
   return (
@@ -31,15 +59,19 @@ const Poster = ({ className }) => {
         <img className="absolute b0 l30p w100px" src={ring} />
       </div>
       <div className="col-5 flex">
-        <div>
+        <Toggle>
           <img src={card1} />
-        </div>
+          <img src={card2} />
+        </Toggle>
         <div>
           <img src={airfreshner} />
         </div>
       </div>
       <div className="col-5 flex">
-        <img className="w75p m-auto" src={menu1} />
+        <Toggle className="rotate-10 w200p relative t15vh l-6vw">
+          <img className="scale150p" src={menu1} />
+          <img className="scale150p" src={menu2} />
+        </Toggle>
       </div>
       <div className="col-5">
         <img className="rotate5" src={envelope} />
