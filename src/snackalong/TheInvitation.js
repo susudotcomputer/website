@@ -1,11 +1,13 @@
 import React from 'react';
 import { Heading, Paragraph } from '../components/Text';
+import Filled from '../components/Filled';
 import Grid from '../components/Grid';
 import deetsVideo from './assets/invitation/deets.mp4';
 import cardFront from './assets/invitation/business_card-front.jpg';
 import cardBack from './assets/invitation/business_card-back.jpg';
 import styles from '../utils/css';
 import AutoplayVideo from '../components/AutoplayVideo';
+import Note from './Note';
 
 const WebBrowser = ({ className, children }) => {
   const wrapperStyles = styles(
@@ -26,7 +28,7 @@ const WebBrowser = ({ className, children }) => {
         </div>
         <div className="none block-md basis80px-md ml10p-md" />
       </div>
-      <div className="border mx3 mb3 lh0">{children}</div>
+      <div className="mx3 mb3 lh0">{children}</div>
     </div>
   );
 };
@@ -34,7 +36,7 @@ const WebBrowser = ({ className, children }) => {
 const TheInvitation = () => {
   return (
     <Grid className="py20">
-      <div className="col-6 col-offset-2 text-center mb10">
+      <Filled className="col-10 col-4-sm col-offset-3-sm mb10">
         <Heading kind="bigfreedia" className="mb2">
           The Invitation
         </Heading>
@@ -43,15 +45,21 @@ const TheInvitation = () => {
           sent a URL to RSVP. It was modeled after Ocean’s business card he
           gives Linus when rounding up the crew.
         </Paragraph>
-      </div>
+      </Filled>
       <div className="col-4 px6 flex flex-column justify-center">
         <img src={cardFront} className="mb4" />
         <img src={cardBack} className="rotate-3" />
       </div>
-      <div className="col-6">
+      <div className="col-6 mb4">
         <WebBrowser className="w100p">
           <AutoplayVideo className="max-w100p" src={deetsVideo} />
         </WebBrowser>
+      </div>
+      <div className="col-offset-5 col-4">
+        <Note direction="rightAbove">
+          We thought this detail “totally gave away the movie,” but no one had a
+          fucking clue!
+        </Note>
       </div>
     </Grid>
   );

@@ -58,51 +58,55 @@ const quiztions = [
 
 const Quiz = () => {
   return (
-    <ol className="quiz-list p3">
+    <ol className="quiz-list p1 p5-md">
       {quiztions.map((item, idx) => {
         const itemIndex = idx + 1;
         const qNumber =
           itemIndex.toString().length === 1 ? `0${itemIndex}` : itemIndex;
         const [answerHidden, setAnswerVisibility] = useState(true);
         const wrapperClasses = styles(
-          'min-h120px',
+          'min-h120px w100p',
           answerHidden ? 'hov-target' : undefined
         );
 
         return (
           <li className={wrapperClasses} key={`qanda-${idx}`}>
             <div className="relative h100p">
-              <div className="hide hov-item-flex absolute bg-white_85 h100p w100p">
-                <button
-                  onClick={() => setAnswerVisibility(!answerHidden)}
-                  className="pointer m-auto bg-archive-beige p3 border-none rounded-medium"
-                >
-                  <Span kind="vulfpeck">Show answer</Span>
-                </button>
-              </div>
               {answerHidden ? (
-                <div>
-                  <Span className="block text-uppercase mb2" kind="reuben">
-                    Question {qNumber}
-                    <span className="block w15p h3px mt1 bg-archive-brown-900" />
-                  </Span>
-                  <Span className="" kind="vulfpeck">
-                    {item.q}
-                  </Span>
-                </div>
+                <button
+                  className="pointer"
+                  onClick={() => setAnswerVisibility(!answerHidden)}
+                >
+                  <div className="flex justify-between items-baseline mb1">
+                    <Span
+                      className="block text-uppercase archive-brown-400"
+                      kind="vulfpeck"
+                    >
+                      Question {qNumber}
+                    </Span>
+                    <Span
+                      className="inline-block o0p hov-item-o100p archive-brown-400 bg-archive-beige rounded-medium p1 px2"
+                      kind="vulfpeck"
+                    >
+                      Show answer
+                    </Span>
+                  </div>
+                  <span className="block w15p h5px mb2 bg-archive-brown-400" />
+                  <Span kind="danny">{item.q}</Span>
+                </button>
               ) : (
                 <button
                   className="pointer border-none bg-archive-brown-400 archive-beige block h100p w100p relative text-left p3 flex flex-column justify-between"
                   onClick={() => setAnswerVisibility(!answerHidden)}
                 >
                   <div className="flex justify-between">
-                    <Paragraph>{item.a}</Paragraph>
+                    <Paragraph kind="chromesparks">{item.a}</Paragraph>
                     <Span className="o5p mt-3" kind="kishibashi">
                       {qNumber}
                     </Span>
                   </div>
                   <div>
-                    <hr className="border-none w15p h3px bg-archive-beige m0 mb2" />
+                    <hr className="borderwidth-none border-color-none w15p h5px bg-archive-beige m0 mb2" />
                     <Paragraph className="archive-brown-900" kind="reuben">
                       {item.q}
                     </Paragraph>

@@ -1,9 +1,11 @@
-import React from "react";
+import React from 'react';
 
 const Filled = ({ children, className }) => {
   return (
     <div className={className}>
-      <div className="bg-white px5 border-left border-black_10">{children}</div>
+      <div className="bg-white px1 px5-sm border-left border2px border-black_05">
+        {children}
+      </div>
     </div>
   );
 };

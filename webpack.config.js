@@ -1,3 +1,4 @@
+/* eslint-env node */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BatteryWebpackPlugin = require('@battery/webpack-plugin');
@@ -35,13 +36,8 @@ module.exports = {
         use: ['babel-loader', BatteryWebpackPlugin.loader]
       },
       {
-        test: /\.css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader
-          },
-          'css-loader'
-        ]
+        test: /\.s?css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       },
       {
         test: /.mdx?$/,

@@ -14,20 +14,28 @@ const blankItem = {
 
 const snacksArr = [...snacks, blankItem, blankItem];
 
-const SnacksGrid = () => {
+const SnacksGrid = ({ className }) => {
   return (
-    <Speckled className="pt20vh">
-      <Heading kind="bigfreedia" className="col-6 col-offset-2">
-        Below are the 19 items Rusty orally interacts with…
-      </Heading>
-      <Paragraph className="mb4 col-6 col-offset-2">
-        That is a weird way to say that right? It’s just that some of the items
-        below aren’t exactly “food”—sometimes he just puts items to his mouth
-        and we counted every. single. one.
-      </Paragraph>
+    <Speckled className={className}>
+      <div className="col-6 col-offset-2 mb10">
+        <Heading kind="bigfreedia" className="col-6 col-offset-2 mb4">
+          All 👏 Of 👏 The 👏 Foods 👏
+        </Heading>
+        <Paragraph kind="danny" className="mb4">
+          Below are the 19 items Rusty orally interacts with… which is a weird
+          way to say that right? It’s just that some of the items below aren’t
+          exactly food. Sometimes he just puts items to his mouth and we counted
+          every single item.
+        </Paragraph>
+        <Paragraph kind="danny" className="mb4 ">
+          We should mention upfront this is not a balanced meal, in sustenance
+          or timing. In the beginning items come fast and sometimes they’re 30
+          minutes apart.
+        </Paragraph>
+      </div>
 
       <div className="col-10 relative">
-        <ul className="w100p mx-auto snackalong__snacks my10">
+        <ul className="w100p mx-auto snackalong__snacks">
           {snacksArr.map(({ svg, image, position, title }, i) => {
             return (
               <li key={i} className="aspect-ratio aspect-ratio--1x1 hov-target">
@@ -38,7 +46,7 @@ const SnacksGrid = () => {
                   {svg && (
                     <InlineSVG
                       className={styles(
-                        'fill-archive-brown-400 hov-item-fill-white w65p relative z1 click-through'
+                        'fill-archive-brown-400 hov-item-fill-white w60p relative z1 click-through'
                       )}
                       src={svg}
                     />

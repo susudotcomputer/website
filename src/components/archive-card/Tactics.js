@@ -3,29 +3,14 @@ import { Heading, Span } from '../Text';
 import styles from '../../utils/css';
 import { camelToSentence } from '../../utils/text';
 
-const TACTICS = [
-  'visualDesign',
-  'webDevelopment',
-  'cooking',
-  'branding',
-  'photography',
-  'hosting',
-  'copyWriting',
-  'video',
-  'illustration',
-  'carpentry',
-  'print',
-  'music'
-];
-
 const dotPositions = [
-  styles('t1px l2px'),
-  styles('b-1px r2px'),
+  styles('t1px l1px'),
+  styles('b-1px r1px'),
   styles('b1px l1px'),
-  styles('b2px l2px'),
+  styles('b1px l1px'),
   styles('t1px r0px'),
   styles('t1px l0px'),
-  styles('t0px l2px')
+  styles('t0px l1px')
 ];
 
 const randomNumber = num => {
@@ -34,12 +19,12 @@ const randomNumber = num => {
 
 const TacticStamp = ({ stamped }) => {
   const wrapperClasses = styles(
-    'circle w16px h16px border border-black_50 inline-flex mr2 relative'
+    'circle w16px h16px border border1px border-black_50 inline-flex mr2 relative'
   );
   const direction = dotPositions[randomNumber(dotPositions.length)];
   const dotClasses = styles(
     direction,
-    'relative w12px h12px circle m-auto',
+    'relative w13px h13px circle m-auto',
     stamped ? 'bg-archive-brown-400' : ''
   );
   return (
@@ -51,30 +36,34 @@ const TacticStamp = ({ stamped }) => {
 
 const TacticItem = ({ stamped, title }) => {
   return (
-    <li>
+    <li className="flex mb3px">
       <TacticStamp stamped={stamped} />
       <Span kind="vulfpeck">{camelToSentence(title)}</Span>
     </li>
   );
 };
 
-const Tactics = ({ markedTactics }) => {
-  const usedTactics = Object.entries(
-    TACTICS.reduce((accum, tactic) => {
-      accum[tactic] = markedTactics.includes(tactic);
-      return accum;
-    }, {})
-  );
-
+const Tactics = ({ allTactics }) => {
   return (
     <div className="archive-card__tactics">
-      <Heading level="3" kind="vulfpeck" className="text-uppercase black_50">
-        Tactics used:
+      <Heading
+        level="3"
+        kind="vulfpeck"
+        className="text-uppercase black_30 mb1"
+      >
+        Tactics:
       </Heading>
       <ul className="archive-card__tactics-list">
-        {usedTactics.map(([tactic, stamped], i) => (
-          <TacticItem key={`${tactic}-${i}`} title={tactic} stamped={stamped} />
-        ))}
+        {Object.keys(allTactics).map((tactic, i) => {
+          const stamped = allTactics[tactic];
+          return (
+            <TacticItem
+              key={`${tactic}-${i}`}
+              title={tactic}
+              stamped={stamped}
+            />
+          );
+        })}
       </ul>
     </div>
   );

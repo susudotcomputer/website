@@ -8,7 +8,7 @@ const Grid = ({ children, className, lines = true }) => {
     lines ? 'bg-gridient' : ''
   );
   return (
-    <div className="px5">
+    <div className="px2 px5-sm">
       <div className={classes}>{children}</div>
     </div>
   );

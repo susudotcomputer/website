@@ -10,7 +10,7 @@ const TabItem = ({ title, onClick, active, last }) => {
   );
   return (
     <button className={classes} onClick={onClick}>
-      <Heading level="3" kind="chromesparks" className="text-uppercase">
+      <Heading level="3" kind="bigfreedia" className="text-uppercase">
         {title}
       </Heading>
     </button>
@@ -19,7 +19,7 @@ const TabItem = ({ title, onClick, active, last }) => {
 
 export const TabSection = ({ children, active = true }) => {
   const classes = styles(
-    'border-x border-medium border-top border-archive-brown-400 w100p px5 pt5 bg-white relative z1',
+    'border-x border-medium border-top border-bottom border-archive-brown-400 w100p bg-white relative z1 pb1 pb5-md',
     active ? 'block' : 'hide'
   );
   return (
@@ -56,7 +56,7 @@ class Tabs extends React.Component {
     const allChildren = React.Children;
     return (
       <div className={classes}>
-        <div className="relative b-3px flex w100p px5">
+        <div className="relative b-3px flex w100p px1 px5-sm yscroll">
           {React.Children.map(children, (child, i) => (
             <TabItem
               title={child.props.title}

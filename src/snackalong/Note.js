@@ -14,8 +14,8 @@ const Note = ({ children, direction = 'rightBelow' }) => {
       textDirection: styles('text-right')
     },
     leftBelow: {
-      arrowDirection: 'scaleY(-1) scaleX(1)',
-      arrowCentering: styles('r-30px'),
+      arrowDirection: 'scaleY(-1) scaleX(1) rotate(40deg)',
+      arrowCentering: styles('r-40px t-30px'),
       arrowPosition: styles('flex-column'),
       textRotation: 'rotate(-5deg)'
     },

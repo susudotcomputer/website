@@ -55,26 +55,25 @@ import burgerSVG from './assets/svg/19-burger.svg';
 import styles from '../../utils/css';
 
 const bigSoda = {
-  title: 'Big Soda',
+  title: 'Big soda',
   index: '08',
   timeStamp: '0:22:59',
   kind: 'Drink',
   kindList: ['Coke'],
-  vesselList: ['Custom cup'],
+  vesselList: ['Paper cup'],
   clip: 'https://s3.amazonaws.com/susuassets/08-bigsoda.mp4',
   clipPosition: 'center',
   image: bigSodaPhoto,
   neonImage: bigSodaNeon,
-  note:
-    'Did someone say custom stickers to match the circus event they were attending?? Hey oh!',
+  note: 'We made custom stickers to match the circus show!',
   svg: bigSodaSVG,
   position: '54% 15%'
 };
 
 const brownDrink = {
-  title: 'Brown Drink',
+  title: 'Brown drink',
   index: '02/03',
-  timeStamp: '0:06:20 & 0:08:01',
+  timeStamp: '0:06:20, 0:08:01',
   kind: 'Drink',
   kindList: ['Whiskey (or Rum?)'],
   vesselList: ['Tumbler glass'],
@@ -89,17 +88,16 @@ const brownDrink = {
 };
 
 const burger = {
-  title: 'Burger',
+  title: 'Cheeseburger',
   index: '19',
   timeStamp: '1:49:20',
   kind: 'Food',
-  kindList: ['Burger'],
+  kindList: ['Burger patty', 'American cheese', 'Onions', 'Ketchup', 'Bun'],
   vesselList: ['Paper'],
   clip: 'https://s3.amazonaws.com/susuassets/19-cheeseburger.mp4',
   clipPosition: 'center',
   image: burgerPhoto,
   neonImage: burgerNeon,
-  note: 'Kilian made such a great burger. Legendary.',
   svg: burgerSVG,
   position: '57% 66%'
 };
@@ -120,7 +118,7 @@ const cigarette = {
 };
 
 const cottonCandy = {
-  title: 'Cotton Candy',
+  title: 'Cotton candy',
   index: '09',
   timeStamp: '0:23:10',
   kind: 'Food',
@@ -131,24 +129,23 @@ const cottonCandy = {
   image: cottonCandyPhoto,
   neonImage: cottonCandyNeon,
   note:
-    'Note to everyone, cotton candy does not keep well and will photograph terribly and is hard to replace because where do you quickly get some cotton candy?!',
+    'Please note, cotton candy does not keep well and will photograph terribly.',
   svg: cottonCandySVG,
   position: '50% 50%'
 };
 
 const espresso = {
-  title: 'Espresso & Treat',
+  title: 'Espresso + treat',
   index: '06',
   timeStamp: '0:20:19',
-  kind: 'Combo',
+  kind: 'Food + Drink',
   kindList: ['Espresso', 'Slice of Banana Bread'],
-  vesselList: ['Espresso cup', 'Plate'],
+  vesselList: ['Espresso cup + saucer', 'Plate + napkin'],
   clip: 'https://s3.amazonaws.com/susuassets/06-espresso.mp4',
   clipPosition: 'center',
   image: espressoPhoto,
   neonImage: espressoNeon,
-  note:
-    'Totally guessed on the baked good he was eating. We decided banana bread is delicious and would work.',
+  note: 'Totally guessed on the baked good.',
   svg: espressoSVG,
   position: '82% 46%'
 };
@@ -169,12 +166,12 @@ const gingerale = {
 };
 
 const icecream = {
-  title: 'IceCream',
+  title: 'Ice cream',
   index: '17',
   timeStamp: '1:01:44',
   kind: 'Food',
   kindList: ['Vanilla gelato'],
-  vesselList: ['Small plastic cup', 'Plastic spoon'],
+  vesselList: ['Plastic spoon', 'Small cup'],
   clip: 'https://s3.amazonaws.com/susuassets/17-icecream.mp4',
   clipPosition: 'center',
   image: icecreamPhoto,
@@ -219,7 +216,7 @@ const martini = {
   timeStamp: '0:25:57',
   kind: 'Drink',
   kindList: ['Gin martini'],
-  vesselList: ['That glass'],
+  vesselList: ['Nick & Nora glass'],
   clip: 'https://s3.amazonaws.com/susuassets/11-martini.mp4',
   clipPosition: 'left',
   image: martiniImage,
@@ -229,24 +226,24 @@ const martini = {
 };
 
 const mysterySalad = {
-  title: 'MysterySalad',
+  title: 'Mystery salad',
   index: '12',
   timeStamp: '0:34:53',
   kind: 'Food',
-  kindList: ['Cotton candy'],
-  vesselList: ['Plastic bag'],
+  kindList: ['Romaine', 'Caesar dressing', 'Croutons', 'Parmesan'],
+  vesselList: ['Mystery plate'],
   clip: 'https://s3.amazonaws.com/susuassets/12-mystery-salad.mp4',
   clipPosition: 'center',
   image: mysterySaladPhoto,
   neonImage: mysterySaladNeon,
   note:
-    'Totally mystery salad. We went frame-by-frame to try and get a clue to what kind of salad it was. No friggin’ clue. So we picked caesar salad. Yum, so tasty! (Kilian made his own dressing too! Who does that?! So good.)',
+    'We went frame-by-frame to try and get a clue to what kind of salad it was. No friggin’ clue. So we picked caesar salad. Yum!',
   svg: mysterySaladSVG,
   position: '50% 50%'
 };
 
 const nachos = {
-  title: 'Cheese Nachos',
+  title: 'Nachos',
   index: '01',
   timeStamp: '0:05:12',
   kind: 'Food',
@@ -257,18 +254,18 @@ const nachos = {
   image: nachosPhoto,
   neonImage: nachosNeon,
   note:
-    'We couldn’t find red paper trays anywhere! Bonkers, right? So Kilian covered each one with red contact paper to match the movie. It was the first item so it was important to great right and set the tone.',
+    'We couldn’t find red trays anywhere. Bonkers! So we covered each white tray with red contact paper to match.',
   svg: nachosSVG,
   position: '50% 62%'
 };
 
 const nicoiseSalad = {
-  title: 'Niçoise Salad',
+  title: 'Niçoise salad',
   index: '05',
   timeStamp: '0:14:39',
-  kind: 'Food',
-  kindList: ['Cherry tomatoes', 'Lettuce', 'Red patatoes'],
-  vesselList: ['Plates'],
+  kind: 'Food + Drink',
+  kindList: ['Cherry tomatoes', 'Lettuce', 'Red patatoes', 'Lemonade'],
+  vesselList: ['Fancy plate', 'Round amber tumbler'],
   clip: 'https://s3.amazonaws.com/susuassets/05-nicoisesalad.mp4',
   clipPosition: 'right',
   image: nicoiseSaladPhoto,
@@ -278,7 +275,7 @@ const nicoiseSalad = {
 };
 
 const redBull = {
-  title: 'RedBull',
+  title: 'Red Bull',
   index: '16',
   timeStamp: '0:56:27',
   kind: 'Drink',
@@ -289,7 +286,7 @@ const redBull = {
   image: redBullPhoto,
   neonImage: redBullNeon,
   note:
-    'TBH, we actually missed this one for the event. Brad drinks it so sneakily in the background. An audience member pointed it out to us after. It would be more heartbreaking if it wasn’t a redbull. No one really needs a redbull— especially after all the coffee and tea before.',
+    'Honestly we actually missed this one. But like, no one really needs a Redbull.',
   svg: redBullSVG,
   position: '45% 83%'
 };
@@ -300,7 +297,7 @@ const shrimp = {
   timeStamp: '0:43:42',
   kind: 'Food',
   kindList: ['Shrimp', 'Cocktail sauce'],
-  vesselList: ['Coupe glass'],
+  vesselList: ['Coupe glass', 'Cloth napkin'],
   clip: 'https://s3.amazonaws.com/susuassets/15-shrimp.mp4',
   clipPosition: 'center',
   image: shrimpPhoto,
@@ -330,13 +327,13 @@ const tea = {
   timeStamp: '0:11:56',
   kind: 'Drink',
   kindList: ['English Breakfast Tea'],
-  vesselList: ['Strawberry Hill, Syracuse cup'],
+  vesselList: ['Strawberry Hill Syracuse tea cup'],
   clip: 'https://s3.amazonaws.com/susuassets/04-tea.mp4',
   clipPosition: 'right',
   image: teaPhoto,
   neonImage: teaNeon,
   note:
-    'We googled the fuck out of the internet to find the exact right china cup. Turns out the print is “Syracuse China Strawberry Hill”... DM us for a detailed history of the Dutch colonization of the American northwest and its influence on dishware design',
+    'We googled the fuck out of the internet to find the exact right china cup. Turns out the print is Syracuse China Strawberry Hill.',
   svg: teaSVG,
   position: '62% 73%'
 };

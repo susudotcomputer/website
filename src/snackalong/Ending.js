@@ -7,13 +7,21 @@ import balloons from './assets/balloons.png';
 import bff from './assets/bff.jpg';
 import email from './assets/email.svg';
 import SVG from 'react-inlinesvg';
+import Note from './Note';
+import Filled from '../components/Filled';
 
 const Ending = () => {
   return (
     <>
       <Grid className="pt10">
-        <div className="col-5 p2 bg-archive-beige lh0 rotate-3 mb-35p">
+        <div className="col-offset-2 col-4 p2 bg-archive-beige lh0 rotate-3 mb-35p">
           <img src={bff} />
+        </div>
+        <div className="col-3 pt20">
+          <Note>
+            This is the one photo we have of us from the night. Two handsome
+            boys&nbsp;in&nbsp;SuSuits.
+          </Note>
         </div>
       </Grid>
       <div className="relative">
@@ -25,7 +33,7 @@ const Ending = () => {
         </div>
       </div>
       <Grid className="py20">
-        <div className="col-6 col-offset-2 text-center mb10">
+        <Filled className="col-10 col-6-sm col-offset-2-sm mb10">
           <Heading kind="bigfreedia" className="mb2">
             Have any questions/comments?
           </Heading>
@@ -34,15 +42,27 @@ const Ending = () => {
             you wanna reach out and say hey… please do! We love hearing from
             folks.
           </Paragraph>
-        </div>
-        <div className="col-6 col-offset-2 flex justify-center">
+        </Filled>
+        <div className="col-6 col-offset-2 flex justify-center mb3">
           <Button className="relative px10" size="medium">
             <SVG
               className="fill-archive-brown-900 w40px h40px inline-block l2 t-3 absolute"
               src={email}
             />
-            Contact us
+            Follow on Instagram
           </Button>
+          <Button className="relative px10" size="medium">
+            <SVG
+              className="fill-archive-brown-900 w40px h40px inline-block l2 t-3 absolute"
+              src={email}
+            />
+            Say hello via email
+          </Button>
+        </div>
+        <div className="col-3 col-offset-1">
+          <Note direction="leftAbove">
+            If you know Steven Soderbergh can you DM us immediately!
+          </Note>
         </div>
       </Grid>
 

@@ -44,37 +44,35 @@ const Toggle = props => {
 const Poster = ({ className }) => {
   return (
     <Grid className={className}>
-      <Filled className="col-4 col-offset-3">
+      <Filled className="col-10 col-4-sm col-offset-3-sm">
         <Heading kind="bigfreedia" className="mb4">
           Gift pack for attendees
         </Heading>
         <Paragraph kind="reuben" className="mb4">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
-          Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.
+          Everyone got a pack filled with goodies. It was modeled after Danny’s
+          jail release envelope in the beginning of the movie.
         </Paragraph>
       </Filled>
-      <div className="col-5 relative">
+      <div className="col-10 col-5-sm relative">
         <img className="l-100px relative w90p" src={poster} />
         <img className="absolute b20 r0 w300px" src={sticker} />
         <img className="absolute b0 l30p w100px" src={ring} />
       </div>
-      <div className="col-5 flex">
-        <Toggle>
-          <img src={card1} />
+      <div className="col-10 col-5-sm flex">
+        <div>
           <img src={card2} />
-        </Toggle>
+        </div>
         <div>
           <img src={airfreshner} />
         </div>
       </div>
-      <div className="col-5 flex">
-        <Toggle className="rotate-10 w200p relative t15vh l-6vw">
-          <img className="scale150p" src={menu1} />
+      <div className="col-10 col-5-sm flex">
+        <div className="rotate-10 w200p relative t15vh">
           <img className="scale150p" src={menu2} />
-        </Toggle>
+        </div>
       </div>
-      <div className="col-5">
-        <img className="rotate5" src={envelope} />
+      <div className="col-10 col-5-sm">
+        <img className="rotate5 relative" src={envelope} />
       </div>
     </Grid>
   );

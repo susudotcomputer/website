@@ -1,5 +1,5 @@
 import React from 'react';
-import { Li, Span } from '../components/Text';
+import { Li, Span, Paragraph } from '../components/Text';
 
 const triviaItems = [
   'Luke & Owen Wilson were lined up to play bickering brothers Virgil and Turk, but dropped out at the last minute to do The Royal Tenenbaums instead. ',
@@ -16,15 +16,15 @@ const triviaItems = [
 
 const Trivia = () => {
   return (
-    <ul className="trivia-list p3">
+    <ul className="trivia-list p1 p5-sm">
       {triviaItems.map((item, i) => {
         return (
           <Li className="lh24px" kind="reuben" key={`trivia-item-${i}`}>
-            <Span className="text-uppercase" kind="reuben" bold>
-              Did you know
+            <Span className="" kind="vulfpeck">
+              Did you know…
             </Span>{' '}
             {item}
-            <hr className="mt4 w15p h3px border-none bg-archive-brown-900" />
+            <hr className="mt4 w15p h5px border-none bg-archive-brown-400" />
           </Li>
         );
       })}

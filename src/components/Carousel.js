@@ -6,20 +6,21 @@ import rightArrow from './assets/right-arrow.svg';
 import SVG from 'react-inlinesvg';
 
 const baseTheme = {
+  dotWrapperStyles: styles('column-gap40px w60p mx-auto mt6'),
   dotStyles: {
     base: styles(
-      'pointer p0 h6px min-w6 max-w10 border border-archive-brown-400 border'
+      'pointer p0 h9px min-w6 flex1 border border1px border-archive-brown-400'
     ),
     active: styles('bg-archive-brown-400'),
-    inactive: styles('')
+    inactive: styles('bg-white')
   },
   arrowStyles: {
-    base: styles('border-none fill-archive-brown-400'),
+    base: styles('border-none fill-archive-brown-400 pointer'),
     active: styles('o100p'),
     inactive: styles('o25p')
   },
-  arrowLeft: () => <SVG className="w4 block" src={leftArrow} />,
-  arrowRight: () => <SVG className="w4 block" src={rightArrow} />,
+  arrowLeft: () => <SVG className="w7 mr4 block" src={leftArrow} />,
+  arrowRight: () => <SVG className="w7 ml4 block" src={rightArrow} />,
   bgColor: 'bg-black'
 };
 
@@ -68,7 +69,6 @@ export const Carousel = (theme = baseTheme) => ({
   );
 
   const wrapperStyles = styles('relative', wrapperClassNames);
-
   return (
     <div className={wrapperStyles}>
       {overlayComponent && <OverlayComponent />}
@@ -112,7 +112,13 @@ export const Carousel = (theme = baseTheme) => ({
         )}
       </div>
       {showDots && (
-        <div className="flex justify-around w50p mx-auto mt3">
+        <div
+          className={theme.dotWrapperStyles}
+          style={{
+            display: 'grid',
+            gridAutoFlow: 'column'
+          }}
+        >
           {children.map((_, i) => {
             const isActive = activeImage === i;
             const dotClasses = styles(
