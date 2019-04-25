@@ -1,3 +1,7 @@
+.debug * {
+  outline: 1px solid gold;
+}
+
 * {
   box-sizing: border-box;
 }

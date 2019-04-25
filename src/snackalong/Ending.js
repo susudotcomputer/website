@@ -14,7 +14,7 @@ const Ending = () => {
   return (
     <>
       <Grid className="pt10">
-        <div className="col-offset-2 col-4 p2 bg-archive-beige lh0 rotate-3 mb-35p">
+        <div className="col-8 col-offset-1 col-offset-2-md col-4-md p2 bg-archive-beige lh0 rotate-3 mb-35p">
           <img src={bff} />
         </div>
         <div className="col-3 pt20">
@@ -35,7 +35,7 @@ const Ending = () => {
       <Grid className="py20">
         <Filled className="col-10 col-6-sm col-offset-2-sm mb10">
           <Heading kind="bigfreedia" className="mb2">
-            Have any questions/comments?
+            Have any questions / comments?
           </Heading>
           <Paragraph kind="danny" className="mb4">
             Wow, you got to the very very very end of this site. Thank you! If
@@ -43,7 +43,7 @@ const Ending = () => {
             folks.
           </Paragraph>
         </Filled>
-        <div className="col-6 col-offset-2 flex justify-center mb3">
+        <div className="col-6 col-offset-2 flex flex-column flex-row-md justify-center mb3">
           <Button className="relative px10" size="medium">
             <SVG
               className="fill-archive-brown-900 w40px h40px inline-block l2 t-3 absolute"

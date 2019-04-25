@@ -41,7 +41,7 @@ const Poster = ({ className }) => {
       </Filled>
       <div className="col-10 col-offset-5-md col-5-md">
         <Carousel
-          wrapperClassNames={styles('mx-6-md')}
+          wrapperClassNames={styles('')}
           aspectRatio={styles('aspect-ratio--2x3')}
         >
           <img src={img1} />

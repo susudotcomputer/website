@@ -64,6 +64,7 @@ export const Carousel = (theme = baseTheme) => ({
   }
 
   const imageContainerStyles = styles(
+    'clip',
     aspectRatio ? `aspect-ratio ${aspectRatio}` : '',
     theme.bgColor
   );

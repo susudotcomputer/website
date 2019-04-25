@@ -14,9 +14,9 @@ const blankItem = {
 
 const snacksArr = [...snacks, blankItem, blankItem];
 
-const SnacksGrid = ({ className }) => {
+const SnacksGrid = () => {
   return (
-    <Speckled className={className}>
+    <Speckled className="pt20 pb30vw">
       <div className="col-6 col-offset-2 mb10">
         <Heading kind="bigfreedia" className="col-6 col-offset-2 mb4">
           All 👏 Of 👏 The 👏 Foods 👏

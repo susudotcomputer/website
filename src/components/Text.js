@@ -13,12 +13,14 @@ const TEXT_STYLES = {
     normal: styles('weight-400')
   },
   bigfreedia: {
-    classes: styles('font-mono fz38px ls-2px smooth-antialiased'),
+    classes: styles(
+      'font-mono fz28px ls-1px fz38px-md ls-2px-md smooth-antialiased'
+    ),
     bold: styles('weight-600'),
     normal: styles('weight-400')
   },
   jonhopkins: {
-    classes: styles('font-mono fz60px ls-4px smooth-antialiased'),
+    classes: styles('font-mono fz30px fz60px-md ls-4px-md smooth-antialiased'),
     bold: styles('weight-600'),
     normal: styles('weight-400')
   },

@@ -174,3 +174,15 @@ $large-bp: 1040px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.clip-triangle {
+  $point1: 50% 100%;
+  $point2: 100% 0;
+  $point3: 100% 100%;
+  $point4: 0 100%;
+  $point5: 0 0;
+
+  -webkit-clip-path: polygon($point1, $point2, $point3, $point4, $point5);
+  clip-path: polygon($point1, $point2, $point3, $point4, $point5);
+}
+

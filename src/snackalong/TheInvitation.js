@@ -36,7 +36,7 @@ const WebBrowser = ({ className, children }) => {
 const TheInvitation = () => {
   return (
     <Grid className="py20">
-      <Filled className="col-10 col-4-sm col-offset-3-sm mb10">
+      <Filled className="col-10 col-4-md col-offset-3-md mb10">
         <Heading kind="bigfreedia" className="mb2">
           The Invitation
         </Heading>

@@ -44,7 +44,7 @@ const Note = ({ children, direction = 'rightBelow' }) => {
   } = directions[direction];
 
   return (
-    <div className={styles('flex', parent)}>
+    <div className={styles('hide flex-md', parent)}>
       <div className={styles('relative flex items-center', arrowPosition)}>
         <Paragraph
           kind="moon"

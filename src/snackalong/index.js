@@ -54,9 +54,9 @@ const Snackalong = () => {
       <Video />
       <Branding className="pb20" />
       <Poster className="pb20" />
-      <SnacksGrid className="pt20" />
+      <SnacksGrid />
       <Snacks />
-      <GiftPack className="py20" />
+      <GiftPack />
       <VideoGraphics />
       <TheInvitation />
       <Grid>
