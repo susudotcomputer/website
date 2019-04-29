@@ -2,6 +2,7 @@ import React from 'react';
 import { Paragraph, Link } from '../components/Text';
 import Filled from '../components/Filled';
 import Grid from '../components/Grid';
+import { PlayButton } from '../components/Buttons';
 
 const Video = () => {
   return (
@@ -9,9 +10,7 @@ const Video = () => {
       <div className="col-10">
         <div className="aspect-ratio aspect-ratio--16x9">
           <div className="aspect-ratio__object bg-black_80 inline-flex">
-            <button className="circle h15 w15 fz20px p2 border border-white bg-transparent white m-auto">
-              Play
-            </button>
+            <PlayButton />
           </div>
         </div>
       </div>

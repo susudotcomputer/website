@@ -5,6 +5,7 @@ import styles from '../utils/css';
 import InlineSVG from 'react-inlinesvg';
 import snacks from './Snacks/snackdata';
 import { titleToId } from '../utils/links';
+import Perforation from '../components/Perforation';
 
 const blankItem = {
   title: '',
@@ -16,7 +17,8 @@ const snacksArr = [...snacks, blankItem, blankItem];
 
 const SnacksGrid = () => {
   return (
-    <Speckled className="pt20 pb30vw">
+    <Speckled className="pt20 pb30vw relative">
+      <Perforation direction="up" />
       <div className="col-6 col-offset-2 mb10">
         <Heading kind="bigfreedia" className="col-6 col-offset-2 mb4">
           All 👏 Of 👏 The 👏 Foods 👏

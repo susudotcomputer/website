@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../utils/css';
 
-const Button = props => {
+export const Button = props => {
   const { children, className, ...rest } = props;
   const sizes = {
     small: 'p3',
@@ -21,4 +21,13 @@ const Button = props => {
   );
 };
 
-export default Button;
+export const PlayButton = props => {
+  return (
+    <button
+      className="text-center circle h15 w15 fz20px p2 border border-white bg-transparent white m-auto"
+      {...props}
+    >
+      Play
+    </button>
+  );
+};

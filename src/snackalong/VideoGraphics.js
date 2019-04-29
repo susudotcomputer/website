@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Heading, Paragraph } from '../components/Text';
 import Speckled from '../components/Speckled';
-import Button from '../components/Buttons';
+import { PlayButton } from '../components/Buttons';
 import projector from './assets/snackalong-film-projector.png';
 import orange from './assets/circle-foods/orange.png';
 import styles from '../utils/css';
 import tadaLoop from './assets/tada-loop.mp4';
+import Perforation from '../components/Perforation';
 
 const SnackalongProjector = () => {
   return (
@@ -115,7 +116,8 @@ const VideoGraphics = () => {
   });
 
   return (
-    <Speckled className="py20">
+    <Speckled className="py20 relative">
+      <Perforation direction="up" />
       <div className="col-10 col-5-sm pr3-sm">
         <Heading kind="bigfreedia" className="col-6 col-offset-2 mb2">
           Tada!
@@ -141,7 +143,7 @@ const VideoGraphics = () => {
           </div>
           {!playing && (
             <div className="aspect-ratio__object flex z101">
-              <Button onClick={handleVideoPlay}>Play</Button>
+              <PlayButton onClick={handleVideoPlay}>Play</PlayButton>
             </div>
           )}
 
@@ -176,6 +178,7 @@ const VideoGraphics = () => {
         </Paragraph>
         <SnackalongProjector />
       </div>
+      <Perforation direction="down" />
     </Speckled>
   );
 };

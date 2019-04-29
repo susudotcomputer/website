@@ -44,6 +44,11 @@ const TEXT_STYLES = {
     bold: styles('weight-600'),
     normal: styles('weight-300')
   },
+  rusty: {
+    classes: styles('font-serif fz48px'),
+    bold: styles('weight-600'),
+    normal: styles('weight-300')
+  },
   moon: {
     classes: styles('font-cursive fz30px lh30px ls-1px smooth-antialiased'),
     bold: styles('weight-600'),

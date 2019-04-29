@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Heading, Paragraph } from '../components/Text';
 import Filled from '../components/Filled';
 import Grid from '../components/Grid';
@@ -8,11 +8,12 @@ import cardBack from './assets/invitation/business_card-back.jpg';
 import styles from '../utils/css';
 import AutoplayVideo from '../components/AutoplayVideo';
 import Note from './Note';
+import VisibilitySensor from 'react-visibility-sensor';
 
 const WebBrowser = ({ className, children }) => {
   const wrapperStyles = styles(
     className,
-    'w60p border border-archive-brown-400 rounded-medium border-medium flex flex-column'
+    'bg-white border border-archive-brown-400 rounded-medium border-medium flex flex-column'
   );
   return (
     <div className={wrapperStyles}>
@@ -34,6 +35,15 @@ const WebBrowser = ({ className, children }) => {
 };
 
 const TheInvitation = () => {
+  const [cardsVisible, setVisible] = useState(false);
+
+  const visibilityChange = isVisible => {
+    isVisible ? setVisible(true) : setVisible(false);
+  };
+  const baseCardStyles = styles(
+    'transition-all transition400',
+    cardsVisible ? '' : 'translate-x110p'
+  );
   return (
     <Grid className="py20">
       <Filled className="col-10 col-4-md col-offset-3-md mb10">
@@ -46,11 +56,15 @@ const TheInvitation = () => {
           gives Linus when rounding up the crew.
         </Paragraph>
       </Filled>
-      <div className="col-4 px6 flex flex-column justify-center">
-        <img src={cardFront} className="mb4" />
-        <img src={cardBack} className="rotate-3" />
-      </div>
-      <div className="col-6 mb4">
+      <VisibilitySensor onChange={visibilityChange}>
+        <div className="col-4 px6 flex flex-column justify-center relative z1">
+          <img src={cardFront} className={styles(baseCardStyles, 'mb4')} />
+          <div className={styles(baseCardStyles, 'transition-delay100')}>
+            <img src={cardBack} className="rotate-3" />
+          </div>
+        </div>
+      </VisibilitySensor>
+      <div className="col-6 mb4 relative z10">
         <WebBrowser className="w100p">
           <AutoplayVideo className="max-w100p" src={deetsVideo} />
         </WebBrowser>

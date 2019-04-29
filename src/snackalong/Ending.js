@@ -1,7 +1,7 @@
 import React from 'react';
 import { Heading, Paragraph } from '../components/Text';
 import Grid from '../components/Grid';
-import Button from '../components/Buttons';
+import { Button } from '../components/Buttons';
 import castImage from '../assets/oceans-cast-transparent.png';
 import balloons from './assets/balloons.png';
 import bff from './assets/bff.jpg';

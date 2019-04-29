@@ -12,7 +12,7 @@ const Footer = () => {
             The movie ends with this song, and so does this web page. Bye!
           </Note>
         </div>
-        <div className="col-10 col-4-md col-offset-3-md h80px mb10">
+        <div className="col-10 col-4-md col-offset-3-md h80px mb10 children-bg-archive-brown-900">
           <iframe
             src="https://open.spotify.com/embed/track/3Vo5NwAezmRMP2aH2xQVm1"
             width="100%"
