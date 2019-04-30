@@ -17,7 +17,7 @@ const snacksArr = [...snacks, blankItem, blankItem];
 
 const SnacksGrid = () => {
   return (
-    <Speckled className="pt20 pb30vw relative">
+    <Speckled grid className="pt20 pb20vw relative">
       <Perforation direction="up" />
       <div className="col-6 col-offset-2 mb10">
         <Heading kind="bigfreedia" className="col-6 col-offset-2 mb4">

@@ -116,9 +116,9 @@ const VideoGraphics = () => {
   });
 
   return (
-    <Speckled className="py20 relative">
+    <Speckled grid className="py20 relative">
       <Perforation direction="up" />
-      <div className="col-10 col-5-sm pr3-sm">
+      <div className="col-10 col-5-sm pr5-sm">
         <Heading kind="bigfreedia" className="col-6 col-offset-2 mb2">
           Tada!
         </Heading>
@@ -168,7 +168,7 @@ const VideoGraphics = () => {
           </div>
         </div>
       </div>
-      <div className="col-10 col-5-sm pl3-sm">
+      <div className="col-10 col-5-sm pl5-sm">
         <Heading kind="bigfreedia" className="col-6 col-offset-2 mb2">
           Pre-show video logo
         </Heading>

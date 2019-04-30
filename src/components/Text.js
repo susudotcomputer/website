@@ -86,6 +86,7 @@ export const Strong = props => <Text tag="strong" bold {...props} />;
 export const Div = props => <Text tag="div" {...props} />;
 export const Span = props => <Text tag="span" {...props} />;
 export const Li = props => <Text tag="li" {...props} />;
+export const Button = props => <Text tag="button" {...props} />;
 export const Heading = props => {
   const level = props.level ? props.level : '2';
   return <Text tag={`h${level}`} {...props} />;

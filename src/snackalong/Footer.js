@@ -5,7 +5,7 @@ import Grid from '../components/Grid';
 
 const Footer = () => {
   return (
-    <div className="bg-archive-brown-900 pt6 pb10">
+    <div className="bg-archive-brown-400 pt6 pb10 border2px border-top border-archive-brown-900">
       <Grid lines={false}>
         <div className="col-10 col-3-md col-offset-7-md mb-5p mb-10p-md">
           <Note>

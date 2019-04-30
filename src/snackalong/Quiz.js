@@ -15,7 +15,8 @@ const quiztions = [
   {
     q:
       'What is the one personal item Danny Ocean received when he was released from jail?',
-    a: 'Wedding Ring'
+    a: 'Wedding Ring',
+    bigType: true
   },
   {
     q:
@@ -24,21 +25,25 @@ const quiztions = [
   },
   {
     q: 'What does Tess do for a living?',
-    a: 'Art Curator'
+    a: 'Art Curator',
+    bigType: true
   },
   {
     q: 'How much money is going to be in the vault on fight night?',
-    a: '~$157,000,000'
+    a: '~$157,000,000',
+    bigType: true
   },
   {
     q:
       'What is the name of the device Basher steals to knock out the power in Vegas?',
-    a: 'A Pinch'
+    a: 'A Pinch',
+    bigType: true
   },
   {
     q:
       'What item did Linus bring as a backup that Danny suddenly needed to get into the vault?',
-    a: 'Batteries'
+    a: 'Batteries',
+    bigType: true
   },
   {
     q:
@@ -52,7 +57,8 @@ const quiztions = [
   },
   {
     q: 'What is the scent of the air freshener in the S.W.A.T. van?',
-    a: 'Royal Pine'
+    a: 'Royal Pine',
+    bigType: true
   }
 ];
 
@@ -100,7 +106,11 @@ const Quiz = () => {
                   onClick={() => setAnswerVisibility(!answerHidden)}
                 >
                   <div className="flex justify-between">
-                    <Paragraph kind="chromesparks">{item.a}</Paragraph>
+                    <Paragraph
+                      kind={item.bigType ? 'bigfreedia' : 'chromesparks'}
+                    >
+                      {item.a}
+                    </Paragraph>
                     <Span className="o5p mt-3" kind="kishibashi">
                       {qNumber}
                     </Span>

@@ -13,7 +13,7 @@ const Tab = ({ children }) => {
 const MiscTabs = () => {
   return (
     <>
-      <Filled className="col-10 col-4-sm col-offset-3-sm mb10">
+      <Filled className="col-10 col-6-sm col-offset-2-sm mb10">
         <Heading kind="bigfreedia" className="mb2">
           Pre-show & post-show materials
         </Heading>
@@ -23,14 +23,14 @@ const MiscTabs = () => {
         </Paragraph>
       </Filled>
       <Tabs activeTab={1} className="w100p mb20">
-        <Tab title="Trivia">
-          <Trivia />
-        </Tab>
         <Tab title="Quiz">
           <Quiz />
         </Tab>
         <Tab title="Prizes">
           <Prizes />
+        </Tab>
+        <Tab title="Trivia">
+          <Trivia />
         </Tab>
       </Tabs>
     </>

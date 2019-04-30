@@ -3,14 +3,14 @@ import Grid from '../components/Grid';
 import styles from '../utils/css';
 import speckles from '../assets/speckled.png';
 
-const Speckled = ({ className, children }) => {
-  const classes = styles(className, 'bg-archive-beige bg-repeat pt15vh');
+const Speckled = ({ className, children, grid = false }) => {
+  const classes = styles(className, 'bg-archive-beige bg-repeat');
   return (
     <div
       className={classes}
       style={{ backgroundImage: `url(${speckles})`, backgroundSize: '600px' }}
     >
-      <Grid lines={false}>{children}</Grid>
+      {grid ? <Grid lines={false}>{children}</Grid> : children}
     </div>
   );
 };

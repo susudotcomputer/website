@@ -164,7 +164,7 @@ const Archive = () => {
 
         <img src={poloroids} className="col-10" />
       </Grid>
-      <Speckled>
+      <Speckled grid className="pt20">
         <div className="col-5">
           <Paragraph>Sign up for email from us.</Paragraph>
         </div>

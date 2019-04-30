@@ -14,11 +14,11 @@ import sticker from './assets/pack/sticker.png';
 const GiftPack = () => {
   return (
     <Grid className={'py20'}>
-      <Filled className="col-10 col-4-sm col-offset-3-sm">
+      <Filled className="col-10 col-6-sm col-offset-2-sm">
         <Heading kind="bigfreedia" className="mb4">
           Gift pack for attendees
         </Heading>
-        <Paragraph kind="reuben" className="mb4">
+        <Paragraph kind="danny" className="mb10">
           Everyone got a pack filled with goodies. It was modeled after Danny’s
           jail release envelope in the beginning of the movie.
         </Paragraph>
@@ -30,14 +30,14 @@ const GiftPack = () => {
       </div>
       <div className="col-10 col-5-sm flex">
         <div>
-          <img src={card2} />
+          <img src={card2} className="scale115p" />
         </div>
         <div>
           <img src={airfreshner} />
         </div>
       </div>
       <div className="col-10 col-5-sm flex">
-        <div className="rotate-10-sm w200p relative t15vh">
+        <div className="rotate-10-sm w200p relative t15vh l10">
           <img className="scale150p-sm" src={menu2} />
         </div>
       </div>

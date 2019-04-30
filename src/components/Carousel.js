@@ -19,8 +19,18 @@ const baseTheme = {
     active: styles('o100p'),
     inactive: styles('o25p')
   },
-  arrowLeft: () => <SVG className="w7 mr4 block" src={leftArrow} />,
-  arrowRight: () => <SVG className="w7 ml4 block" src={rightArrow} />,
+  arrowLeft: () => (
+    <SVG
+      className="w7 mr4 block fill-archive-beige hover-fill-archive-brown-400"
+      src={leftArrow}
+    />
+  ),
+  arrowRight: () => (
+    <SVG
+      className="w7 ml4 block fill-archive-beige hover-fill-archive-brown-400"
+      src={rightArrow}
+    />
+  ),
   bgColor: 'bg-black'
 };
 
