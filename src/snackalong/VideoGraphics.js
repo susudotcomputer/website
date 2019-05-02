@@ -30,12 +30,12 @@ const SnackalongProjector = () => {
           <div>
             <div className="flex w60p mb-6 z1 relative mx-auto l-8">
               <img
-                className="snack-rotate-360"
+                className="snack-rotate-360 w170px h170px"
                 src={orange}
                 alt="Roatating Orange to look like film atop a projector"
               />
               <img
-                className="snack-rotate-360"
+                className="snack-rotate-360 w170px h170px"
                 src={orange}
                 alt="Roatating Orange to look like film atop a projector"
               />

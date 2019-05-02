@@ -5,7 +5,9 @@ import { Heading } from './Text';
 const TabItem = ({ title, onClick, active, last }) => {
   const classes = styles(
     'border border-medium border-archive-brown-400 archive-brown-400 bg-white p3 mr2 relative pointer fz18px flex1',
-    active ? 'border-bottom-none z2' : 'z0',
+    active
+      ? 'border-bottom-style-none border-bottom-width-none border-bottom-transparent z2'
+      : 'z0',
     last ? 'mr5' : ''
   );
   return (

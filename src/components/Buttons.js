@@ -11,14 +11,14 @@ export const Button = props => {
 
   const classNames = styles(
     className,
-    'pointer m-auto bg-archive-beige border-none rounded-medium',
+    'pointer text-center bg-archive-beige border-none rounded-medium',
     sizes[props.size] ? sizes[props.size] : sizes['small']
   );
 
   return (
-    <button className={classNames} {...rest}>
+    <TextButton kind="vulfpeck" className={classNames} {...rest}>
       {children}
-    </button>
+    </TextButton>
   );
 };
 

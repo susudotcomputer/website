@@ -54,12 +54,14 @@ const SnacksGrid = () => {
                     />
                   )}
                   <div className="absolute t0 r0 b0 l0 p2 o0p hover-o100p">
-                    <img
-                      className="o-fit-none w100p h100p circle clip"
-                      src={image}
-                      style={{ objectPosition: position }}
-                      alt={title}
-                    />
+                    {image && (
+                      <img
+                        className="o-fit-none w100p h100p circle clip"
+                        src={image}
+                        style={{ objectPosition: position }}
+                        alt={title}
+                      />
+                    )}
                   </div>
                 </a>
               </li>

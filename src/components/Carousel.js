@@ -84,7 +84,7 @@ export const Carousel = (theme = baseTheme) => ({
     <div className={wrapperStyles}>
       {overlayComponent && <OverlayComponent />}
 
-      <div className="flex relative z0">
+      <div className="flex relative z0 items-center">
         {showArrows && (
           <NavButton className={theme.arrowStyles.base} onClick={previousImage}>
             <ArrowLeft />

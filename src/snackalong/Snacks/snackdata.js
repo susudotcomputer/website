@@ -264,7 +264,16 @@ const nicoiseSalad = {
   index: '05',
   timeStamp: '0:14:39',
   kind: 'Food + Drink',
-  kindList: ['Cherry tomatoes', 'Lettuce', 'Red patatoes', 'Lemonade'],
+  kindList: [
+    'Cherry tomatoes',
+    'Lettuce',
+    'Tuna',
+    'Red patatoes',
+    'String beans',
+    'Black olives',
+    'Hard-bolied eggs',
+    'Lemonade'
+  ],
   vesselList: ['Fancy plate', 'Round amber tumbler'],
   clip: 'https://s3.amazonaws.com/susuassets/05-nicoisesalad.mp4',
   clipPosition: 'right',

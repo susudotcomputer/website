@@ -6,6 +6,7 @@ import castImage from '../assets/oceans-cast-transparent.png';
 import balloons from './assets/balloons.png';
 import bff from './assets/bff.jpg';
 import email from './assets/email.svg';
+import instagram from './assets/instagram.svg';
 import SVG from 'react-inlinesvg';
 import Note from './Note';
 import Filled from '../components/Filled';
@@ -43,15 +44,15 @@ const Ending = () => {
             folks.
           </Paragraph>
         </Filled>
-        <div className="col-6 col-offset-2 flex flex-column flex-row-md justify-center mb3">
-          <Button className="relative px10" size="medium">
+        <div className="col-10 col-6-sm col-offset-2-sm col-6-lg col-offset-2-lg flex flex-column flex-row-md justify-around items-start-md mb3">
+          <Button className="relative px10-sm mb5 mb0-lg" size="medium">
             <SVG
               className="fill-archive-brown-900 w40px h40px inline-block l2 t-3 absolute"
-              src={email}
+              src={instagram}
             />
             Follow on Instagram
           </Button>
-          <Button className="relative px10" size="medium">
+          <Button className="relative px10-sm" size="mediu0m">
             <SVG
               className="fill-archive-brown-900 w40px h40px inline-block l2 t-3 absolute"
               src={email}
@@ -69,6 +70,26 @@ const Ending = () => {
       <div className="relative">
         <div className="absolute w100p t0 r0 b0 l0 z-1 px5">
           <div className="max-w1200px bg-gridient h100p mx-auto " />
+        </div>
+        <div>
+          <Grid>
+            <div className="col-10 col-6-sm col-offset-2-sm col-4-md col-offset-3-md h80px mb10 children-bg-archive-brown-900">
+              <iframe
+                src="https://open.spotify.com/embed/track/3Vo5NwAezmRMP2aH2xQVm1"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allow="encrypted-media"
+              />
+            </div>
+          </Grid>
+          <Grid className="mb-15vw">
+            <div className="col-3-md col-offset-4-md">
+              <Note direction="rightAbove">
+                The movie ends with this song, and so does this web page. Bye!
+              </Note>
+            </div>
+          </Grid>
         </div>
         <div className="lh0">
           <img className="w100p" src={castImage} />
