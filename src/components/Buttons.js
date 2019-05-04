@@ -12,6 +12,7 @@ export const Button = props => {
   const classNames = styles(
     className,
     'pointer text-center bg-archive-beige border-none rounded-medium',
+    'hover-bg-archive-brown-900 hover-archive-beige hov-target',
     sizes[props.size] ? sizes[props.size] : sizes['small']
   );
 

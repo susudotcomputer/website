@@ -70,7 +70,7 @@ const TheInvitation = () => {
         </WebBrowser>
       </div>
       <div className="col-offset-5 col-4">
-        <Note direction="rightAbove">
+        <Note direction="centerAbove">
           We thought this detail “totally gave away the movie,” but no one had a
           fucking clue!
         </Note>

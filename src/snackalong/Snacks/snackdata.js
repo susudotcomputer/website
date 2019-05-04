@@ -146,6 +146,7 @@ const espresso = {
   image: espressoPhoto,
   neonImage: espressoNeon,
   note: 'Totally guessed on the baked good.',
+  noteClasses: 'col-3 col-offset-1',
   svg: espressoSVG,
   position: '82% 46%'
 };

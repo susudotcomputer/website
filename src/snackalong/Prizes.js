@@ -2,7 +2,7 @@ import React from 'react';
 import prize1 from './assets/prizes/prize-1.jpg';
 import prize2 from './assets/prizes/prize-2.jpg';
 import prize3 from './assets/prizes/prize-3.jpg';
-import { Span, Paragraph, Strong } from '../components/Text';
+import { Span, Paragraph, Strong, Em } from '../components/Text';
 import styles from '../utils/css';
 import Grid from '../components/Grid';
 
@@ -29,7 +29,7 @@ const Prizes = () => {
           <Strong kind="danny">Second place</Strong> was Scott Cann’s coffee
           table photography book. (Tons of nudes in it, FYI) And{' '}
           <Strong kind="danny">third place</Strong> was a notebook made from an
-          Ocean’s Eleven VHS cover.
+          <Em>Ocean’s Eleven</Em> VHS cover.
         </Paragraph>
       </div>
       <div className="col-10 flex">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Paragraph } from '../components/Text';
+import { Heading, Paragraph, Em } from '../components/Text';
 import Speckled from '../components/Speckled';
 import styles from '../utils/css';
 import InlineSVG from 'react-inlinesvg';
@@ -31,8 +31,8 @@ const SnacksGrid = () => {
         </Paragraph>
         <Paragraph kind="danny" className="mb4 ">
           We should mention upfront this is not a balanced meal, in sustenance
-          or timing. In the beginning items come fast and sometimes they’re 30
-          minutes apart.
+          or timing. In the beginning items come <Em>fast</Em> and sometimes
+          they’re 30 minutes apart.
         </Paragraph>
       </div>
 

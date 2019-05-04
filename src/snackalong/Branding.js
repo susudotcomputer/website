@@ -74,9 +74,7 @@ const Branding = ({ className }) => {
           drive-in signage. The rounded terminals suggest a handdrawn feeling to
           match with the event’s DIY nature.
         </Paragraph>
-        <Note direction="rightAbove">
-          Look at all that tasty, spinning food!
-        </Note>
+        <Note direction="leftUp">Look at all that tasty, spinning food!</Note>
       </Filled>
     </Grid>
   );

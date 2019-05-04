@@ -18,7 +18,7 @@ const Ending = () => {
         <div className="col-8 col-offset-1 col-offset-2-md col-4-md p2 bg-archive-beige lh0 rotate-3 mb-35p">
           <img src={bff} />
         </div>
-        <div className="col-3 pt20">
+        <div className="col-3 ">
           <Note>
             This is the one photo we have of us from the night. Two handsome
             boys&nbsp;in&nbsp;SuSuits.
@@ -45,16 +45,19 @@ const Ending = () => {
           </Paragraph>
         </Filled>
         <div className="col-10 col-6-sm col-offset-2-sm col-6-lg col-offset-2-lg flex flex-column flex-row-md justify-around items-start-md mb3">
-          <Button className="relative px10-sm mb5 mb0-lg" size="medium">
+          <Button
+            className="relative flex items-center pl4 pr5 mb5 mb0-lg"
+            size="medium"
+          >
             <SVG
-              className="fill-archive-brown-900 w40px h40px inline-block l2 t-3 absolute"
+              className="fill-archive-brown-900 hov-item-fill-archive-beige w30px h30px mr2 inline-block"
               src={instagram}
             />
             Follow on Instagram
           </Button>
-          <Button className="relative px10-sm" size="mediu0m">
+          <Button className="relative flex items-center pl4 pr5" size="medium">
             <SVG
-              className="fill-archive-brown-900 w40px h40px inline-block l2 t-3 absolute"
+              className="fill-archive-brown-900 hov-item-fill-archive-beige w30px h30px mr2 inline-block"
               src={email}
             />
             Say hello via email

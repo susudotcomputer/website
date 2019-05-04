@@ -10,8 +10,7 @@ const Note = ({ children, direction = 'rightBelow' }) => {
       arrowDirection: 'scaleY(-1) scaleX(-1)',
       arrowCentering: styles('l-40px'),
       arrowPosition: styles('flex-column'),
-      textRotation: 'rotate(5deg)',
-      textDirection: styles('text-right')
+      textRotation: 'rotate(5deg)'
     },
     leftBelow: {
       arrowDirection: 'scaleY(-1) scaleX(1) rotate(40deg)',
@@ -24,13 +23,27 @@ const Note = ({ children, direction = 'rightBelow' }) => {
       arrowDirection: 'scaleX(-1)',
       arrowCentering: styles('l-40px'),
       arrowPosition: styles('flex-column-reverse'),
-      textRotation: 'rotate(-5deg)',
-      textDirection: styles('text-right')
+      textRotation: 'rotate(-5deg)'
     },
     leftAbove: {
       arrowCentering: styles('r-30px'),
       arrowPosition: styles('flex-column-reverse'),
       textRotation: 'rotate(-5deg)'
+    },
+    centerAbove: {
+      arrowCentering: styles('self-center t-10px'),
+      arrowPosition: styles('flex-column-reverse'),
+      textRotation: 'rotate(-5deg)'
+    },
+    leftUp: {
+      arrowDirection: 'scaleY(-1) scaleX(-1) rotate(65deg)',
+      arrowCentering: styles('l-40px'),
+      arrowPosition: styles('flex-row-reverse items-end')
+    },
+    leftUpUp: {
+      arrowDirection: 'scaleY(-1) scaleX(-1) rotate(110deg)',
+      arrowCentering: styles('t-80px'),
+      arrowPosition: styles('flex-row-reverse items-end')
     }
   };
 
@@ -45,7 +58,7 @@ const Note = ({ children, direction = 'rightBelow' }) => {
 
   return (
     <div className={styles('hide flex-md', parent)}>
-      <div className={styles('relative flex items-center', arrowPosition)}>
+      <div className={styles('relative flex', arrowPosition)}>
         <Paragraph
           kind="moon"
           className={styles(
@@ -59,7 +72,7 @@ const Note = ({ children, direction = 'rightBelow' }) => {
         <img
           src={arrow}
           alt="hand drawn arrow"
-          className={styles('w80px relative', arrowCentering)}
+          className={styles('w80px relative flex-none', arrowCentering)}
           style={{ transform: arrowDirection }}
         />
       </div>

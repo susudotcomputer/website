@@ -5,54 +5,64 @@ const TEXT_STYLES = {
   vulfpeck: {
     classes: styles('font-mono fz18px ls-1px smooth-antialiased'),
     bold: styles('weight-600'),
-    normal: styles('weight-400')
+    normal: styles('weight-400'),
+    italic: styles('text-italic')
   },
   chromesparks: {
     classes: styles('font-mono fz24px ls-2px smooth-antialiased'),
     bold: styles('weight-600'),
-    normal: styles('weight-400')
+    normal: styles('weight-400'),
+    italic: styles('text-italic')
   },
   bigfreedia: {
     classes: styles(
       'font-mono fz28px ls-1px fz38px-md ls-2px-md smooth-antialiased'
     ),
     bold: styles('weight-600'),
-    normal: styles('weight-400')
+    normal: styles('weight-400'),
+    italic: styles('text-italic')
   },
   jonhopkins: {
     classes: styles('font-mono fz30px fz60px-md ls-4px-md smooth-antialiased'),
     bold: styles('weight-600'),
-    normal: styles('weight-400')
+    normal: styles('weight-400'),
+    italic: styles('text-italic')
   },
   kishibashi: {
     classes: styles('font-mono fz130px ls-6px smooth-antialiased'),
     bold: styles('weight-600'),
-    normal: styles('weight-400')
+    normal: styles('weight-400'),
+    italic: styles('text-italic')
   },
   danny: {
     classes: styles('font-serif fz17px lh28px'),
     bold: styles('weight-600'),
-    normal: styles('weight-300')
+    normal: styles('weight-300'),
+    italic: styles('text-italic')
   },
   reuben: {
     classes: styles('font-serif fz16px'),
     bold: styles('weight-600'),
-    normal: styles('weight-300')
+    normal: styles('weight-300'),
+    italic: styles('text-italic')
   },
   linus: {
     classes: styles('font-serif fz12px'),
     bold: styles('weight-600'),
-    normal: styles('weight-300')
+    normal: styles('weight-300'),
+    italic: styles('text-italic')
   },
   rusty: {
     classes: styles('font-serif fz48px'),
     bold: styles('weight-600'),
-    normal: styles('weight-300')
+    normal: styles('weight-300'),
+    italic: styles('text-italic')
   },
   moon: {
     classes: styles('font-cursive fz30px lh30px ls-1px smooth-antialiased'),
     bold: styles('weight-600'),
-    normal: styles('weight-400')
+    normal: styles('weight-400'),
+    italic: styles('text-italic')
   }
 };
 
@@ -63,13 +73,15 @@ export const Text = ({
   style,
   className,
   bold = false,
+  italic = false,
   ...rest
 }) => {
   let kindClasses;
   if (kind) {
     kindClasses = styles(
       TEXT_STYLES[kind].classes,
-      bold ? TEXT_STYLES[kind].bold : TEXT_STYLES[kind].normal
+      bold ? TEXT_STYLES[kind].bold : TEXT_STYLES[kind].normal,
+      italic ? TEXT_STYLES[kind].italic : ''
     );
   }
 
@@ -83,6 +95,7 @@ export const Text = ({
 
 export const Paragraph = props => <Text tag="p" {...props} />;
 export const Strong = props => <Text tag="strong" bold {...props} />;
+export const Em = props => <Text tag="em" italic {...props} />;
 export const Div = props => <Text tag="div" {...props} />;
 export const Span = props => <Text tag="span" {...props} />;
 export const Li = props => <Text tag="li" {...props} />;
