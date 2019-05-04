@@ -45,7 +45,7 @@ const TacticItem = ({ stamped, title }) => {
 
 const Tactics = ({ allTactics }) => {
   return (
-    <div className="archive-card__tactics">
+    <div className="hide block-sm">
       <Heading
         level="3"
         kind="vulfpeck"

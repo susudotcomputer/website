@@ -21,7 +21,7 @@ const Badge = ({ className, children }) => {
 const Prizes = () => {
   return (
     <Grid lines={false}>
-      <div className="col-6 col-offset-2 py8 px5">
+      <div className="col-10 col-8-sm col-offset-1-sm col-6-md col-offset-2-md py8 px5">
         <Paragraph kind="danny">
           The prizes are all scavenged from Etsy n’ shit.{' '}
           <Strong kind="danny">First place</Strong> was a (potentially real)

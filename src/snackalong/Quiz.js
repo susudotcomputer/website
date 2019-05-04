@@ -64,14 +64,14 @@ const quiztions = [
 
 const Quiz = () => {
   return (
-    <ol className="quiz-list p1 p5-md">
+    <ol className="quiz-list pt5 pb2">
       {quiztions.map((item, idx) => {
         const itemIndex = idx + 1;
         const qNumber =
           itemIndex.toString().length === 1 ? `0${itemIndex}` : itemIndex;
         const [answerHidden, setAnswerVisibility] = useState(true);
         const wrapperClasses = styles(
-          'min-h120px w100p',
+          'min-h120px-sm w100p px3 px5-md',
           answerHidden ? 'hov-target' : undefined
         );
 

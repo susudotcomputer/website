@@ -10,7 +10,7 @@ const WhatIs = () => {
       <div className="col-10 col-2-sm">
         <Note direction="leftBelow">Okey, here we go.</Note>
       </div>
-      <Filled className="col-10 col-6-sm col-offset-2-sm mb20">
+      <Filled className="col-10 col-8-sm col-offset-1-sm col-6-md col-offset-2-md mb6 mb20-md">
         <Heading kind="bigfreedia" className="mb4">
           What is a Snackalong?
         </Heading>

@@ -28,14 +28,14 @@ const SnackalongProjector = () => {
       <div className="aspect-ratio__object">
         <div className="flex items-center h100p">
           <div>
-            <div className="flex w60p mb-6 z1 relative mx-auto l-8">
+            <div className="flex w60p mb-6 z1 relative mx-auto l-8 clip">
               <img
-                className="snack-rotate-360 w170px h170px"
+                className="snack-rotate-360 w100p h100p"
                 src={orange}
                 alt="Roatating Orange to look like film atop a projector"
               />
               <img
-                className="snack-rotate-360 w170px h170px"
+                className="snack-rotate-360 w100p h100p"
                 src={orange}
                 alt="Roatating Orange to look like film atop a projector"
               />
@@ -116,9 +116,9 @@ const VideoGraphics = () => {
   });
 
   return (
-    <Speckled grid className="py20 relative">
+    <Speckled grid className="py10 py20-md relative">
       <Perforation direction="up" />
-      <div className="col-10 col-5-sm pr5-sm">
+      <div className="col-10 col-5-sm pr5-sm mb10 mb0-sm">
         <Heading kind="bigfreedia" className="col-6 col-offset-2 mb2">
           Tada!
         </Heading>

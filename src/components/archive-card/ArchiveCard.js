@@ -27,12 +27,16 @@ const InfoItem = ({ label, text, className }) => {
 const ArchiveCard = ({ project, location, medium, date, budget, tactics }) => {
   return (
     <div
-      className="archive-card bg-archive-beige p5 col-10 col-8-sm col-6-md col-offset-2-md col-offset-1-sm self-center z1 mx-4-md relative"
+      className="archive-card bg-archive-beige p5 relative"
       style={{ backgroundImage: `url(${speckles})`, backgroundSize: '600px' }}
     >
       <Perforation direction="up" />
       <div className="archive-card__logo flex">
-        <img src={logoSrc} className="o10p h100p m-auto" alt="SuSu Logo" />
+        <img
+          src={logoSrc}
+          className="w100px w-auto-md o10p h100p m-auto"
+          alt="SuSu Logo"
+        />
       </div>
       <div className="archive-card__primary-info mb1">
         <InfoItem label="Project" text={project} />

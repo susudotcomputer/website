@@ -38,7 +38,7 @@ const SnackalongLogo = () => (
 const Branding = ({ className }) => {
   return (
     <Grid className={className}>
-      <div className="col-10 col-6-sm relative">
+      <div className="col-10 col-6-md relative">
         <Carousel
           aspectRatio={styles('aspect-ratio--4x3')}
           showArrows={false}
@@ -63,7 +63,7 @@ const Branding = ({ className }) => {
           <SpinningSnack image={sushiImg} />
         </Carousel>
       </div>
-      <Filled className="col-10 col-4-sm">
+      <Filled className="col-10 col-4-md">
         <Heading kind="bigfreedia" className="mb4">
           Event branding
         </Heading>

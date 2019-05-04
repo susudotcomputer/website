@@ -37,8 +37,8 @@ $large-bp: 1040px;
 .archive-card {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 10rem;
   grid-column-gap: 5%;
+  grid-row-gap: 2rem;
   box-shadow: 0 60px 70px -70px rgba(0, 0, 0, 0.4);
 
   @media screen and (min-width: 800px) {
@@ -101,7 +101,11 @@ $large-bp: 1040px;
 .quiz-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
-  grid-gap: 2em;
+  grid-gap: 1em;
+
+  @media screen and (min-width: $medium-bp) {
+    grid-gap: 2em;
+  }
 }
 
 .trivia-list {

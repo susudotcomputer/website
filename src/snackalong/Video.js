@@ -10,7 +10,7 @@ import Speckled from '../components/Speckled';
 const Video = () => {
   return (
     <Grid className="pb20">
-      <Speckled className="col-10 p8">
+      <Speckled className="col-10 p1 p6-md">
         <div className="aspect-ratio aspect-ratio--16x9">
           <div className="aspect-ratio__object bg-black_20 inline-flex z101">
             <PlayButton />
@@ -21,7 +21,7 @@ const Video = () => {
           />
         </div>
       </Speckled>
-      <Filled className="col-8">
+      <Filled className="col-10 col-8-md">
         <Paragraph kind="danny" className="pt4">
           This video was made by our (very handsome) buddy{' '}
           <Link kind="danny" bold href="https://elihorne.com">

@@ -80,10 +80,14 @@ const triviaItems = [
 
 const Trivia = () => {
   return (
-    <ul className="trivia-list p1 p5-sm">
+    <ul className="trivia-list py5">
       {triviaItems.map((item, i) => {
         return (
-          <Li className="lh24px" kind="reuben" key={`trivia-item-${i}`}>
+          <Li
+            className="lh24px px3 px5-md"
+            kind="reuben"
+            key={`trivia-item-${i}`}
+          >
             <Span className="" kind="vulfpeck">
               Did you know…
             </Span>{' '}

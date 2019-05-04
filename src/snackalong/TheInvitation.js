@@ -45,7 +45,7 @@ const TheInvitation = () => {
     cardsVisible ? '' : 'translate-x110p'
   );
   return (
-    <Grid className="py20">
+    <Grid className="py10 py20-md">
       <Filled className="col-10 col-6-md col-offset-2-md mb10">
         <Heading kind="bigfreedia" className="mb2">
           The Invitation
@@ -57,14 +57,14 @@ const TheInvitation = () => {
         </Paragraph>
       </Filled>
       <VisibilitySensor onChange={visibilityChange}>
-        <div className="col-4 px6 flex flex-column justify-center relative z1">
+        <div className="hide col-4 px6 flex-md flex-column justify-center relative z1">
           <img src={cardFront} className={styles(baseCardStyles, 'mb4')} />
           <div className={styles(baseCardStyles, 'transition-delay100')}>
             <img src={cardBack} className="rotate-3" />
           </div>
         </div>
       </VisibilitySensor>
-      <div className="col-6 mb4 relative z10">
+      <div className="col-10 col-6-sm col-offset-2-md mb4 relative z10">
         <WebBrowser className="w100p">
           <AutoplayVideo className="max-w100p" src={deetsVideo} />
         </WebBrowser>

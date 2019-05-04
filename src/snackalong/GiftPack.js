@@ -37,7 +37,7 @@ const GiftPack = () => {
         </div>
       </div>
       <div className="col-10 col-5-sm flex">
-        <div className="rotate-10-sm w200p relative t15vh l10">
+        <div className="rotate-10-sm w200p relative t15vh-sm l10-sm">
           <img className="scale150p-sm" src={menu2} />
         </div>
       </div>
