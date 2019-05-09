@@ -38,8 +38,6 @@ $large-bp: 1040px;
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 5%;
-  grid-row-gap: 2rem;
-  box-shadow: 0 60px 70px -70px rgba(0, 0, 0, 0.4);
 
   @media screen and (min-width: 800px) {
     grid-template-columns: minmax(4rem, 7rem) 1fr;
@@ -94,9 +92,9 @@ $large-bp: 1040px;
   grid-column: 1 / -1;
 }
 
-.archive-card__tactics-list {
-  columns: 9em;
-}
+// .archive-card__tactics-list {
+//   columns: 9em;
+// }
 
 .quiz-list {
   display: grid;

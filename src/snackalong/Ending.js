@@ -10,6 +10,7 @@ import instagram from './assets/instagram.svg';
 import SVG from 'react-inlinesvg';
 import Note from './Note';
 import Filled from '../components/Filled';
+import Speckled from '../components/Speckled';
 
 const Ending = () => {
   return (
@@ -46,6 +47,7 @@ const Ending = () => {
         </Filled>
         <div className="col-10 col-6-sm col-offset-2-sm col-6-lg col-offset-2-lg flex flex-column flex-row-md justify-around items-start-md mb3">
           <Button
+            href="https://instagram.com/susudotcomputer"
             className="relative flex items-center pl4 pr5 mb5 mb0-lg"
             size="medium"
           >
@@ -55,7 +57,11 @@ const Ending = () => {
             />
             Follow on Instagram
           </Button>
-          <Button className="relative flex items-center pl4 pr5" size="medium">
+          <Button
+            href="mailto:email@susu.computer"
+            className="relative flex items-center pl4 pr5"
+            size="medium"
+          >
             <SVG
               className="fill-archive-brown-900 hov-item-fill-archive-beige w30px h30px mr2 inline-block"
               src={email}
@@ -77,13 +83,15 @@ const Ending = () => {
         <div>
           <Grid>
             <div className="col-10 col-6-sm col-offset-2-sm col-4-md col-offset-3-md h80px mb10 children-bg-archive-brown-900">
-              <iframe
-                src="https://open.spotify.com/embed/track/3Vo5NwAezmRMP2aH2xQVm1"
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                allow="encrypted-media"
-              />
+              <Speckled className="p2 h98px">
+                <iframe
+                  src="https://open.spotify.com/embed/track/3Vo5NwAezmRMP2aH2xQVm1"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  allow="encrypted-media"
+                />
+              </Speckled>
             </div>
           </Grid>
           <Grid className="mb-15vw">

@@ -13,7 +13,7 @@ const Tab = ({ children }) => {
 const MiscTabs = () => {
   return (
     <>
-      <Filled className="col-10 col-6-sm col-offset-2-sm mb10">
+      <Filled className="col-10 col-8-sm col-offset-1-sm col-6-md col-offset-2-md mb10">
         <Heading kind="bigfreedia" className="mb2">
           Pre-show & post-show materials
         </Heading>

@@ -17,7 +17,7 @@ const WebBrowser = ({ className, children }) => {
   );
   return (
     <div className={wrapperStyles}>
-      <div className="flex h60px px3 items-center justify-between">
+      <div className="flex h48px h60px-md px1 px3-md items-center justify-between">
         <div className="hide flex-md justify-between basis80px mr10p">
           <div className="w18px h18px border border-archive-brown-400 border-medium circle" />
           <div className="w18px h18px border border-archive-brown-400 border-medium circle" />
@@ -29,7 +29,7 @@ const WebBrowser = ({ className, children }) => {
         </div>
         <div className="none block-md basis80px-md ml10p-md" />
       </div>
-      <div className="mx3 mb3 lh0">{children}</div>
+      <div className="mx1 mx3-md mb1 mb3-md lh0">{children}</div>
     </div>
   );
 };
@@ -46,7 +46,7 @@ const TheInvitation = () => {
   );
   return (
     <Grid className="py10 py20-md">
-      <Filled className="col-10 col-6-md col-offset-2-md mb10">
+      <Filled className="col-10 col-8-sm col-offset-1-sm col-6-md col-offset-2-md mb10">
         <Heading kind="bigfreedia" className="mb2">
           The Invitation
         </Heading>
@@ -64,7 +64,7 @@ const TheInvitation = () => {
           </div>
         </div>
       </VisibilitySensor>
-      <div className="col-10 col-6-sm col-offset-2-md mb4 relative z10">
+      <div className="col-10 col-8-sm col-offset-1-sm col-6-md col-offset-4-md mb4 relative z10">
         <WebBrowser className="w100p">
           <AutoplayVideo className="max-w100p" src={deetsVideo} />
         </WebBrowser>

@@ -8,7 +8,6 @@ import { titleToId } from '../utils/links';
 import Perforation from '../components/Perforation';
 
 const blankItem = {
-  title: '',
   svg: '',
   photo: ''
 };
@@ -39,10 +38,17 @@ const SnacksGrid = () => {
       <div className="col-10 relative">
         <ul className="w100p mx-auto snackalong__snacks">
           {snacksArr.map(({ svg, image, position, title }, i) => {
+            const wrapperClassnames = styles(
+              'aspect-ratio aspect-ratio--1x1 hov-target',
+              i > 14 && i < 17
+                ? 'border-bottom-width-none border-bottom-md'
+                : '',
+              i >= 18 ? 'hide block-md' : ''
+            );
             return (
-              <li key={i} className="aspect-ratio aspect-ratio--1x1 hov-target">
+              <li key={i} className={wrapperClassnames}>
                 <a
-                  href={`#${titleToId(title)}`}
+                  href={title ? `#${titleToId(title)}` : null}
                   className="aspect-ratio__object flex items-center justify-center"
                 >
                   {svg && (

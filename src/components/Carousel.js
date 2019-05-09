@@ -21,13 +21,13 @@ const baseTheme = {
   },
   arrowLeft: () => (
     <SVG
-      className="w7 mr4 block fill-archive-beige hover-fill-archive-brown-400"
+      className="w5 w7-sm mr4 block fill-archive-beige hover-fill-archive-brown-400"
       src={leftArrow}
     />
   ),
   arrowRight: () => (
     <SVG
-      className="w7 ml4 block fill-archive-beige hover-fill-archive-brown-400"
+      className="w5 w7-sm ml4 block fill-archive-beige hover-fill-archive-brown-400"
       src={rightArrow}
     />
   ),

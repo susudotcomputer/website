@@ -30,12 +30,12 @@ const SnackalongProjector = () => {
           <div>
             <div className="flex w60p mb-6 z1 relative mx-auto l-8 clip">
               <img
-                className="snack-rotate-360 w100p h100p"
+                className="snack-rotate-360 w50p h50p"
                 src={orange}
                 alt="Roatating Orange to look like film atop a projector"
               />
               <img
-                className="snack-rotate-360 w100p h100p"
+                className="snack-rotate-360 w50p h50p"
                 src={orange}
                 alt="Roatating Orange to look like film atop a projector"
               />
@@ -149,6 +149,7 @@ const VideoGraphics = () => {
 
           <video
             className="aspect-ratio__object"
+            playsInline
             ref={videoEl}
             src={tadaLoop}
           />

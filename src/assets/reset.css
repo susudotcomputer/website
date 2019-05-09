@@ -40,6 +40,15 @@ button {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
 .font-sans {
   font-family: sans-serif;
 }

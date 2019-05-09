@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from '@reach/router';
 
 const SiteLogo = ({ className }) => {
   return (
-    <div className={className}>
+    <Link to="/archive" className={className}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 200 310"
@@ -25,7 +26,7 @@ const SiteLogo = ({ className }) => {
 
         <path d="M102.08,181.29V162.67l-71.6,19.18v5.82l66-17.68v18.62L169.52,169v-5.82ZM145,169.8l-22.44,6" />
       </svg>
-    </div>
+    </Link>
   );
 };
 

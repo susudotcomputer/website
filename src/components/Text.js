@@ -9,7 +9,7 @@ const TEXT_STYLES = {
     italic: styles('text-italic')
   },
   chromesparks: {
-    classes: styles('font-mono fz24px ls-2px smooth-antialiased'),
+    classes: styles('font-mono fz22px ls-2px smooth-antialiased'),
     bold: styles('weight-600'),
     normal: styles('weight-400'),
     italic: styles('text-italic')
@@ -99,7 +99,10 @@ export const Em = props => <Text tag="em" italic {...props} />;
 export const Div = props => <Text tag="div" {...props} />;
 export const Span = props => <Text tag="span" {...props} />;
 export const Li = props => <Text tag="li" {...props} />;
-export const Button = props => <Text tag="button" {...props} />;
+export const Button = props => {
+  const linkOrButton = props.href ? 'a' : 'button';
+  return <Text tag={linkOrButton} {...props} />;
+};
 export const Heading = props => {
   const level = props.level ? props.level : '2';
   return <Text tag={`h${level}`} {...props} />;

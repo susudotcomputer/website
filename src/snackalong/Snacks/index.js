@@ -19,7 +19,7 @@ const Snacks = () => {
               <React.Fragment key={`snack-${i}`}>
                 <Snack {...snack} />
                 {snack.note && (
-                  <div className={styles('mt10', noteClasses)}>
+                  <div className={styles('mt10-md', noteClasses)}>
                     <Note direction={'leftUpUp'}>{snack.note}</Note>
                   </div>
                 )}

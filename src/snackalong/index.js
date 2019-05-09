@@ -27,7 +27,7 @@ const Snackalong = () => {
           className={styles(
             'col-10 pt20vw z1 relative mb10 self-center',
             'col-8-sm col-offset-1-sm',
-            'col-6-md col-offset-2-md mb0-md mx-4-md pt0-md'
+            'col-6-md col-offset-2-md mb0-md mx8-md pt0-md'
           )}
         >
           <ArchiveCard
@@ -36,26 +36,17 @@ const Snackalong = () => {
             medium="Event"
             date="2018&#8209;06&#8209;30"
             budget="n/a"
-            tactics={{
-              visualDesign: true,
-              webDevelopment: false,
-              cooking: true,
-              branding: true,
-              photography: false,
-              emceeing: true,
-              copyWriting: true,
-              video: true,
-              illustration: true,
-              carpentry: false,
-              print: true,
-              choreography: false,
-              composition: true,
-              motionGraphics: true,
-              ceramics: false,
-              keynote: true,
-              sleuthing: true,
-              propBuilding: true
-            }}
+            tactics={[
+              'Design',
+              'Branding',
+              'Illustration',
+              'Video',
+              'Copy writing',
+              'Composition',
+              'Emceeing',
+              'Cooking',
+              'Sleuthing'
+            ]}
           />
         </div>
       </Grid>

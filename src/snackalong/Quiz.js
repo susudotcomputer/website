@@ -80,7 +80,7 @@ const Quiz = () => {
             <div className="relative h100p">
               {answerHidden ? (
                 <button
-                  className="pointer"
+                  className="pointer w100p"
                   onClick={() => setAnswerVisibility(!answerHidden)}
                 >
                   <div className="flex justify-between items-baseline mb1">
@@ -91,7 +91,7 @@ const Quiz = () => {
                       Question {qNumber}
                     </Span>
                     <Span
-                      className="inline-block o0p hov-item-o100p archive-brown-400 bg-archive-beige rounded-medium p1 px2"
+                      className="inline-block o30p o0p-sm hov-item-o100p archive-brown-400 bg-archive-beige rounded-medium p1 px2"
                       kind="vulfpeck"
                     >
                       Show answer
