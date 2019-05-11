@@ -46,6 +46,7 @@ const Branding = ({ className }) => {
           autoAdvanceInterval={5000}
           childClassNames={styles('w100p h100p snack-rotate-360')}
           overlayComponent={SnackalongLogo}
+          wrapperClassNames={styles('max-w500px max-w-none-md mx-auto')}
         >
           <SpinningSnack image={donutImg} />
           <SpinningSnack image={paellaImg} />

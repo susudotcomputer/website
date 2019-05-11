@@ -6,7 +6,7 @@ import rightArrow from './assets/right-arrow.svg';
 import SVG from 'react-inlinesvg';
 
 const baseTheme = {
-  dotWrapperStyles: styles('column-gap15px column-gap40px-md w60p mx-auto mt6'),
+  dotWrapperStyles: styles('column-gap15px column-gap40px-sm w60p mx-auto mt6'),
   dotStyles: {
     base: styles(
       'pointer p0 h9px min-w6 flex1 border border1px border-archive-brown-400'
