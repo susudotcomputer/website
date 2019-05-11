@@ -21,7 +21,10 @@ const Snackalong = () => {
   return (
     <div className="archive-brown-900">
       <Grid className="h85vh-md relative">
-        <SiteLogo className="col-1 relative z1" />
+        <div className="col-1 relative z1 flex">
+          <SiteLogo className="min-w60px max-w100px mx-auto" />
+        </div>
+
         <div className="w101p absolute t0 h50vh fade-white-transparent" />
         <div
           className={styles(

@@ -22,13 +22,24 @@ const Video = () => {
         </div>
       </Speckled>
       <Filled className="col-10 col-8-md">
-        <Paragraph kind="danny" className="pt4">
-          This video was made by our (very handsome) buddy{' '}
-          <Link kind="danny" bold href="https://elihorne.com">
-            Eli Horne
-          </Link>
-          , with tender editing and lots of love.
-        </Paragraph>
+        <div className="hide block-md">
+          <Paragraph kind="danny" className="pt4">
+            This video was made by our (very handsome) buddy{' '}
+            <Link kind="danny" bold href="https://elihorne.com">
+              Eli Horne
+            </Link>
+            , with tender editing and lots of love.
+          </Paragraph>
+        </div>
+        <div className="hide-md text-center ">
+          <Paragraph italic kind="reuben" className="pt4 px4">
+            This video was made by our (very handsome) buddy{' '}
+            <Link kind="reuben" bold href="https://elihorne.com">
+              Eli Horne
+            </Link>
+            , with tender editing and lots of love.
+          </Paragraph>
+        </div>
       </Filled>
     </Grid>
   );

@@ -63,7 +63,7 @@ const Branding = ({ className }) => {
           <SpinningSnack image={sushiImg} />
         </Carousel>
       </div>
-      <Filled className="col-10 col-4-md">
+      <Filled className="col-10 col-4-md order-1 order-0-md">
         <Heading kind="bigfreedia" className="mb4">
           Event branding
         </Heading>

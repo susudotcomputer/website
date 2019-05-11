@@ -5,7 +5,7 @@ import AutoplayVideo from '../../components/AutoplayVideo';
 import { titleToId } from '../../utils/links';
 import styles from '../../utils/css';
 
-const borderWidth = 'border1px border-medium-sm';
+const borderWidth = styles('border1px border-medium-md');
 
 const Vessel = ({ vesselList }) => {
   const vesselClassNames = styles(
@@ -85,7 +85,7 @@ const NeonSnack = ({ image }) => {
   );
 };
 
-const Clip = ({ clip, clipPosition }) => {
+const Clip = ({ clip, clipPosition, poster }) => {
   const clipClassNames = styles(
     'snack__clip pb2 pt2 pl2 border-bottom-lg border-archive-brown-400 clip',
     borderWidth
@@ -93,6 +93,14 @@ const Clip = ({ clip, clipPosition }) => {
   return (
     <div className={clipClassNames}>
       <div className="aspect-ratio aspect-ratio--4x3 aspect-ratio--16x9-lg clip">
+        <div
+          className="aspect-ratio__object"
+          style={{
+            backgroundImage: `url(${poster}`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        />
         <AutoplayVideo
           src={clip}
           className="w100p h100p aspect-ratio__object"
@@ -146,7 +154,8 @@ const Snack = ({
   neonImage,
   kind,
   kindList,
-  vesselList
+  vesselList,
+  poster
 }) => {
   const snackClassNames = styles(
     'snack relative border-y border-archive-brown-400',
@@ -163,7 +172,7 @@ const Snack = ({
         <TimeStamp time={timeStamp} />
         <Food kind={kind} kindList={kindList} />
         <Vessel vesselList={vesselList} />
-        <Clip clip={clip} clipPosition={clipPosition} />
+        <Clip clip={clip} clipPosition={clipPosition} poster={poster} />
         <NeonSnack image={neonImage} />
       </div>
     </div>

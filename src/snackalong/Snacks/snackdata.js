@@ -54,8 +54,28 @@ import burgerNeon from './assets/19-burger-min.png';
 import burgerSVG from './assets/svg/19-burger.svg';
 import styles from '../../utils/css';
 
+import nachosPoster from './assets/video-posters/01-nachos.jpg';
+import browndrinkPoster from './assets/video-posters/02-browndrink.jpg';
+import teaPoster from './assets/video-posters/04-tea.jpg';
+import nicoisesaladPoster from './assets/video-posters/05-nicoisesalad.jpg';
+import espressoPoster from './assets/video-posters/06-espresso.jpg';
+import cigarettePoster from './assets/video-posters/07-cigarette.jpg';
+import bigsodaPoster from './assets/video-posters/08-biggulp.jpg';
+import cottoncandyPoster from './assets/video-posters/09-cottoncandy.jpg';
+import sorbetPoster from './assets/video-posters/10-sorbet.jpg';
+import martiniPoster from './assets/video-posters/11-martini.jpg';
+import saladPoster from './assets/video-posters/12-salad.jpg';
+import lollipopPoster from './assets/video-posters/13-lollipop.jpg';
+import gingeralePoster from './assets/video-posters/14-gingerale.jpg';
+import shrimpPoster from './assets/video-posters/15-shrimp.jpg';
+import redbullPoster from './assets/video-posters/16-redbull.jpg';
+import icecreamPoster from './assets/video-posters/17-icecream.jpg';
+import jellybeansPoster from './assets/video-posters/18-jellybeans.jpg';
+import burgerPoster from './assets/video-posters/19-burger.jpg';
+
 const bigSoda = {
   title: 'Big soda',
+  poster: bigsodaPoster,
   index: '08',
   timeStamp: '0:22:59',
   kind: 'Drink',
@@ -66,12 +86,14 @@ const bigSoda = {
   image: bigSodaPhoto,
   neonImage: bigSodaNeon,
   note: 'We made custom stickers to match the circus show!',
+  noteClasses: styles('col-3 col-offset-5'),
   svg: bigSodaSVG,
   position: '54% 15%'
 };
 
 const brownDrink = {
   title: 'Brown drink',
+  poster: browndrinkPoster,
   index: '02/03',
   timeStamp: '0:06:20, 0:08:01',
   kind: 'Drink',
@@ -82,13 +104,14 @@ const brownDrink = {
   image: brownDrinkPhoto,
   neonImage: brownDrinkNeon,
   note: 'This is the only item that is consumed twice!',
-  noteClasses: styles('col-3 col-offset-2'),
+  noteClasses: styles('col-3 col-offset-1'),
   svg: brownDrinkSVG,
   position: '50% 63%'
 };
 
 const burger = {
   title: 'Cheeseburger',
+  poster: burgerPoster,
   index: '19',
   timeStamp: '1:49:20',
   kind: 'Food',
@@ -104,6 +127,7 @@ const burger = {
 
 const cigarette = {
   title: 'Cigarette',
+  poster: cigarettePoster,
   index: '07',
   timeStamp: '0:21:24',
   kind: 'Food',
@@ -119,6 +143,7 @@ const cigarette = {
 
 const cottonCandy = {
   title: 'Cotton candy',
+  poster: cottoncandyPoster,
   index: '09',
   timeStamp: '0:23:10',
   kind: 'Food',
@@ -130,12 +155,14 @@ const cottonCandy = {
   neonImage: cottonCandyNeon,
   note:
     'Please note, cotton candy does not keep well and will photograph terribly.',
+  noteClasses: styles('col-3 col-offset-3'),
   svg: cottonCandySVG,
   position: '50% 50%'
 };
 
 const espresso = {
   title: 'Espresso + treat',
+  poster: espressoPoster,
   index: '06',
   timeStamp: '0:20:19',
   kind: 'Food + Drink',
@@ -146,13 +173,14 @@ const espresso = {
   image: espressoPhoto,
   neonImage: espressoNeon,
   note: 'Totally guessed on the baked good.',
-  noteClasses: 'col-3 col-offset-1',
+  noteClasses: styles('col-3 col-offset-2'),
   svg: espressoSVG,
   position: '82% 46%'
 };
 
 const gingerale = {
   title: 'Ginger ale',
+  poster: gingeralePoster,
   index: '14',
   timeStamp: '0:42:34',
   kind: 'Drink',
@@ -168,6 +196,7 @@ const gingerale = {
 
 const icecream = {
   title: 'Ice cream',
+  poster: icecreamPoster,
   index: '17',
   timeStamp: '1:01:44',
   kind: 'Food',
@@ -183,6 +212,7 @@ const icecream = {
 
 const jellybeans = {
   title: 'Jelly beans',
+  poster: jellybeansPoster,
   index: '18',
   timeStamp: '1:04:04',
   kind: 'Food',
@@ -198,6 +228,7 @@ const jellybeans = {
 
 const lollipop = {
   title: 'Lollipop',
+  poster: lollipopPoster,
   index: '13',
   timeStamp: '0:35:27',
   kind: 'Food',
@@ -213,6 +244,7 @@ const lollipop = {
 
 const martini = {
   title: 'Martini',
+  poster: martiniPoster,
   index: '11',
   timeStamp: '0:25:57',
   kind: 'Drink',
@@ -228,6 +260,7 @@ const martini = {
 
 const mysterySalad = {
   title: 'Mystery salad',
+  poster: saladPoster,
   index: '12',
   timeStamp: '0:34:53',
   kind: 'Food',
@@ -239,12 +272,14 @@ const mysterySalad = {
   neonImage: mysterySaladNeon,
   note:
     'We went frame-by-frame to try and get a clue to what kind of salad it was. No friggin’ clue. So we picked caesar salad. Yum!',
+  noteClasses: styles('col-3 col-offset-3'),
   svg: mysterySaladSVG,
   position: '50% 50%'
 };
 
 const nachos = {
   title: 'Nachos',
+  poster: nachosPoster,
   index: '01',
   timeStamp: '0:05:12',
   kind: 'Food',
@@ -256,12 +291,14 @@ const nachos = {
   neonImage: nachosNeon,
   note:
     'We couldn’t find red trays anywhere. Bonkers! So we covered each white tray with red contact paper to match.',
+  noteClasses: styles('col-3 col-offset-5'),
   svg: nachosSVG,
   position: '50% 62%'
 };
 
 const nicoiseSalad = {
   title: 'Niçoise salad',
+  poster: nicoisesaladPoster,
   index: '05',
   timeStamp: '0:14:39',
   kind: 'Food + Drink',
@@ -286,6 +323,7 @@ const nicoiseSalad = {
 
 const redBull = {
   title: 'Red Bull',
+  poster: redbullPoster,
   index: '16',
   timeStamp: '0:56:27',
   kind: 'Drink',
@@ -297,12 +335,14 @@ const redBull = {
   neonImage: redBullNeon,
   note:
     'Honestly we actually missed this one. But like, no one really needs a Redbull.',
+  noteClasses: styles('col-3 col-offset-3'),
   svg: redBullSVG,
   position: '45% 83%'
 };
 
 const shrimp = {
   title: 'Shrimp cocktail',
+  poster: shrimpPoster,
   index: '15',
   timeStamp: '0:43:42',
   kind: 'Food',
@@ -318,6 +358,7 @@ const shrimp = {
 
 const sorbet = {
   title: 'Sorbet',
+  poster: sorbetPoster,
   index: '10',
   timeStamp: '0:24:36',
   kind: 'Food',
@@ -333,6 +374,7 @@ const sorbet = {
 
 const tea = {
   title: 'Tea',
+  poster: teaPoster,
   index: '04',
   timeStamp: '0:11:56',
   kind: 'Drink',
@@ -344,6 +386,7 @@ const tea = {
   neonImage: teaNeon,
   note:
     'We googled the fuck out of the internet to find the exact right china cup. Turns out the print is Syracuse China Strawberry Hill.',
+  noteClasses: styles('col-3 col-offset-5'),
   svg: teaSVG,
   position: '62% 73%'
 };

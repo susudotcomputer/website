@@ -24,9 +24,15 @@ const GiftPack = () => {
         </Paragraph>
       </Filled>
       <div className="col-10 col-5-sm relative">
-        <img className="l-100px relative w90p" src={poster} />
-        <img className="absolute b20 r0 w300px" src={sticker} />
-        <img className="absolute b0 l30p w100px" src={ring} />
+        <img
+          className="l-20px l-50px-sm l-70px-md l-100px-lg relative w80p w90p-lg"
+          src={poster}
+        />
+        <img
+          className="absolute b60px b120px-lg r0px r0-lg w50p"
+          src={sticker}
+        />
+        <img className="absolute b10px l30p w15p w20p-sm w20p-md" src={ring} />
       </div>
       <div className="col-10 col-5-sm flex">
         <div>
@@ -37,7 +43,7 @@ const GiftPack = () => {
         </div>
       </div>
       <div className="col-10 col-5-sm flex">
-        <div className="rotate-10-sm w200p relative t15vh-sm l10-sm">
+        <div className="rotate-10-sm w200p relative t7vh-sm t15vh-md l10-sm">
           <img className="scale150p-sm" src={menu2} />
         </div>
       </div>

@@ -18,7 +18,7 @@ const SnacksGrid = () => {
   return (
     <Speckled grid className="pt20 pb20vw relative">
       <Perforation direction="up" />
-      <div className="col-10 col-8-sm col-offset-1-sm col-6-md col-offset-2-md mb10">
+      <div className="col-10 col-8-sm col-offset-1-sm col-6-md col-offset-2-md mb10 px1 px5-sm">
         <Heading kind="bigfreedia" className="col-6 col-offset-2 mb4">
           All 👏 Of 👏 The 👏 Foods 👏
         </Heading>

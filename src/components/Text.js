@@ -6,13 +6,13 @@ const TEXT_STYLES = {
     classes: styles('font-mono fz18px ls-1px smooth-antialiased'),
     bold: styles('weight-600'),
     normal: styles('weight-400'),
-    italic: styles('text-italic')
+    italic: styles('font-italic')
   },
   chromesparks: {
     classes: styles('font-mono fz22px ls-2px smooth-antialiased'),
     bold: styles('weight-600'),
     normal: styles('weight-400'),
-    italic: styles('text-italic')
+    italic: styles('font-italic')
   },
   bigfreedia: {
     classes: styles(
@@ -20,49 +20,49 @@ const TEXT_STYLES = {
     ),
     bold: styles('weight-600'),
     normal: styles('weight-400'),
-    italic: styles('text-italic')
+    italic: styles('font-italic')
   },
   jonhopkins: {
     classes: styles('font-mono fz30px fz60px-md ls-4px-md smooth-antialiased'),
     bold: styles('weight-600'),
     normal: styles('weight-400'),
-    italic: styles('text-italic')
+    italic: styles('font-italic')
   },
   kishibashi: {
     classes: styles('font-mono fz130px ls-6px smooth-antialiased'),
     bold: styles('weight-600'),
     normal: styles('weight-400'),
-    italic: styles('text-italic')
+    italic: styles('font-italic')
   },
   danny: {
     classes: styles('font-serif fz17px lh28px'),
     bold: styles('weight-600'),
     normal: styles('weight-300'),
-    italic: styles('text-italic')
+    italic: styles('font-italic')
   },
   reuben: {
     classes: styles('font-serif fz16px'),
     bold: styles('weight-600'),
     normal: styles('weight-300'),
-    italic: styles('text-italic')
+    italic: styles('font-italic')
   },
   linus: {
     classes: styles('font-serif fz12px'),
     bold: styles('weight-600'),
     normal: styles('weight-300'),
-    italic: styles('text-italic')
+    italic: styles('font-italic')
   },
   rusty: {
     classes: styles('font-serif fz48px'),
     bold: styles('weight-600'),
     normal: styles('weight-300'),
-    italic: styles('text-italic')
+    italic: styles('font-italic')
   },
   moon: {
     classes: styles('font-cursive fz30px lh30px ls-1px smooth-antialiased'),
     bold: styles('weight-600'),
     normal: styles('weight-400'),
-    italic: styles('text-italic')
+    italic: styles('font-italic')
   }
 };
 

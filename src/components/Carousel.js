@@ -6,7 +6,7 @@ import rightArrow from './assets/right-arrow.svg';
 import SVG from 'react-inlinesvg';
 
 const baseTheme = {
-  dotWrapperStyles: styles('column-gap40px w60p mx-auto mt6'),
+  dotWrapperStyles: styles('column-gap15px column-gap40px-md w60p mx-auto mt6'),
   dotStyles: {
     base: styles(
       'pointer p0 h9px min-w6 flex1 border border1px border-archive-brown-400'
@@ -21,13 +21,13 @@ const baseTheme = {
   },
   arrowLeft: () => (
     <SVG
-      className="w5 w7-sm mr4 block fill-archive-beige hover-fill-archive-brown-400"
+      className="w3 w7-sm mr4 block fill-archive-beige hover-fill-archive-brown-400"
       src={leftArrow}
     />
   ),
   arrowRight: () => (
     <SVG
-      className="w5 w7-sm ml4 block fill-archive-beige hover-fill-archive-brown-400"
+      className="w3 w7-sm ml4 block fill-archive-beige hover-fill-archive-brown-400"
       src={rightArrow}
     />
   ),

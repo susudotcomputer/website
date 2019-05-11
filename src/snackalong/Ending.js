@@ -48,7 +48,7 @@ const Ending = () => {
         <div className="col-10 col-6-sm col-offset-2-sm col-6-lg col-offset-2-lg flex flex-column flex-row-md justify-around items-start-md mb3">
           <Button
             href="https://instagram.com/susudotcomputer"
-            className="relative flex items-center pl4 pr5 mb5 mb0-lg"
+            className="relative flex items-center pl4 pr5 mb5 mb0-lg justify-center"
             size="medium"
           >
             <SVG
@@ -59,7 +59,7 @@ const Ending = () => {
           </Button>
           <Button
             href="mailto:email@susu.computer"
-            className="relative flex items-center pl4 pr5"
+            className="relative flex items-center pl4 pr5 justify-center"
             size="medium"
           >
             <SVG
@@ -96,7 +96,7 @@ const Ending = () => {
           </Grid>
           <Grid className="mb-15vw">
             <div className="col-3-md col-offset-4-md">
-              <Note direction="rightAbove">
+              <Note direction="centerAboveFlip">
                 The movie ends with this song, and so does this web page. Bye!
               </Note>
             </div>

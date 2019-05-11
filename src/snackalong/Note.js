@@ -35,6 +35,12 @@ const Note = ({ children, direction = 'rightBelow' }) => {
       arrowPosition: styles('flex-column-reverse'),
       textRotation: 'rotate(-5deg)'
     },
+    centerAboveFlip: {
+      arrowCentering: styles('self-center t-10px l-40px'),
+      arrowPosition: styles('flex-column-reverse'),
+      textRotation: 'rotate(-5deg)',
+      arrowDirection: 'scaleX(-1)'
+    },
     leftUp: {
       arrowDirection: 'scaleY(-1) scaleX(-1) rotate(65deg)',
       arrowCentering: styles('l-40px'),
