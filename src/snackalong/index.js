@@ -29,7 +29,7 @@ const Snackalong = () => {
     <div className="archive-brown-900">
       <Grid className="h85vh-md relative">
         <div className="col-1 relative z1 flex">
-          <SiteLogo className="min-w60px max-w100px mx-auto" />
+          <SiteLogo className="w100p px2-lg" />
         </div>
 
         <div className="w101p absolute t0 h50vh fade-white-transparent" />
