@@ -3,14 +3,16 @@ import { Paragraph, Heading, Strong, Link, Em } from '../components/Text';
 import Grid from '../components/Grid';
 import Filled from '../components/Filled';
 import Note from './Note';
+import { sectionSpacer } from '../constants';
+import styles from '../utils/css';
 
-const WhatIs = () => {
+const WhatIs = ({ className }) => {
   return (
-    <Grid>
+    <Grid className={className}>
       <div className="col-10 col-2-sm">
         <Note direction="leftBelow">Okey, here we go.</Note>
       </div>
-      <Filled className="col-10 col-8-sm col-offset-1-sm col-6-md col-offset-2-md mb6 mb20-md">
+      <Filled className="col-10 col-8-sm col-offset-1-sm col-6-md col-offset-2-md">
         <Heading kind="bigfreedia" className="mb4">
           What is a Snackalong?
         </Heading>

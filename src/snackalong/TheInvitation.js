@@ -9,6 +9,7 @@ import styles from '../utils/css';
 import AutoplayVideo from '../components/AutoplayVideo';
 import Note from './Note';
 import VisibilitySensor from 'react-visibility-sensor';
+import { textGapBottom } from '../constants';
 
 const WebBrowser = ({ className, children }) => {
   const wrapperStyles = styles(
@@ -34,7 +35,7 @@ const WebBrowser = ({ className, children }) => {
   );
 };
 
-const TheInvitation = () => {
+const TheInvitation = ({ className }) => {
   const [cardsVisible, setVisible] = useState(false);
 
   const visibilityChange = isVisible => {
@@ -45,12 +46,17 @@ const TheInvitation = () => {
     cardsVisible ? '' : 'translate-x110p'
   );
   return (
-    <Grid className="py10 py20-md">
-      <Filled className="col-10 col-8-sm col-offset-1-sm col-6-md col-offset-2-md mb10">
+    <Grid className={className}>
+      <Filled
+        className={styles(
+          'col-10 col-8-sm col-offset-1-sm col-6-md col-offset-2-md',
+          textGapBottom
+        )}
+      >
         <Heading kind="bigfreedia" className="mb2">
           The Invitation
         </Heading>
-        <Paragraph kind="danny" className="mb4">
+        <Paragraph kind="danny">
           After receiving a personalized audio invitation, the attendees were
           sent a URL to RSVP. It was modeled after Ocean’s business card he
           gives Linus when rounding up the crew.

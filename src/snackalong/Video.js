@@ -7,9 +7,9 @@ import videoThumbnail from './assets/video-thumbnail.mp4';
 import AutoplayVideo from '../components/AutoplayVideo';
 import Speckled from '../components/Speckled';
 
-const Video = () => {
+const Video = ({ className }) => {
   return (
-    <Grid className="pb20">
+    <Grid className={className}>
       <Speckled className="col-10 p1 p6-md">
         <div className="aspect-ratio aspect-ratio--16x9">
           <div className="aspect-ratio__object bg-black_20 inline-flex z101">

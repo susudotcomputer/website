@@ -16,6 +16,13 @@ import Ending from './Ending';
 import SiteLogo from '../components/SiteLogo';
 import Footer from './Footer';
 import styles from '../utils/css';
+import BalloonBoys from './BalloonBoys';
+import QuestionsComments from './QuestionsComments';
+import {
+  paddingBottomSpacer,
+  paddingYSpacer,
+  paddingTopSpacer
+} from '../constants';
 
 const Snackalong = () => {
   return (
@@ -53,18 +60,18 @@ const Snackalong = () => {
           />
         </div>
       </Grid>
-      <WhatIs />
-      <Video />
-      <Branding className="pb20" />
-      <Poster className="pb20" />
+      <WhatIs className={paddingBottomSpacer} />
+      <Video className={paddingBottomSpacer} />
+      <Branding className={paddingBottomSpacer} />
+      <Poster className={paddingBottomSpacer} />
       <SnacksGrid />
-      <Snacks />
-      <GiftPack />
-      <VideoGraphics />
-      <TheInvitation />
-      <Grid>
-        <MiscTabs />
-      </Grid>
+      <Snacks className={paddingBottomSpacer} />
+      <GiftPack className={paddingYSpacer} />
+      <VideoGraphics className={paddingYSpacer} />
+      <TheInvitation className={paddingYSpacer} />
+      <MiscTabs className={paddingBottomSpacer} />
+      <BalloonBoys />
+      <QuestionsComments className={paddingYSpacer} />
       <Ending />
       <Footer />
     </div>

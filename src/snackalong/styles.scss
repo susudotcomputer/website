@@ -167,10 +167,34 @@ $large-bp: 1040px;
   background: linear-gradient(#da861b, #ba6000);
 }
 
-.prize-grid {
+.snackalong__prizes {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'first'
+    'second'
+    'third';
+
+  @media screen and (min-width: $medium-bp) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas:
+      'second first'
+      'second third';
+  }
+}
+
+.snack__prize-first {
+  grid-area: first;
+}
+
+.snack__prize-second {
+  grid-area: second;
+}
+
+.snack__prize-third {
+  grid-area: third;
 }
 
 .smooth-antialiased {

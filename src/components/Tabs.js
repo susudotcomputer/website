@@ -58,7 +58,7 @@ class Tabs extends React.Component {
   render() {
     const children = this.props.children;
     const classes = styles(
-      'col-10 flex flex-column items-center mb10',
+      'col-10 flex flex-column items-center',
       this.props.className
     );
 

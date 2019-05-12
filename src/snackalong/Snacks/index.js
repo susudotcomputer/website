@@ -5,11 +5,11 @@ import Grid from '../../components/Grid';
 import snacks from './snackdata';
 import styles from '../../utils/css';
 
-const Snacks = () => {
+const Snacks = ({ className }) => {
   return (
-    <div className="relative">
+    <div className={'relative'}>
       <div className="bg-archive-brown-900 h15vw w100p clip-triangle absolute t-15vw l0 r0 z10" />
-      <div className="bg-archive-brown-900 pb20 clip relative">
+      <div className={styles(className, 'bg-archive-brown-900 clip relative')}>
         <Grid lines={false}>
           {snacks.map((snack, i) => {
             const noteClasses = styles(

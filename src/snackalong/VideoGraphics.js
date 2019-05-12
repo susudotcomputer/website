@@ -95,7 +95,7 @@ const Triangle = ({ direction, size, hex, className }) => {
   return <div className={classes} style={triangleStyles} />;
 };
 
-const VideoGraphics = () => {
+const VideoGraphics = ({ className }) => {
   const videoEl = React.createRef();
   const [playing, setVideoState] = useState(false);
 
@@ -116,7 +116,7 @@ const VideoGraphics = () => {
   });
 
   return (
-    <Speckled grid className="py10 py20-md relative">
+    <Speckled grid className={styles(className, 'relative')}>
       <Perforation direction="up" />
       <div className="col-10 col-5-sm pr5-sm mb10 mb0-sm">
         <Heading kind="bigfreedia" className="col-6 col-offset-2 mb2">

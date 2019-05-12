@@ -9,7 +9,7 @@ import Grid from '../components/Grid';
 const Badge = ({ className, children }) => {
   const allClassNames = styles(
     className,
-    'circle p3 w80px h80px archive-beige bg-archive-brown-400 flex justiy-center items-center'
+    'circle p3 w80px h80px archive-beige bg-archive-brown-400 flex justify-center items-center z3'
   );
   return (
     <Span kind="bigfreedia" className={allClassNames}>
@@ -28,27 +28,25 @@ const Prizes = () => {
           signed photo of Elliott Gould.{' '}
           <Strong kind="danny">Second place</Strong> was Scott Cann’s coffee
           table photography book. (Tons of nudes in it, FYI) And{' '}
-          <Strong kind="danny">third place</Strong> was a notebook made from an
+          <Strong kind="danny">third place</Strong> was a notebook made from an{' '}
           <Em>Ocean’s Eleven</Em> VHS cover.
         </Paragraph>
       </div>
-      <div className="col-10 flex">
-        <div className="flex1 mr6 relative">
+      <div className="col-10 snackalong__prizes">
+        <div className="aspect-ratio aspect-ratio--16x9 mb3 mb0-md">
+          <div className="aspect-ratio__object snack__prize-first">
+            <Badge className="absolute r-2 t-2">#1</Badge>
+            <img className="w100p h100p o-fit-cover" src={prize2} />
+          </div>
+        </div>
+        <div className="mr6-md relative snack__prize-second mb3 mb0-md">
           <Badge className="absolute l-2 t-2">#2</Badge>
           <img src={prize1} />
         </div>
-        <div className="flex1 flex flex-column justify-between">
-          <div className="aspect-ratio aspect-ratio--16x9">
-            <div className="aspect-ratio__object">
-              <Badge className="absolute r-2 t-2">#1</Badge>
-              <img className="w100p h100p o-fit-cover" src={prize2} />
-            </div>
-          </div>
-          <div className="aspect-ratio aspect-ratio--16x9">
-            <div className="aspect-ratio__object">
-              <Badge className="absolute r-2 t-2">#3</Badge>
-              <img className="w100p h100p o-fit-cover" src={prize3} />
-            </div>
+        <div className="aspect-ratio aspect-ratio--16x9">
+          <div className="aspect-ratio__object snack__prize-third mb3 mb0-md">
+            <Badge className="absolute r-2 t-2">#3</Badge>
+            <img className="w100p h100p o-fit-cover" src={prize3} />
           </div>
         </div>
       </div>
