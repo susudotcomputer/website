@@ -1,15 +1,17 @@
-import React from 'react';
-import Filled from '../components/Filled';
-import { Paragraph, Heading } from '../components/Text';
-import Grid from '../components/Grid';
-import Carousel from '../components/Carousel';
+import React from "react";
+import Filled from "../components/Filled";
+import { Paragraph, Heading } from "../components/Text";
+import Grid from "../components/Grid";
+import Carousel from "../components/Carousel";
 
-import img1 from './assets/poster/movie-poster1.jpg';
-import img2 from './assets/poster/movie-poster2.jpg';
-import img3 from './assets/poster/movie-poster3.jpg';
-import styles from '../utils/css';
+import img1 from "./assets/poster/movie-poster1.jpg";
+import img2 from "./assets/poster/movie-poster2.jpg";
+import img3 from "./assets/poster/movie-poster3.jpg";
+import styles from "../utils/css";
+import { useIntersectionObserver } from "../hooks/useObserver";
 
 const Poster = ({ className }) => {
+  const { targetRef, didIntersect } = useIntersectionObserver();
   return (
     <Grid className={className}>
       <Filled className="col-10 col-4-md">
@@ -39,14 +41,17 @@ const Poster = ({ className }) => {
           project and ended up using it in various collateral.
         </Paragraph>
       </Filled>
-      <div className="col-10 col-offset-5-md col-5-md">
+      <div
+        ref={targetRef}
+        className="col-10 col-8-sm col-offset-1-sm col-offset-5-md col-5-md"
+      >
         <Carousel
-          wrapperClassNames={styles('')}
-          aspectRatio={styles('aspect-ratio--2x3')}
+          wrapperClassNames={styles("")}
+          aspectRatio={styles("aspect-ratio--2x3")}
         >
-          <img src={img1} />
-          <img src={img2} />
-          <img src={img3} />
+          <img src={didIntersect ? img1 : ""} />
+          <img src={didIntersect ? img2 : ""} />
+          <img src={didIntersect ? img3 : ""} />
         </Carousel>
       </div>
     </Grid>

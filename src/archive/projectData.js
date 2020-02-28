@@ -1,22 +1,28 @@
 export const projects = [
   {
     year: 2018,
-    type: 'Album art',
-    started: '2018-11-20',
-    title: 'Unicore Album Cover'
-  },
-  {
-    year: 2018,
     type: 'Event',
     started: '2018-12-09',
     title: 'SuSuSunday'
   },
   {
     year: 2018,
+    type: 'Album art',
+    started: '2018-12-08',
+    title: 'Unicore Album Cover'
+  },
+  {
+    year: 2018,
     type: 'Event',
-    started: '2018-12-09',
+    started: '2018-06-30',
     title: "Snackalong: Ocean's Eleven",
     route: '/snackalong'
+  },
+  {
+    year: 2018,
+    type: 'Branding',
+    started: '2018-02-11',
+    title: 'SuSu'
   },
   {
     year: 2017,

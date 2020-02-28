@@ -1,27 +1,30 @@
-import React from 'react';
-import { Heading, Paragraph, Em } from '../components/Text';
-import Speckled from '../components/Speckled';
-import styles from '../utils/css';
-import InlineSVG from 'react-inlinesvg';
-import snacks from './Snacks/snackdata';
-import { titleToId } from '../utils/links';
-import Perforation from '../components/Perforation';
-import { paddingTopSpacer, textGapBottom } from '../constants';
+import React from "react";
+import { Heading, Paragraph, Em } from "../components/Text";
+import Speckled from "../components/Speckled";
+import styles from "../utils/css";
+import InlineSVG from "react-inlinesvg";
+import snacks from "./Snacks/snackdata";
+import { titleToId } from "../utils/links";
+import Perforation from "../components/Perforation";
+import { paddingTopSpacer, textGapBottom } from "../constants";
+import { useIntersectionObserver } from "../hooks/useObserver";
 
 const blankItem = {
-  svg: '',
-  photo: ''
+  svg: "",
+  photo: ""
 };
 
 const snacksArr = [...snacks, blankItem, blankItem];
 
 const SnacksGrid = () => {
+  const { targetRef, didIntersect } = useIntersectionObserver();
   return (
-    <Speckled grid className={styles(paddingTopSpacer, 'pb20vw relative')}>
+    <Speckled grid className={styles(paddingTopSpacer, "pb20vw relative")}>
       <Perforation direction="up" />
       <div
+        ref={targetRef}
         className={styles(
-          'col-10 col-8-sm col-offset-1-sm col-6-md col-offset-2-md px1 px5-sm',
+          "col-10 col-8-sm col-offset-1-sm col-6-md col-offset-2-md px1 px5-sm",
           textGapBottom
         )}
       >
@@ -45,11 +48,11 @@ const SnacksGrid = () => {
         <ul className="w100p mx-auto snackalong__snacks">
           {snacksArr.map(({ svg, image, position, title }, i) => {
             const wrapperClassnames = styles(
-              'aspect-ratio aspect-ratio--1x1 hov-target',
+              "aspect-ratio aspect-ratio--1x1 hov-target",
               i > 14 && i < 17
-                ? 'border-bottom-width-none border-bottom-md'
-                : '',
-              i >= 18 ? 'hide block-md' : ''
+                ? "border-bottom-width-none border-bottom-md"
+                : "",
+              i >= 18 ? "hide block-md" : ""
             );
             return (
               <li key={i} className={wrapperClassnames}>
@@ -60,7 +63,7 @@ const SnacksGrid = () => {
                   {svg && (
                     <InlineSVG
                       className={styles(
-                        'fill-archive-brown-400 hov-item-fill-white w60p relative z1 click-through'
+                        "fill-archive-brown-400 hov-item-fill-white w60p relative z1 click-through"
                       )}
                       src={svg}
                     />
@@ -69,7 +72,7 @@ const SnacksGrid = () => {
                     {image && (
                       <img
                         className="o-fit-none w100p h100p circle clip"
-                        src={image}
+                        src={didIntersect ? image : ""}
                         style={{ objectPosition: position }}
                         alt={title}
                       />

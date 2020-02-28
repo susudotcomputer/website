@@ -1,15 +1,16 @@
-import React from 'react';
-import { Heading, Li } from '../../components/Text';
-import stopwatch from '../assets/stopwatch.svg';
-import AutoplayVideo from '../../components/AutoplayVideo';
-import { titleToId } from '../../utils/links';
-import styles from '../../utils/css';
+import React from "react";
+import { Heading, Li } from "../../components/Text";
+import stopwatch from "../assets/stopwatch.svg";
+import AutoplayVideo from "../../components/AutoplayVideo";
+import { titleToId } from "../../utils/links";
+import styles from "../../utils/css";
+import { useIntersectionObserver } from "../../hooks/useObserver";
 
-const borderWidth = styles('border1px border-medium-md');
+const borderWidth = styles("border1px border-medium-md");
 
 const Vessel = ({ vesselList }) => {
   const vesselClassNames = styles(
-    'snack__vessel white border-top border-right-lg border-archive-brown-400',
+    "snack__vessel white border-top border-right-lg border-archive-brown-400",
     borderWidth
   );
   return (
@@ -20,7 +21,7 @@ const Vessel = ({ vesselList }) => {
         </Heading>
         <ul>
           {vesselList.map((item, i) => (
-            <Li kind={'danny'} key={i}>
+            <Li kind={"danny"} key={i}>
               {item}
             </Li>
           ))}
@@ -32,7 +33,7 @@ const Vessel = ({ vesselList }) => {
 
 const Food = ({ kindList, kind }) => {
   const kindClassNames = styles(
-    'snack__food white border-top border-right border-x-lg border-archive-brown-400',
+    "snack__food white border-top border-right border-x-lg border-archive-brown-400",
     borderWidth
   );
   return (
@@ -41,7 +42,7 @@ const Food = ({ kindList, kind }) => {
         <Heading kind="chromesparks" className="text-uppercase" bold>
           {kind}
         </Heading>
-        <ul>
+        <ul style={{ columns: "20ch" }}>
           {kindList.map((item, i) => (
             <Li kind="danny" key={i}>
               {item}
@@ -55,7 +56,7 @@ const Food = ({ kindList, kind }) => {
 
 const TimeStamp = ({ time }) => {
   const timeStampClassNames = styles(
-    'snack__timestamp border-top border-archive-brown-400',
+    "snack__timestamp border-top border-archive-brown-400",
     borderWidth
   );
   return (
@@ -70,14 +71,14 @@ const TimeStamp = ({ time }) => {
   );
 };
 
-const NeonSnack = ({ image }) => {
+const NeonSnack = ({ image, didIntersect }) => {
   return (
     <div className="snack__neon py2 pl2 hide flex-lg">
       <div className="m-auto w100p">
         <div className="aspect-ratio aspect-ratio--1x1 clip">
           <img
             className="max-w100p h100p o-fit-contain aspect-ratio__object"
-            src={image}
+            src={didIntersect ? image : ""}
           />
         </div>
       </div>
@@ -85,9 +86,9 @@ const NeonSnack = ({ image }) => {
   );
 };
 
-const Clip = ({ clip, clipPosition, poster }) => {
+const Clip = ({ clip, clipPosition, poster, didIntersect }) => {
   const clipClassNames = styles(
-    'snack__clip pb2 pt2 pl2 border-bottom-lg border-archive-brown-400 clip',
+    "snack__clip pb2 pt2 pl2 border-bottom-lg border-archive-brown-400 clip",
     borderWidth
   );
   return (
@@ -96,24 +97,24 @@ const Clip = ({ clip, clipPosition, poster }) => {
         <div
           className="aspect-ratio__object"
           style={{
-            backgroundImage: `url(${poster}`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
+            backgroundImage: `url(${didIntersect ? poster : ""}`,
+            backgroundSize: "cover",
+            backgroundPosition: "center"
           }}
         />
         <AutoplayVideo
-          src={clip}
+          src={didIntersect ? clip : ""}
           className="w100p h100p aspect-ratio__object"
-          style={{ objectFit: 'cover', objectPosition: clipPosition }}
+          style={{ objectFit: "cover", objectPosition: clipPosition }}
         />
       </div>
     </div>
   );
 };
 
-const Photo = ({ image }) => {
+const Photo = ({ image, didIntersect }) => {
   const photoClassNames = styles(
-    'snack__photo pr2 py2 border-right border-archive-brown-400',
+    "snack__photo pr2 py2 border-right border-archive-brown-400",
     borderWidth
   );
   return (
@@ -121,7 +122,7 @@ const Photo = ({ image }) => {
       <div className="aspect-ratio aspect-ratio--4x3">
         <img
           className="max-w100p o-fit-cover h100p aspect-ratio__object"
-          src={image}
+          src={didIntersect ? image : ""}
         />
       </div>
     </div>
@@ -130,7 +131,7 @@ const Photo = ({ image }) => {
 
 const Title = ({ text, index }) => {
   const titleClassNames = styles(
-    'py2 white snack__title border-bottom border-right-lg border-archive-brown-400 flex items-center',
+    "py2 white snack__title border-bottom border-right-lg border-archive-brown-400 flex items-center",
     borderWidth
   );
   return (
@@ -157,23 +158,32 @@ const Snack = ({
   vesselList,
   poster
 }) => {
+  const { targetRef, didIntersect } = useIntersectionObserver({
+    rootMargin: "100%"
+  });
   const snackClassNames = styles(
-    'snack relative border-y border-archive-brown-400',
+    "snack relative border-y border-archive-brown-400",
     borderWidth
   );
   return (
     <div
+      ref={targetRef}
       id={titleToId(title)}
       className="col-10 pt2vh-md mb2-md mt-1px mt8vh-md "
     >
       <div className={snackClassNames}>
         <Title text={title} index={index} />
-        <Photo image={image} />
+        <Photo image={image} didIntersect={didIntersect} />
         <TimeStamp time={timeStamp} />
         <Food kind={kind} kindList={kindList} />
         <Vessel vesselList={vesselList} />
-        <Clip clip={clip} clipPosition={clipPosition} poster={poster} />
-        <NeonSnack image={neonImage} />
+        <Clip
+          clip={clip}
+          clipPosition={clipPosition}
+          poster={poster}
+          didIntersect={didIntersect}
+        />
+        <NeonSnack image={neonImage} didIntersect={didIntersect} />
       </div>
     </div>
   );

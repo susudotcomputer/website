@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { Heading, Paragraph } from '../components/Text';
-import Speckled from '../components/Speckled';
-import { PlayButton } from '../components/Buttons';
-import projector from './assets/snackalong-film-projector.png';
-import orange from './assets/circle-foods/orange.png';
-import styles from '../utils/css';
-import tadaLoop from './assets/tada-loop.mp4';
-import Perforation from '../components/Perforation';
+import React, { useState, useEffect } from "react";
+import { Heading, Paragraph } from "../components/Text";
+import Speckled from "../components/Speckled";
+import { PlayButton } from "../components/Buttons";
+import projector from "./assets/snackalong-film-projector.png";
+import orange from "./assets/circle-foods/orange.png";
+import styles from "../utils/css";
+import tadaLoop from "./assets/tada-loop.mp4";
+import tadaPoster from "./assets/tada-poster.png";
+import Perforation from "../components/Perforation";
 
 const SnackalongProjector = () => {
   return (
@@ -66,19 +67,19 @@ const SnackalongProjector = () => {
 
 const Triangle = ({ direction, size, hex, className }) => {
   const borderProps = [
-    'borderTop',
-    'borderRight',
-    'borderBottom',
-    'borderLeft'
+    "borderTop",
+    "borderRight",
+    "borderBottom",
+    "borderLeft"
   ];
   const transparentStyles = `${size} solid transparent`;
   const colorStyles = `${size} solid ${hex}`;
 
   const colorMapper = {
-    bottomLeft: ['borderBottom', 'borderLeft'],
-    bottomRight: ['borderBottom', 'borderRight'],
-    topLeft: ['borderTop', 'borderLeft'],
-    topRight: ['borderTop', 'borderRight']
+    bottomLeft: ["borderBottom", "borderLeft"],
+    bottomRight: ["borderBottom", "borderRight"],
+    topLeft: ["borderTop", "borderLeft"],
+    topRight: ["borderTop", "borderRight"]
   };
 
   const triangleStyles = borderProps.reduce((accum, prop) => {
@@ -90,7 +91,7 @@ const Triangle = ({ direction, size, hex, className }) => {
     return accum;
   }, {});
 
-  const classes = styles(className, 'w0 h0');
+  const classes = styles(className, "w0 h0");
 
   return <div className={classes} style={triangleStyles} />;
 };
@@ -110,13 +111,13 @@ const VideoGraphics = ({ className }) => {
   };
 
   useEffect(() => {
-    videoEl.current.addEventListener('ended', restartVideo, false);
+    videoEl.current.addEventListener("ended", restartVideo, false);
     // return () =>
     //   videoEl.current.removeEventListener('ended', handleVideoPlay, false);
   });
 
   return (
-    <Speckled grid className={styles(className, 'relative')}>
+    <Speckled grid className={styles(className, "relative")}>
       <Perforation direction="up" />
       <div className="col-10 col-5-sm pr5-sm mb10 mb0-sm">
         <Heading kind="bigfreedia" className="col-6 col-offset-2 mb2">
@@ -146,7 +147,14 @@ const VideoGraphics = ({ className }) => {
               <PlayButton onClick={handleVideoPlay}>Play</PlayButton>
             </div>
           )}
-
+          <div
+            className="aspect-ratio__object"
+            style={{
+              backgroundImage: `url(${tadaPoster}`,
+              backgroundSize: "cover",
+              backgroundPosition: "center"
+            }}
+          ></div>
           <video
             className="aspect-ratio__object"
             playsInline

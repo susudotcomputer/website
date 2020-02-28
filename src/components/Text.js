@@ -53,7 +53,7 @@ const TEXT_STYLES = {
     italic: styles('font-italic')
   },
   rusty: {
-    classes: styles('font-serif fz48px'),
+    classes: styles('font-serif fz48px fz64px-md'),
     bold: styles('weight-600'),
     normal: styles('weight-300'),
     italic: styles('font-italic')

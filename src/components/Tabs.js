@@ -1,23 +1,23 @@
-import React from 'react';
-import styles from '../utils/css';
-import { Heading } from './Text';
+import React from "react";
+import styles from "../utils/css";
+import { Heading } from "./Text";
 
 const TabItem = ({ title, onClick, active, last }) => {
   const classes = styles(
-    'border border-medium border-archive-brown-400 archive-brown-400 bg-white p1 p3-md mr2 relative pointer flex1',
+    "border border-medium border-archive-brown-400 archive-brown-400 bg-white p1 p3-md mr2 relative pointer flex1",
     active
-      ? 'border-bottom-style-none border-bottom-width-none border-bottom-transparent z2'
-      : 'z0',
-    last ? 'mr5' : ''
+      ? "border-bottom-style-none border-bottom-width-none border-bottom-transparent z2"
+      : "z0",
+    last ? "mr5" : ""
   );
   return (
     <>
-      <button className={styles('hide block-md', classes)} onClick={onClick}>
+      <button className={styles("hide block-md", classes)} onClick={onClick}>
         <Heading level="3" kind="bigfreedia" className="text-uppercase">
           {title}
         </Heading>
       </button>
-      <button className={styles('hide-md', classes)} onClick={onClick}>
+      <button className={styles("hide-md", classes)} onClick={onClick}>
         <Heading level="3" kind="chromesparks" className="text-uppercase">
           {title}
         </Heading>
@@ -28,11 +28,11 @@ const TabItem = ({ title, onClick, active, last }) => {
 
 export const TabSection = ({ children, active = true }) => {
   const classes = styles(
-    'border-x border-medium border-top border-bottom border-archive-brown-400 w100p bg-white relative z1 pb1 pb5-md',
-    active ? 'block' : 'hide'
+    "border-x border-medium border-top border-bottom border-archive-brown-400 w100p bg-white relative z1 pb3 pb5-md",
+    active ? "block" : "hide"
   );
   return (
-    <div className={classes} style={{ width: 'calc(100% + 3px)' }}>
+    <div className={classes} style={{ width: "calc(100% + 3px)" }}>
       {children}
     </div>
   );
@@ -58,7 +58,7 @@ class Tabs extends React.Component {
   render() {
     const children = this.props.children;
     const classes = styles(
-      'col-10 flex flex-column items-center',
+      "col-10 flex flex-column items-center",
       this.props.className
     );
 

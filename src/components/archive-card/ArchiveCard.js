@@ -1,17 +1,17 @@
-import React from 'react';
-import styles from '../../utils/css';
-import logoSrc from '../../assets/susu-logo.svg';
-import { Heading, Span } from '../Text';
-import speckles from '../../assets/speckled.png';
-import Perforation from '../Perforation';
-import SVG from 'react-inlinesvg';
+import React from "react";
+import styles from "../../utils/css";
+import logoSrc from "../../assets/susu-logo.svg";
+import { Heading, Span, Paragraph } from "../Text";
+import speckles from "../../assets/speckled.png";
+import Perforation from "../Perforation";
+import SVG from "react-inlinesvg";
 
 const InfoItem = ({ label, text, className }) => {
   return (
     <Heading
       level="2"
       className={styles(
-        'archive-brown-400 border1px border-bottom border-black_20 mb1',
+        "archive-brown-400 border1px border-bottom border-black_20",
         `archive-card__${label.toLowerCase()}`,
         className
       )}
@@ -28,12 +28,12 @@ const ArchiveCard = ({ project, medium, date, tactics }) => {
   return (
     <div
       className="archive-card bg-archive-beige p5 relative"
-      style={{ backgroundImage: `url(${speckles})`, backgroundSize: '600px' }}
+      style={{ backgroundImage: `url(${speckles})`, backgroundSize: "600px" }}
     >
       <Perforation direction="up" />
       <div className="archive-card__logo flex mb3 mb0-md">
         <SVG
-          className="block o65p w100px w-auto-md m-auto fill-archive-brown-900"
+          className="block o65p w100px m-auto fill-archive-brown-900"
           src={logoSrc}
         />
       </div>
@@ -44,23 +44,23 @@ const ArchiveCard = ({ project, medium, date, tactics }) => {
       </div>
       <div className="hide block-sm relative">
         <div className="absolute t0 l0 r0 b0 clip">
-          <div className="border1px border-bottom border-black_20 h30px" />
-          <div className="border1px border-bottom border-black_20 h30px" />
-          <div className="border1px border-bottom border-black_20 h30px" />
-          <div className="border1px border-bottom border-black_20 h30px" />
-          <div className="border1px border-bottom border-black_20 h30px" />
+          <div className="border1px border-bottom border-black_20 h34px" />
+          <div className="border1px border-bottom border-black_20 h34px" />
+          <div className="border1px border-bottom border-black_20 h34px" />
+          <div className="border1px border-bottom border-black_20 h34px" />
+          <div className="border1px border-bottom border-black_20 h34px" />
         </div>
-        <Heading level="3" kind="vulfpeck" className="mb1">
+        <Paragraph level="3" kind="vulfpeck" className="mb1">
           <Span
             kind="vulfpeck"
-            className="text-uppercase archive-brown-900 lh32px"
+            className="text-uppercase archive-brown-900 lh34px"
           >
-            Methods:{' '}
+            Methods:{" "}
           </Span>
-          <Span kind="chromesparks" className="archive-brown-400 lh30px">
-            {tactics.join(', ')}
+          <Span kind="chromesparks" className="archive-brown-400 lh34px">
+            {tactics.join(", ")}
           </Span>
-        </Heading>
+        </Paragraph>
       </div>
       <Perforation direction="down" />
     </div>

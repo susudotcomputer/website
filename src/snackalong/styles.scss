@@ -118,20 +118,20 @@ $large-bp: 1040px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
-    'title title'
-    'photo clip'
-    'timestamp timestamp'
-    'food vessel';
+    "title title"
+    "photo clip"
+    "timestamp timestamp"
+    "food vessel";
 
   @media screen and (min-width: $large-bp) {
     grid-template-columns: 1fr 1fr 1fr 2fr;
     grid-template-rows: auto auto auto 1fr;
     grid-template-areas:
-      'title title title clip'
-      'photo photo photo clip'
-      'photo photo photo clip'
-      'photo photo photo neon'
-      'timestamp food vessel neon';
+      "title title title clip"
+      "photo photo photo clip"
+      "photo photo photo clip"
+      "photo photo photo neon"
+      "timestamp food vessel neon";
   }
 }
 
@@ -171,17 +171,17 @@ $large-bp: 1040px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
-    'first'
-    'second'
-    'third';
+    "first"
+    "second"
+    "third";
 
-  @media screen and (min-width: $medium-bp) {
+  @media screen and (min-width: $small-bp) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 
     grid-template-areas:
-      'second first'
-      'second third';
+      "first second"
+      "third second";
   }
 }
 
@@ -203,7 +203,7 @@ $large-bp: 1040px;
 }
 
 .clip-triangle {
-  $point1: 50% 100%;
+  $point1: 50% 90%;
   $point2: 100% 0;
   $point3: 100% 100%;
   $point4: 0 100%;
