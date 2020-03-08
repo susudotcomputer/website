@@ -1,3 +1,5 @@
+/** @format */
+
 import { useEffect, useRef, useState } from "react";
 
 export const useIntersectionObserver = (
@@ -38,6 +40,5 @@ export const useIntersectionObserver = (
       }
     };
   }, [targetRef.current, isIntersecting, didIntersect, intersectionRatio]);
-  console.log("HIT OBSERVER");
   return { targetRef, isIntersecting, didIntersect, intersectionRatio };
 };

@@ -1,13 +1,21 @@
-import React from 'react';
-import { Link } from '@reach/router';
+import React from "react";
+import { Link } from "@reach/router";
+import { Heart } from "./Heart";
 
 const SiteLogo = ({ className }) => {
   return (
-    <Link to="/archive" className={className}>
+    <Link to="/archive" className={`hov-target relative ${className}`}>
+      <Heart className="w10p t6 l5" />
+      <Heart className="w12p t7 l7 delay100ms" />
+      <Heart className="w8p t8 l6 delay300ms" />
+
+      <Heart className="w11p t4 l10 delay200ms" />
+      <Heart className="w9p t10 l11 delay400ms" />
+      <Heart className="w10p t8 l12 delay200ms" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 200 310"
-        className="hov-target"
+        className=""
       >
         <polygon
           className="fill-archive-yellow"
