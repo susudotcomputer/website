@@ -45,10 +45,7 @@ const Poster = ({ className }) => {
         ref={targetRef}
         className="col-10 col-8-sm col-offset-1-sm col-offset-5-md col-5-md"
       >
-        <Carousel
-          wrapperClassNames={styles("")}
-          aspectRatio={styles("aspect-ratio--2x3")}
-        >
+        <Carousel aspectRatio={styles("aspect-ratio--2x3")}>
           <img src={didIntersect ? img1 : ""} />
           <img src={didIntersect ? img2 : ""} />
           <img src={didIntersect ? img3 : ""} />

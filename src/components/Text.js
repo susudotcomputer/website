@@ -1,68 +1,68 @@
-import React from 'react';
-import styles from '../utils/css';
+import React from "react";
+import styles from "../utils/css";
 
 const TEXT_STYLES = {
   vulfpeck: {
-    classes: styles('font-mono fz18px ls-1px smooth-antialiased'),
-    bold: styles('weight-600'),
-    normal: styles('weight-400'),
-    italic: styles('font-italic')
+    classes: styles("font-mono fz18px ls-1px smooth-antialiased"),
+    bold: styles("weight-600"),
+    normal: styles("weight-400"),
+    italic: styles("font-italic")
   },
   chromesparks: {
-    classes: styles('font-mono fz22px ls-2px smooth-antialiased'),
-    bold: styles('weight-600'),
-    normal: styles('weight-400'),
-    italic: styles('font-italic')
+    classes: styles("font-mono fz22px ls-2px smooth-antialiased"),
+    bold: styles("weight-600"),
+    normal: styles("weight-400"),
+    italic: styles("font-italic")
   },
   bigfreedia: {
     classes: styles(
-      'font-mono fz28px ls-1px fz38px-md ls-2px-md smooth-antialiased'
+      "font-mono fz28px ls-1px fz38px-md ls-2px-md smooth-antialiased"
     ),
-    bold: styles('weight-600'),
-    normal: styles('weight-400'),
-    italic: styles('font-italic')
+    bold: styles("weight-600"),
+    normal: styles("weight-400"),
+    italic: styles("font-italic")
   },
   jonhopkins: {
-    classes: styles('font-mono fz30px fz60px-md ls-4px-md smooth-antialiased'),
-    bold: styles('weight-600'),
-    normal: styles('weight-400'),
-    italic: styles('font-italic')
+    classes: styles("font-mono fz30px fz60px-md ls-4px-md smooth-antialiased"),
+    bold: styles("weight-600"),
+    normal: styles("weight-400"),
+    italic: styles("font-italic")
   },
   kishibashi: {
-    classes: styles('font-mono fz130px ls-6px smooth-antialiased'),
-    bold: styles('weight-600'),
-    normal: styles('weight-400'),
-    italic: styles('font-italic')
+    classes: styles("font-mono fz130px ls-6px smooth-antialiased"),
+    bold: styles("weight-600"),
+    normal: styles("weight-400"),
+    italic: styles("font-italic")
   },
   danny: {
-    classes: styles('font-serif fz17px lh28px'),
-    bold: styles('weight-600'),
-    normal: styles('weight-300'),
-    italic: styles('font-italic')
+    classes: styles("font-serif fz17px lh28px"),
+    bold: styles("weight-600"),
+    normal: styles("weight-300"),
+    italic: styles("font-italic")
   },
   reuben: {
-    classes: styles('font-serif fz16px'),
-    bold: styles('weight-600'),
-    normal: styles('weight-300'),
-    italic: styles('font-italic')
+    classes: styles("font-serif fz16px"),
+    bold: styles("weight-600"),
+    normal: styles("weight-300"),
+    italic: styles("font-italic")
   },
   linus: {
-    classes: styles('font-serif fz12px'),
-    bold: styles('weight-600'),
-    normal: styles('weight-300'),
-    italic: styles('font-italic')
+    classes: styles("font-serif fz12px"),
+    bold: styles("weight-600"),
+    normal: styles("weight-300"),
+    italic: styles("font-italic")
   },
   rusty: {
-    classes: styles('font-serif fz48px fz64px-md'),
-    bold: styles('weight-600'),
-    normal: styles('weight-300'),
-    italic: styles('font-italic')
+    classes: styles("font-serif fz48px fz64px-md"),
+    bold: styles("weight-600"),
+    normal: styles("weight-300"),
+    italic: styles("font-italic")
   },
   moon: {
-    classes: styles('font-cursive fz30px lh30px ls-1px smooth-antialiased'),
-    bold: styles('weight-600'),
-    normal: styles('weight-400'),
-    italic: styles('font-italic')
+    classes: styles("font-cursive fz30px lh30px ls-1px smooth-antialiased"),
+    bold: styles("weight-600"),
+    normal: styles("weight-400"),
+    italic: styles("font-italic")
   }
 };
 
@@ -81,7 +81,7 @@ export const Text = ({
     kindClasses = styles(
       TEXT_STYLES[kind].classes,
       bold ? TEXT_STYLES[kind].bold : TEXT_STYLES[kind].normal,
-      italic ? TEXT_STYLES[kind].italic : ''
+      italic ? TEXT_STYLES[kind].italic : ""
     );
   }
 
@@ -100,19 +100,23 @@ export const Div = props => <Text tag="div" {...props} />;
 export const Span = props => <Text tag="span" {...props} />;
 export const Li = props => <Text tag="li" {...props} />;
 export const Button = props => {
-  const linkOrButton = props.href ? 'a' : 'button';
+  const linkOrButton = props.href ? "a" : "button";
   return <Text tag={linkOrButton} {...props} />;
 };
 export const Heading = props => {
-  const level = props.level ? props.level : '2';
+  const level = props.level ? props.level : "2";
   return <Text tag={`h${level}`} {...props} />;
 };
 
 export const Link = props => {
+  const { color, ...rest } = props;
+  const linkColor = {
+    black: styles("black hover-archive-brown-400"),
+    beige: styles("archive-beige hover-archive-brown-400")
+  };
   const classes = styles(
-    props.color ? props.color : 'black',
-    props.className,
-    'hover-archive-brown-400'
+    color ? linkColor[color] : linkColor["black"],
+    props.className
   );
-  return <Text tag="a" href={props.href} className={classes} {...props} />;
+  return <Text tag="a" href={props.href} className={classes} {...rest} />;
 };

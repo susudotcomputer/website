@@ -62,23 +62,20 @@ class Tabs extends React.Component {
       this.props.className
     );
 
-    const allChildren = React.Children;
     return (
       <div className={classes}>
         <div className="relative b-3px flex w100p px1 px5-sm yscroll">
           {React.Children.map(children, (child, i) => (
             <TabItem
-              title={child.props.title}
+              title={child.props.tabTitle}
               onClick={() => this.setActiveTab(i)}
               active={this.isActive(i)}
-              last={allChildren.length === i + 1}
+              last={React.Children.length === i + 1}
             />
           ))}
         </div>
         {React.Children.map(children, (child, i) => (
-          <TabSection active={this.isActive(i)}>
-            {child.props.children}
-          </TabSection>
+          <TabSection active={this.isActive(i)}>{child}</TabSection>
         ))}
       </div>
     );

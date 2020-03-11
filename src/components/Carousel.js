@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import { useInterval } from '../utils/hooks/useInterval';
-import styles from '../utils/css';
-import leftArrow from './assets/left-arrow.svg';
-import rightArrow from './assets/right-arrow.svg';
-import SVG from 'react-inlinesvg';
+import React, { useState } from "react";
+import { useInterval } from "../utils/hooks/useInterval";
+import styles from "../utils/css";
+import leftArrow from "./assets/left-arrow.svg";
+import rightArrow from "./assets/right-arrow.svg";
+import SVG from "react-inlinesvg";
 
 const baseTheme = {
-  dotWrapperStyles: styles('column-gap15px column-gap40px-sm w60p mx-auto mt6'),
+  dotWrapperStyles: styles("column-gap15px column-gap40px-sm w60p mx-auto mt6"),
   dotStyles: {
     base: styles(
-      'pointer p0 h9px min-w6 flex1 border border1px border-archive-brown-400'
+      "pointer p0 h9px min-w6 flex1 border border1px border-archive-brown-400"
     ),
-    active: styles('bg-archive-brown-400'),
-    inactive: styles('bg-white')
+    active: styles("bg-archive-brown-400"),
+    inactive: styles("bg-white")
   },
   arrowStyles: {
-    base: styles('border-none fill-archive-brown-400 pointer'),
-    active: styles('o100p'),
-    inactive: styles('o25p')
+    base: styles("border-none fill-archive-brown-400 pointer"),
+    active: styles("o100p"),
+    inactive: styles("o25p")
   },
   arrowLeft: () => (
     <SVG
@@ -31,7 +31,7 @@ const baseTheme = {
       src={rightArrow}
     />
   ),
-  bgColor: 'bg-black'
+  bgColor: "bg-black"
 };
 
 const NavButton = ({ className, onClick, children }) => {
@@ -49,6 +49,7 @@ export const Carousel = (theme = baseTheme) => ({
   aspectRatio,
   childClassNames,
   wrapperClassNames,
+  childWrapperClassName,
   overlayComponent,
   children
 }) => {
@@ -74,12 +75,12 @@ export const Carousel = (theme = baseTheme) => ({
   }
 
   const imageContainerStyles = styles(
-    'clip',
-    aspectRatio ? `aspect-ratio ${aspectRatio}` : '',
+    "clip",
+    aspectRatio ? `aspect-ratio ${aspectRatio}` : "",
     theme.bgColor
   );
 
-  const wrapperStyles = styles('relative', wrapperClassNames);
+  const wrapperStyles = styles("relative", wrapperClassNames);
   return (
     <div className={wrapperStyles}>
       {overlayComponent && <OverlayComponent />}
@@ -102,9 +103,10 @@ export const Carousel = (theme = baseTheme) => ({
                 <div
                   key={`carousel-image-${i}`}
                   className={styles(
-                    'transition-all transition-ease-in-out transition300',
-                    activeImage === i ? 'o100p' : 'o0p',
-                    aspectRatio ? 'aspect-ratio__object' : 'l0 t0 absolute'
+                    "transition-all transition-ease-in-out transition300",
+                    activeImage === i ? "o100p" : "o0p",
+                    aspectRatio ? "aspect-ratio__object" : "l0 t0 absolute",
+                    childWrapperClassName ? childWrapperClassName : ""
                   )}
                 >
                   {React.cloneElement(child, {
@@ -126,8 +128,8 @@ export const Carousel = (theme = baseTheme) => ({
         <div
           className={theme.dotWrapperStyles}
           style={{
-            display: 'grid',
-            gridAutoFlow: 'column'
+            display: "grid",
+            gridAutoFlow: "column"
           }}
         >
           {children.map((_, i) => {

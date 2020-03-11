@@ -14,7 +14,7 @@ import poloroids from "./assets/poloroids.png";
 import Speckled from "../components/Speckled";
 import MailchimpForm from "./mailchimpForm";
 import styles from "../utils/css";
-import Helmet from "react-helmet";
+import { Meta } from "../utils/Meta";
 
 const PossibleLink = ({ route, children }) => {
   return route ? (
@@ -91,32 +91,12 @@ const ProjectSection = ({ group, projects, caveat }) => {
 const Archive = () => {
   return (
     <>
-      <Helmet>
-        <title>SuSu | Archive</title>
-        <meta
-          property="og:title"
-          content="Hello! Welcome to the archive of SuSu!"
-        />
-        <meta
-          property="og:description"
-          content="SuSu is the creative output of Kilian and Nathan. Each project was done out of the need to go all-in on something completely for fun’s sake."
-        />
-        {/* <meta property="og:image" content="FACEBOOK_IMAGE.jpg" /> */}
-        <meta property="og:url" content="https://susu.computer" />
-        <meta property="og:tagname" content="We are SuSu!" />
+      <Meta
+        title="SuSu Studio"
+        description="When Kilian and Nathan collide, you get a SuSu."
+        url="https://susu.computer/archive"
+      />
 
-        <meta
-          property="twitter:title"
-          content="Hello! Welcome to the archive of SuSu!"
-        />
-        <meta
-          property="twitter:description"
-          content="SuSu is the creative output of Kilian and Nathan. Each project was done out of the need to go all-in on something completely for fun’s sake."
-        />
-        {/* <meta property="twitter:image" content="TWITTER_IMAGE.jpg" /> */}
-        <meta property="twitter:site" content="@susudotcomputer" />
-        <meta property="twitter:image:alt" content="We are SuSu!" />
-      </Helmet>
       <Grid className="pt25vh relative">
         <div className="w101p absolute t0 h50vh fade-white-transparent" />
         <div className="col-10 z10 mb10">
@@ -170,16 +150,13 @@ const Archive = () => {
             Kilian McMahon (Su)
           </Span>
           <Paragraph kind="danny">
-            Nathan is from the Bay Area and went to school for history and
-            theatre. He’s a proud leftie? He loves emoji and helped create the
-            upcoming truck emoji. He likes to create traditions, then continue
-            them forever. He thinks collaboration is the closest humans can get
-            to magic. Here is a list of his favorite things: outer space,
-            podcasts, buddhism, long train ride, vegetarianism, live music,
-            minimalism, and improv. He currently works on creative in the Warren
-            2020 campaign— previously he was a creative director at Blue State
-            Digital, the art director at Funny Or Die and a waiter at Outback
-            Steakhouse.
+            Kilian is from Dublin Ireland. He loves getting absorbed in the
+            details, no matter how small. That could be the etymology of a word
+            he heard in a song lyric, the perfect recreation of a sandwich from
+            a restaurant that he loved but has since gone out of business or
+            doing research to ensure the typeface in a historical project is
+            period accurate. He is currently a Frontend Designer at Kickstarter
+            and was previously at Tito and Úll.
           </Paragraph>
         </Filled>
 

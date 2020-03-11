@@ -19,10 +19,22 @@ import styles from "../utils/css";
 import BalloonBoys from "./BalloonBoys";
 import QuestionsComments from "./QuestionsComments";
 import { paddingBottomSpacer, paddingYSpacer } from "../constants";
+import snackalongFacebook from "./assets/social-card-facebook.jpg";
+import snackalongTwitter from "./assets/social-card-twitter.jpg";
+import { Meta } from "../utils/Meta";
+import { PlayingCards } from "./PlayingCards";
 
 const Snackalong = () => {
   return (
     <div className="archive-brown-900">
+      <Meta
+        title="SuSu Studio | Snackalong: Ocean's Eleven"
+        description="You’ve heard of a movie sing-a-long... well a Snackalong™ is when you watch a film and eat everything the characters are eating. For the inaugural occasion, we chose one of our favorite films: Ocean’s Eleven. It was a very thorough night, we prepared all 19 of Brad Pitt’s items."
+        url="https://susu.computer/snackalong"
+        twitterImageAlt="Photographs and a neon illustration of shrimp cocktail, a burger and whiskey which are all items that Brad Pitt consumes during the film Ocean's Eleven."
+        twitterImage={snackalongTwitter}
+        facebookImage={snackalongFacebook}
+      />
       <Grid className="h85vh-md relative">
         <div className="col-1 relative z1 flex">
           <SiteLogo className="w100p px2-lg" />
@@ -66,6 +78,7 @@ const Snackalong = () => {
       <VideoGraphics className={paddingYSpacer} />
       <TheInvitation className={paddingYSpacer} />
       <MiscTabs className={paddingBottomSpacer} />
+      <PlayingCards />
       <BalloonBoys />
       <QuestionsComments className={paddingYSpacer} />
       <Ending />

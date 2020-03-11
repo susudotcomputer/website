@@ -1,24 +1,20 @@
-import React from 'react';
-import Tabs from '../components/Tabs';
-import Filled from '../components/Filled';
-import Quiz from './Quiz';
-import Trivia from './Trivia';
-import Prizes from './Prizes';
-import { Heading, Paragraph } from '../components/Text';
-import Grid from '../components/Grid';
-import styles from '../utils/css';
-import { textGapBottom } from '../constants';
-
-const Tab = ({ children }) => {
-  return children;
-};
+import React from "react";
+import Tabs from "../components/Tabs";
+import Filled from "../components/Filled";
+import Quiz from "./Quiz";
+import Trivia from "./Trivia";
+import Prizes from "./Prizes";
+import { Heading, Paragraph } from "../components/Text";
+import Grid from "../components/Grid";
+import styles from "../utils/css";
+import { textGapBottom } from "../constants";
 
 const MiscTabs = ({ className }) => {
   return (
     <Grid className={className}>
       <Filled
         className={styles(
-          'col-10 col-8-sm col-offset-1-sm col-6-md col-offset-2-md',
+          "col-10 col-8-sm col-offset-1-sm col-6-md col-offset-2-md",
           textGapBottom
         )}
       >
@@ -31,15 +27,9 @@ const MiscTabs = ({ className }) => {
         </Paragraph>
       </Filled>
       <Tabs activeTab={2} className="w100p">
-        <Tab title="Quiz">
-          <Quiz />
-        </Tab>
-        <Tab title="Prizes">
-          <Prizes />
-        </Tab>
-        <Tab title="Trivia">
-          <Trivia />
-        </Tab>
+        <Quiz tabTitle="Quiz" />
+        <Prizes tabTitle="Prizes" />
+        <Trivia tabTitle="Trivia" />
       </Tabs>
     </Grid>
   );
