@@ -45,6 +45,16 @@ $large-bp: 1040px;
   }
 }
 
+.playing-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  grid-gap: 1rem;
+  @media screen and (min-width: $large-bp) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .archive-card__logo {
   grid-row: 1 / -1;
 }
