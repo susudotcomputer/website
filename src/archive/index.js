@@ -203,11 +203,13 @@ const Archive = () => {
           <Polaroids />
         </div>
       </Grid>
-      <Speckled grid className="py20" backgroundColor="archiveBrown400">
-        <div className="col-4">
-          <p className="fz72px font-mono">Sign up for email from us.</p>
+      <Speckled grid className="py10 py20-md" backgroundColor="archiveBrown400">
+        <div className="col-10 col-4-sm">
+          <p className="fz48px fz72px-sm font-mono mb5 mb0-sm">
+            Sign up for email from us.
+          </p>
         </div>
-        <div className="col-5 col-offset-5">
+        <div className="col-10 col-5-sm col-offset-5-sm">
           <MailchimpForm />
         </div>
       </Speckled>
