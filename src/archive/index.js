@@ -15,6 +15,8 @@ import Speckled from "../components/Speckled";
 import MailchimpForm from "./mailchimpForm";
 import styles from "../utils/css";
 import { Meta } from "../utils/Meta";
+import "./assets/styles.scss";
+import { Polaroids } from "./Polaroids";
 
 const PossibleLink = ({ route, children }) => {
   return route ? (
@@ -117,7 +119,7 @@ const Archive = () => {
         <div className="col-10">
           <>
             {projectYears.map((year, i) => {
-              const projectsByYear = projects.filter(p => p.year === year);
+              const projectsByYear = projects.filter((p) => p.year === year);
               const caveat2016 =
                 "This is a kind of “proto SuSu” because we weren’t SuSu yet, but working on stuff.";
 
@@ -188,7 +190,7 @@ const Archive = () => {
       </Grid>
 
       <Grid className="py20">
-        <Filled className="col-6 col-offset-2">
+        <Filled className="col-6 col-offset-2 mb5">
           <Heading level={3} kind="bigfreedia" className="mb3">
             Visitors to our studio
           </Heading>
@@ -197,14 +199,15 @@ const Archive = () => {
             rules. We love your faces!
           </Paragraph>
         </Filled>
-
-        <img src={poloroids} className="col-10" />
-      </Grid>
-      <Speckled grid className="pt20">
-        <div className="col-5">
-          <Paragraph>Sign up for email from us.</Paragraph>
+        <div className="col-10">
+          <Polaroids />
         </div>
-        <div className="col-5">
+      </Grid>
+      <Speckled grid className="py20" backgroundColor="archiveBrown400">
+        <div className="col-4">
+          <p className="fz72px font-mono">Sign up for email from us.</p>
+        </div>
+        <div className="col-5 col-offset-5">
           <MailchimpForm />
         </div>
       </Speckled>

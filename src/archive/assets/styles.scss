@@ -1,0 +1,39 @@
+$small-bp: 560px;
+$medium-bp: 940px;
+$large-bp: 1040px;
+
+.susu-mailchimp {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    background-color: #fff;
+    padding: 1.2rem;
+    margin-bottom: 1.8rem;
+    border-radius: 0.4rem;
+    border: 0;
+    font-size: 1rem;
+  }
+
+  button {
+    background-color: #130e06;
+    color: #eee6d2;
+    text-align: center;
+    padding: 1.2rem;
+    display: inline-block;
+    align-self: flex-start;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+  }
+}
+
+.polaroid-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+  grid-gap: 1rem;
+
+  @media screen and (min-width: 1400px) {
+    margin: 0 -5rem;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  }
+}
