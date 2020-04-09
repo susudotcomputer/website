@@ -42,12 +42,27 @@ const allPolaroids = [
   liz,
 ];
 
+const getRandomBetweenRange = (min, max, precision = 2) =>
+  (Math.random() * (min - max) + max).toFixed(precision);
+
 export const Polaroids = () => {
   return (
     <div className="polaroid-grid">
-      {allPolaroids.map((polaroid, i) => (
-        <img key={`polaroid-${i}`} src={polaroid} />
-      ))}
+      {allPolaroids.map((polaroid, i) => {
+        const rotation = getRandomBetweenRange(-0.5, 1.5);
+        const vertical = getRandomBetweenRange(-5, 5);
+        return (
+          <img
+            key={`polaroid-${i}`}
+            style={{
+              transform: `rotate(${rotation}deg)`,
+              top: `${vertical}px`,
+            }}
+            className="relative"
+            src={polaroid}
+          />
+        );
+      })}
     </div>
   );
 };

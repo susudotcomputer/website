@@ -1,8 +1,6 @@
 import React from "react";
 import Grid from "../components/Grid";
 import { Heading, Paragraph, Em, Link } from "../components/Text";
-import Note from "./Note";
-import Carousel from "../components/Carousel";
 import styles from "../utils/css";
 import { useIntersectionObserver } from "../hooks/useObserver";
 import danny from "./assets/playing-cards-danny.png";
@@ -13,7 +11,7 @@ import benedict from "./assets/playing-cards-benedict.png";
 const RatioBox = ({ children, className, aspectRatio }) => {
   const child = React.Children.only(children);
   const childrenWithOnClick = React.cloneElement(child, {
-    className: styles(child.props.className, "aspect-ratio__object")
+    className: styles(child.props.className, "aspect-ratio__object"),
   });
 
   return (
@@ -39,7 +37,13 @@ export const PlayingCards = () => {
             We showed you the cards from the gift pack already...{" "}
             <Em>but they’re so good</Em> that we want to show them again. The
             incredible{" "}
-            <Link kind="danny" bold href="https://elihorne.com" color="beige">
+            <Link
+              kind="danny"
+              bold
+              href="http://natasha-fedorova.com/"
+              target="_blank"
+              color="beige"
+            >
               Natasha Fedorova
             </Link>{" "}
             illustrated them.

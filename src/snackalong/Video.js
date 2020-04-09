@@ -1,11 +1,11 @@
-import React from 'react';
-import { Paragraph, Link } from '../components/Text';
-import Filled from '../components/Filled';
-import Grid from '../components/Grid';
-import { PlayButton } from '../components/Buttons';
-import videoThumbnail from './assets/video-thumbnail.mp4';
-import AutoplayVideo from '../components/AutoplayVideo';
-import Speckled from '../components/Speckled';
+import React from "react";
+import { Paragraph, Link } from "../components/Text";
+import Filled from "../components/Filled";
+import Grid from "../components/Grid";
+import { PlayButton } from "../components/Buttons";
+import videoThumbnail from "./assets/video-thumbnail.mp4";
+import AutoplayVideo from "../components/AutoplayVideo";
+import Speckled from "../components/Speckled";
 
 const Video = ({ className }) => {
   return (
@@ -24,8 +24,8 @@ const Video = ({ className }) => {
       <Filled className="col-10 col-8-md">
         <div className="hide block-md">
           <Paragraph kind="danny" className="pt4">
-            This video was made by our (very handsome) buddy{' '}
-            <Link kind="danny" bold href="https://elihorne.com">
+            This video was made by our (very handsome) buddy{" "}
+            <Link target="_blank" kind="danny" bold href="https://elihorne.com">
               Eli Horne
             </Link>
             , with tender editing and lots of love.
@@ -33,7 +33,7 @@ const Video = ({ className }) => {
         </div>
         <div className="hide-md text-center ">
           <Paragraph italic kind="reuben" className="pt4 px4">
-            This video was made by our (very handsome) buddy{' '}
+            This video was made by our (very handsome) buddy{" "}
             <Link kind="reuben" bold href="https://elihorne.com">
               Eli Horne
             </Link>

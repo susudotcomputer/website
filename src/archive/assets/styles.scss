@@ -38,8 +38,17 @@ $large-bp: 1040px;
   grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
   grid-gap: 1rem;
 
+  img {
+    box-shadow: 5px 2px 7px 0px rgba(0, 0, 0, 0.17);
+  }
+
   @media screen and (min-width: 1400px) {
     margin: 0 -5rem;
     grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
   }
+}
+
+.bios-grid {
+  display: grid;
+  justify-content: space-between;
 }

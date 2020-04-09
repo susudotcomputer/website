@@ -6,17 +6,15 @@ import Filled from "../components/Filled";
 import { projects, projectYears } from "./projectData";
 import { Link } from "@reach/router";
 import speckled from "../assets/speckled.png";
-import nathanHeadshot from "./assets/headshot-nathan.jpg";
-import kilianHeadshot from "./assets/headshot-kilian.jpg";
 import timelapse from "./assets/timelapse.mp4";
 import AutoplayVideo from "../components/AutoplayVideo";
-import poloroids from "./assets/poloroids.png";
 import Speckled from "../components/Speckled";
 import MailchimpForm from "./mailchimpForm";
 import styles from "../utils/css";
 import { Meta } from "../utils/Meta";
 import "./assets/styles.scss";
 import { Polaroids } from "./Polaroids";
+import { Bios } from "./Bios";
 
 const PossibleLink = ({ route, children }) => {
   return route ? (
@@ -34,7 +32,7 @@ const PossibleLink = ({ route, children }) => {
 const ProjectItem = ({ type, started, title, route }) => {
   return (
     <li className="mb5">
-      <div>
+      <div className="mb-1 z1 relative">
         {started && (
           <Span
             className={styles(
@@ -109,11 +107,17 @@ const Archive = () => {
           <Heading className="mb3" kind="bigfreedia">
             Hello! Welcome to our archive!
           </Heading>
+          <Paragraph kind="danny" className="mb3">
+            Susu is the creative partnership of Kilian & Nathan. Every project
+            we create is a challenge to go all-in completely for the sake of
+            fun; to not stop building until we’re exhausted and grinning
+            ear-to-ear. We focus on getting every detail right, bring joy into
+            the world, and leaving plenty of easter eggs along the way.
+          </Paragraph>
           <Paragraph kind="danny">
-            Susu is the creative output of Kilian and Nathan. Each project was
-            done out of the need to go all-in on something completely for fun’s
-            sake. Go ahead and browse below around at your leisure.{" "}
-            <Em>(We’re working to get everything up here soon enough.)</Em>
+            <Em>
+              P.S. We’re working to get everything up on the site soon enough.
+            </Em>
           </Paragraph>
         </Filled>
         <div className="col-10">
@@ -141,62 +145,25 @@ const Archive = () => {
         style={{ backgroundImage: `url(${speckled})`, backgroundSize: "800px" }}
       >
         <Grid lines={false} className="py10">
-          <div className="col-10 aspect-ratio aspect-ratio--16x9">
-            <AutoplayVideo src={timelapse} className="aspect-ratio__object" />
+          <div className="col-10 clip">
+            <AutoplayVideo
+              src={timelapse}
+              className="o-fit-cover w100p h100p"
+            />
           </div>
         </Grid>
       </div>
-      <Grid className="pt20 pb10">
-        <Filled className="col-5">
-          <Span kind="bigfreedia" className="block mb3">
-            Kilian McMahon (Su)
-          </Span>
-          <Paragraph kind="danny">
-            Kilian is from Dublin Ireland. He loves getting absorbed in the
-            details, no matter how small. That could be the etymology of a word
-            he heard in a song lyric, the perfect recreation of a sandwich from
-            a restaurant that he loved but has since gone out of business or
-            doing research to ensure the typeface in a historical project is
-            period accurate. He is currently a Frontend Designer at Kickstarter
-            and was previously at Tito and Úll.
-          </Paragraph>
-        </Filled>
 
-        <Filled className="col-5">
-          <Span kind="bigfreedia" className="block mb3">
-            Nathan Maggio (Su)
-          </Span>
-          <Paragraph kind="danny">
-            Nathan is from the Bay Area and went to school for history and
-            theatre. He’s a proud leftie? He loves emoji and helped create the
-            upcoming truck emoji. He likes to create traditions, then continue
-            them forever. He thinks collaboration is the closest humans can get
-            to magic. Here is a list of his favorite things: outer space,
-            podcasts, buddhism, long train ride, vegetarianism, live music,
-            minimalism, and improv. He currently works on creative in the Warren
-            2020 campaign— previously he was a creative director at Blue State
-            Digital, the art director at Funny Or Die and a waiter at Outback
-            Steakhouse.
-          </Paragraph>
-        </Filled>
-      </Grid>
-      <Grid>
-        <Filled className="col-5">
-          <img className="lh0" src={kilianHeadshot} />
-        </Filled>
-        <Filled className="col-5">
-          <img className="lh0" src={nathanHeadshot} />
-        </Filled>
-      </Grid>
+      <Bios />
 
       <Grid className="py20">
         <Filled className="col-6 col-offset-2 mb5">
           <Heading level={3} kind="bigfreedia" className="mb3">
-            Visitors to our studio
+            Visitors to our Long Island City studio
           </Heading>
           <Paragraph kind="danny">
-            If you visit the studio you get your photo on the wall. Them’s the
-            rules. We love your faces!
+            There is a simple rule: when you visit the studio you get a photo on
+            the wall. These are our spoils to date:
           </Paragraph>
         </Filled>
         <div className="col-10">
@@ -204,15 +171,42 @@ const Archive = () => {
         </div>
       </Grid>
       <Speckled grid className="py10 py20-md" backgroundColor="archiveBrown400">
-        <div className="col-10 col-4-sm">
-          <p className="fz48px fz72px-sm font-mono mb5 mb0-sm">
-            Sign up for email from us.
-          </p>
+        <div className="col-10 col-4-sm archive-beige">
+          <Heading className="mb3" kind="bigfreedia">
+            We Have News(usu)letter
+          </Heading>
+          <Paragraph kind="danny">
+            We send a cute little note when we have something great to show you.
+            Our guess is there will be like, 2 a year? Very easy commitment on
+            your end.
+          </Paragraph>
         </div>
         <div className="col-10 col-5-sm col-offset-5-sm">
           <MailchimpForm />
         </div>
       </Speckled>
+      <Grid className="py40">
+        <Filled className="col-6 col-offset-2 z10">
+          <Heading className="mb3" kind="bigfreedia">
+            Okay, that’s it.
+          </Heading>
+          <Paragraph kind="danny">
+            You’re done, this is the bottom… our entire archive to date. Thanks
+            for stopping by, it was very thoughtful of you. We love hearing from
+            folks— please{" "}
+            <Link bold to="mailto:email@susu.computer">
+              email a hello!
+            </Link>
+          </Paragraph>
+        </Filled>
+      </Grid>
+      <Grid>
+        <div className="col-10 py10 text-center">
+          <Link className=" fz38px" to="/phil">
+            🏭
+          </Link>
+        </div>
+      </Grid>
     </>
   );
 };

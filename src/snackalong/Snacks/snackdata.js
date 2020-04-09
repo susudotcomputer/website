@@ -88,7 +88,7 @@ const bigSoda = {
   note: "We made custom stickers to match the circus show!",
   noteClasses: styles("col-3 col-offset-5"),
   svg: bigSodaSVG,
-  position: "54% 15%"
+  position: "54% 15%",
 };
 
 const brownDrink = {
@@ -106,7 +106,7 @@ const brownDrink = {
   note: "This is the only item that is consumed twice!",
   noteClasses: styles("col-3 col-offset-1"),
   svg: brownDrinkSVG,
-  position: "50% 63%"
+  position: "50% 63%",
 };
 
 const burger = {
@@ -122,7 +122,7 @@ const burger = {
   image: burgerPhoto,
   neonImage: burgerNeon,
   svg: burgerSVG,
-  position: "57% 66%"
+  position: "57% 66%",
 };
 
 const cigarette = {
@@ -138,7 +138,7 @@ const cigarette = {
   image: cigarettePhoto,
   neonImage: cigaretteNeon,
   svg: cigaretteSVG,
-  position: "50% 40%"
+  position: "50% 40%",
 };
 
 const cottonCandy = {
@@ -157,7 +157,7 @@ const cottonCandy = {
     "Please note, cotton candy does not keep well and will photograph terribly.",
   noteClasses: styles("col-3 col-offset-3"),
   svg: cottonCandySVG,
-  position: "50% 50%"
+  position: "50% 50%",
 };
 
 const espresso = {
@@ -175,7 +175,7 @@ const espresso = {
   note: "Totally guessed on the baked good.",
   noteClasses: styles("col-3 col-offset-2"),
   svg: espressoSVG,
-  position: "82% 46%"
+  position: "82% 46%",
 };
 
 const gingerale = {
@@ -191,7 +191,7 @@ const gingerale = {
   image: gingeralePhoto,
   neonImage: gingeraleNeon,
   svg: gingerAleSVG,
-  position: "50% 50%"
+  position: "50% 50%",
 };
 
 const icecream = {
@@ -207,7 +207,7 @@ const icecream = {
   image: icecreamPhoto,
   neonImage: icecreamNeon,
   svg: iceCreamSVG,
-  position: "48% 61%"
+  position: "48% 61%",
 };
 
 const jellybeans = {
@@ -223,7 +223,7 @@ const jellybeans = {
   image: jellybeansImage,
   neonImage: jellybeansNeon,
   svg: jellyBeansSVG,
-  position: "50% 38%"
+  position: "50% 38%",
 };
 
 const lollipop = {
@@ -239,7 +239,7 @@ const lollipop = {
   image: lollipopPhoto,
   neonImage: lollipopNeon,
   svg: lollipopSVG,
-  position: "51% 30%"
+  position: "51% 30%",
 };
 
 const martini = {
@@ -255,7 +255,7 @@ const martini = {
   image: martiniImage,
   neonImage: martiniNeon,
   svg: martiniSVG,
-  position: "53% 25%"
+  position: "53% 25%",
 };
 
 const mysterySalad = {
@@ -274,7 +274,7 @@ const mysterySalad = {
     "We went frame-by-frame to try and get a clue to what kind of salad it was. No friggin’ clue. So we picked caesar salad. Yum!",
   noteClasses: styles("col-3 col-offset-3"),
   svg: mysterySaladSVG,
-  position: "50% 50%"
+  position: "50% 50%",
 };
 
 const nachos = {
@@ -293,7 +293,7 @@ const nachos = {
     "We couldn’t find red trays anywhere. Bonkers! So we covered each white tray with red contact paper to match.",
   noteClasses: styles("col-3 col-offset-5"),
   svg: nachosSVG,
-  position: "50% 62%"
+  position: "50% 62%",
 };
 
 const nicoiseSalad = {
@@ -310,7 +310,7 @@ const nicoiseSalad = {
     "String beans",
     "Black olives",
     "Hard-bolied eggs",
-    "Lemonade"
+    "Lemonade",
   ],
   vesselList: ["Fancy plate", "Round amber tumbler"],
   clip: "https://s3.amazonaws.com/susuassets/05-nicoisesalad.mp4",
@@ -318,7 +318,7 @@ const nicoiseSalad = {
   image: nicoiseSaladPhoto,
   neonImage: nicoiseSaladNeon,
   svg: nicoiseSaladSVG,
-  position: "60% 66%"
+  position: "60% 66%",
 };
 
 const redBull = {
@@ -337,7 +337,7 @@ const redBull = {
     "Honestly we actually missed this one. But like, no one really needs a Redbull.",
   noteClasses: styles("col-3 col-offset-3"),
   svg: redBullSVG,
-  position: "45% 83%"
+  position: "45% 83%",
 };
 
 const shrimp = {
@@ -353,7 +353,7 @@ const shrimp = {
   image: shrimpPhoto,
   neonImage: shrimpNeon,
   svg: shrimpSVG,
-  position: "38% 28%"
+  position: "38% 28%",
 };
 
 const sorbet = {
@@ -369,7 +369,7 @@ const sorbet = {
   image: sorbetPhoto,
   neonImage: sorbetNeon,
   svg: sorbetSVG,
-  position: "48% 86%"
+  position: "48% 86%",
 };
 
 const tea = {
@@ -388,7 +388,7 @@ const tea = {
     "We googled the fuck out of the internet to find the exact right china cup. Turns out the print is Syracuse China Strawberry Hill.",
   noteClasses: styles("col-3 col-offset-5"),
   svg: teaSVG,
-  position: "62% 73%"
+  position: "62% 73%",
 };
 
 export default [
@@ -409,5 +409,5 @@ export default [
   redBull,
   icecream,
   jellybeans,
-  burger
+  burger,
 ];

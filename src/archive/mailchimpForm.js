@@ -22,6 +22,7 @@ const MailchimpForm = () => {
               name="EMAIL"
               className="required email"
               id="mce-EMAIL"
+              placeholder="cool@person.biz"
             />
           </div>
           <div className="mc-field-group flex flex-column">
@@ -33,6 +34,7 @@ const MailchimpForm = () => {
               name="FNAME"
               className="required"
               id="mce-FNAME"
+              placeholder="Cool"
             />
           </div>
           <div id="mce-responses" className="clear">
@@ -66,7 +68,7 @@ const MailchimpForm = () => {
             id="mc-embedded-subscribe"
             className="button"
           >
-            Submit
+            Sign me up, my dude!
           </button>
         </div>
       </form>

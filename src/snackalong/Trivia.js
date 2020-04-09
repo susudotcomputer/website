@@ -1,18 +1,18 @@
-import React from 'react';
-import { Li, Span, Paragraph, Em } from '../components/Text';
+import React from "react";
+import { Li, Span, Paragraph, Em } from "../components/Text";
 
 const triviaItems = [
   () => (
     <Paragraph>
       Luke & Owen Wilson were lined up to play bickering brothers Virgil and
-      Turk, but dropped out at the last minute to do{' '}
+      Turk, but dropped out at the last minute to do{" "}
       <Em>The Royal Tenenbaums</Em> instead.
     </Paragraph>
   ),
   () => (
     <Paragraph>
       The wig worn by Brad Pitt when he’s in disguise as a doctor was actually
-      the same one used 4 years prior by Mike Myers during{' '}
+      the same one used 4 years prior by Mike Myers during{" "}
       <Em>Austin Powers: International Man of Mystery</Em>.
     </Paragraph>
   ),
@@ -42,7 +42,7 @@ const triviaItems = [
   () => (
     <Paragraph>
       In <Em>Ocean’s Thirteen</Em>, Linus (Matt Damon) is walking through London
-      speaking on the phone. This was shot while he was in London filming{' '}
+      speaking on the phone. This was shot while he was in London filming{" "}
       <Em>The Bourne Ultimatum</Em>.
     </Paragraph>
   ),
@@ -75,7 +75,7 @@ const triviaItems = [
       British ultra-marathon open-sea swimmer trying to become the first person
       ever to conquer the world's seven toughest sea crossings in one year.
     </Paragraph>
-  )
+  ),
 ];
 
 const Trivia = () => {
@@ -88,9 +88,9 @@ const Trivia = () => {
             kind="reuben"
             key={`trivia-item-${i}`}
           >
-            <Span className="" kind="vulfpeck">
+            <Span className="text-uppercase" kind="vulfpeck">
               Did you know…
-            </Span>{' '}
+            </Span>{" "}
             {item()}
             <hr className="mt4 w15p h5px border-none bg-archive-brown-400" />
           </Li>
