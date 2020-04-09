@@ -34,9 +34,9 @@ const WhatIs = ({ className }) => {
         <Paragraph kind="danny" className="mb4">
           If this sorta thing is your vibe, we encourage you to copy any of this
           and make you own!{" "}
-          <Link bold href="mailto:email@susu.computer">
+          <a className="weight-600" href="mailto:email@susu.computer">
             Drop us a line
-          </Link>{" "}
+          </a>{" "}
           if you do.
         </Paragraph>
       </Filled>

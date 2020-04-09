@@ -194,9 +194,9 @@ const Archive = () => {
             You’re done, this is the bottom… our entire archive to date. Thanks
             for stopping by, it was very thoughtful of you. We love hearing from
             folks— please{" "}
-            <Link bold to="mailto:email@susu.computer">
+            <a className="weight-600" href="mailto:email@susu.computer">
               email a hello!
-            </Link>
+            </a>
           </Paragraph>
         </Filled>
       </Grid>
