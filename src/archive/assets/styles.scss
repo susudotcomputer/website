@@ -2,6 +2,10 @@ $small-bp: 560px;
 $medium-bp: 940px;
 $large-bp: 1040px;
 
+$archive-brown-900: #130e06;
+$archive-brown-400: #83704b;
+$archive-beige: #eee6d2;
+
 .susu-mailchimp {
   display: flex;
   flex-direction: column;
@@ -16,20 +20,21 @@ $large-bp: 1040px;
   }
 
   label {
-    color: #130e06;
+    color: $archive-beige;
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
 
   button {
-    background-color: #130e06;
-    color: #eee6d2;
+    background-color: $archive-brown-400;
+    color: $archive-brown-900;
     text-align: center;
     padding: 1.2rem;
     display: inline-block;
     align-self: flex-start;
     border-radius: 0.4rem;
     font-size: 1rem;
+    cursor: pointer;
   }
 }
 

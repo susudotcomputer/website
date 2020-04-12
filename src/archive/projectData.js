@@ -29,6 +29,7 @@ export const projects = [
     type: "Magazine",
     started: "2016-03-15",
     title: "Fortunate Horse Issue 2 + 3",
+    caveat: "We weren’t SuSu yet, but still working together on projects",
   },
 ];
 

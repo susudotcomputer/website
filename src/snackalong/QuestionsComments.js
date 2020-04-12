@@ -1,20 +1,20 @@
-import React from 'react';
-import { Heading, Paragraph } from '../components/Text';
-import { Button } from '../components/Buttons';
-import email from './assets/email.svg';
-import instagram from './assets/instagram.svg';
-import SVG from 'react-inlinesvg';
-import Filled from '../components/Filled';
-import Note from './Note';
-import Grid from '../components/Grid';
-import styles from '../utils/css';
-import { textGapBottom } from '../constants';
+import React from "react";
+import { Heading, Paragraph } from "../components/Text";
+import { Button } from "../components/Buttons";
+import email from "../assets/email.svg";
+import instagram from "../assets/instagram.svg";
+import SVG from "react-inlinesvg";
+import Filled from "../components/Filled";
+import Note from "./Note";
+import Grid from "../components/Grid";
+import styles from "../utils/css";
+import { textGapBottom } from "../constants";
 
 const QuestionsComments = ({ className }) => {
   return (
     <Grid className={className}>
       <Filled
-        className={styles('col-10 col-6-sm col-offset-2-sm', textGapBottom)}
+        className={styles("col-10 col-6-sm col-offset-2-sm", textGapBottom)}
       >
         <Heading kind="bigfreedia" className="mb2">
           Have any questions / comments?

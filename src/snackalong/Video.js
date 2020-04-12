@@ -1,5 +1,5 @@
 import React from "react";
-import { Paragraph, Link } from "../components/Text";
+import { Paragraph, TextLink } from "../components/Text";
 import Filled from "../components/Filled";
 import Grid from "../components/Grid";
 import { PlayButton } from "../components/Buttons";
@@ -25,18 +25,23 @@ const Video = ({ className }) => {
         <div className="hide block-md">
           <Paragraph kind="danny" className="pt4">
             This video was made by our (very handsome) buddy{" "}
-            <Link target="_blank" kind="danny" bold href="https://elihorne.com">
+            <TextLink
+              target="_blank"
+              kind="danny"
+              bold
+              href="https://elihorne.com"
+            >
               Eli Horne
-            </Link>
+            </TextLink>
             , with tender editing and lots of love.
           </Paragraph>
         </div>
         <div className="hide-md text-center ">
           <Paragraph italic kind="reuben" className="pt4 px4">
             This video was made by our (very handsome) buddy{" "}
-            <Link kind="reuben" bold href="https://elihorne.com">
+            <TextLink kind="reuben" bold href="https://elihorne.com">
               Eli Horne
-            </Link>
+            </TextLink>
             , with tender editing and lots of love.
           </Paragraph>
         </div>

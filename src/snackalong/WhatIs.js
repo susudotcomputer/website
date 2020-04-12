@@ -1,5 +1,5 @@
 import React from "react";
-import { Paragraph, Heading, Strong, Link, Em } from "../components/Text";
+import { Paragraph, Heading, Strong, TextLink, Em } from "../components/Text";
 import Grid from "../components/Grid";
 import Filled from "../components/Filled";
 import Note from "./Note";
@@ -34,9 +34,9 @@ const WhatIs = ({ className }) => {
         <Paragraph kind="danny" className="mb4">
           If this sorta thing is your vibe, we encourage you to copy any of this
           and make you own!{" "}
-          <a className="weight-600" href="mailto:email@susu.computer">
+          <TextLink href="mailto:email@susu.computer" bold>
             Drop us a line
-          </a>{" "}
+          </TextLink>{" "}
           if you do.
         </Paragraph>
       </Filled>

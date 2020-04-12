@@ -1,6 +1,6 @@
 import React from "react";
 import Grid from "../components/Grid";
-import { Heading, Paragraph, Em, Link } from "../components/Text";
+import { Heading, Paragraph, Em, TextLink } from "../components/Text";
 import styles from "../utils/css";
 import { useIntersectionObserver } from "../hooks/useObserver";
 import danny from "./assets/playing-cards-danny.png";
@@ -37,7 +37,7 @@ export const PlayingCards = () => {
             We showed you the cards from the gift pack already...{" "}
             <Em>but they’re so good</Em> that we want to show them again. The
             incredible{" "}
-            <Link
+            <TextLink
               kind="danny"
               bold
               href="http://natasha-fedorova.com/"
@@ -45,7 +45,7 @@ export const PlayingCards = () => {
               color="beige"
             >
               Natasha Fedorova
-            </Link>{" "}
+            </TextLink>{" "}
             illustrated them.
           </Paragraph>
         </div>

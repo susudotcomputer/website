@@ -1,18 +1,19 @@
 import React from "react";
 import styles from "../../utils/css";
 import logoSrc from "../../assets/susu-logo.svg";
-import { Heading, Span, Paragraph } from "../Text";
+import { Span, Paragraph } from "../Text";
 import speckles from "../../assets/speckled.png";
 import Perforation from "../Perforation";
 import SVG from "react-inlinesvg";
 
 const InfoItem = ({ label, text, className }) => {
   return (
-    <Heading
+    <h2
       level="2"
       className={styles(
         "archive-brown-400 border1px border-bottom border-black_20",
         `archive-card__${label.toLowerCase()}`,
+        `lh38px`,
         className
       )}
     >
@@ -20,7 +21,7 @@ const InfoItem = ({ label, text, className }) => {
         {label}:
       </Span>
       <Span kind="chromesparks">{text}</Span>
-    </Heading>
+    </h2>
   );
 };
 
@@ -44,20 +45,20 @@ const ArchiveCard = ({ project, medium, date, tactics }) => {
       </div>
       <div className="hide block-sm relative">
         <div className="absolute t0 l0 r0 b0 clip">
-          <div className="border1px border-bottom border-black_20 h34px" />
-          <div className="border1px border-bottom border-black_20 h34px" />
-          <div className="border1px border-bottom border-black_20 h34px" />
-          <div className="border1px border-bottom border-black_20 h34px" />
-          <div className="border1px border-bottom border-black_20 h34px" />
+          <div className="border1px border-bottom border-black_20 h38px" />
+          <div className="border1px border-bottom border-black_20 h38px" />
+          <div className="border1px border-bottom border-black_20 h38px" />
+          <div className="border1px border-bottom border-black_20 h38px" />
+          <div className="border1px border-bottom border-black_20 h38px" />
         </div>
         <Paragraph level="3" kind="vulfpeck" className="mb1">
           <Span
             kind="vulfpeck"
-            className="text-uppercase archive-brown-900 lh34px"
+            className="text-uppercase archive-brown-900 lh38px"
           >
             Methods:{" "}
           </Span>
-          <Span kind="chromesparks" className="archive-brown-400 lh34px">
+          <Span kind="chromesparks" className="archive-brown-400 lh38px">
             {tactics.join(", ")}
           </Span>
         </Paragraph>

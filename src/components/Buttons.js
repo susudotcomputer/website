@@ -1,19 +1,27 @@
-import React from 'react';
-import styles from '../utils/css';
-import { Button as TextButton } from '../components/Text';
+import React from "react";
+import styles from "../utils/css";
+import { Button as TextButton } from "../components/Text";
 
-export const Button = props => {
+export const Button = (props) => {
   const { children, className, ...rest } = props;
   const sizes = {
-    small: 'p3',
-    medium: 'p3 fz20px'
+    small: styles("p3"),
+    medium: styles("p3 fz20px"),
+  };
+
+  const colors = {
+    beige: styles(
+      "bg-archive-beige hover-bg-archive-brown-900 hover-archive-beige"
+    ),
+    black: styles("bg-black white hover-bg-white hover-black"),
   };
 
   const classNames = styles(
     className,
-    'pointer text-center bg-archive-beige border-none rounded-medium',
-    'hover-bg-archive-brown-900 hover-archive-beige hov-target',
-    sizes[props.size] ? sizes[props.size] : sizes['small']
+    "pointer text-center border-none rounded-medium",
+    "hov-target",
+    sizes[props.size] ? sizes[props.size] : sizes["small"],
+    colors[props.color] ? colors[props.color] : colors["beige"]
   );
 
   return (
@@ -23,7 +31,7 @@ export const Button = props => {
   );
 };
 
-export const PlayButton = props => {
+export const PlayButton = (props) => {
   return (
     <TextButton
       kind="vulfpeck"

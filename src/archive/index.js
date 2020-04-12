@@ -1,20 +1,21 @@
 import React from "react";
 import Grid from "../components/Grid";
 import susuLogo from "../assets/susu-logo.svg";
-import { Paragraph, Heading, Span, Em } from "../components/Text";
+import { Paragraph, Heading, Span, Em, TextLink } from "../components/Text";
 import Filled from "../components/Filled";
 import { projects, projectYears } from "./projectData";
 import { Link } from "@reach/router";
 import speckled from "../assets/speckled.png";
-import timelapse from "./assets/timelapse.mp4";
+import timelapse from "./assets/timelapse-fixed.mp4";
 import AutoplayVideo from "../components/AutoplayVideo";
-import Speckled from "../components/Speckled";
 import MailchimpForm from "./mailchimpForm";
 import styles from "../utils/css";
 import { Meta } from "../utils/Meta";
 import "./assets/styles.scss";
 import { Polaroids } from "./Polaroids";
 import { Bios } from "./Bios";
+import { Things } from "./Things";
+import { Social } from "./Social";
 
 const PossibleLink = ({ route, children }) => {
   return route ? (
@@ -29,7 +30,8 @@ const PossibleLink = ({ route, children }) => {
   );
 };
 
-const ProjectItem = ({ type, started, title, route }) => {
+const ProjectItem = ({ type, started, title, route, caveat }) => {
+  let meta = [type, started, caveat].filter((x) => x !== undefined);
   return (
     <li className="mb5">
       <div className="mb-1 z1 relative">
@@ -41,7 +43,7 @@ const ProjectItem = ({ type, started, title, route }) => {
             )}
             kind="vulfpeck"
           >
-            {type} &middot; {started}
+            {meta.join("・")}
           </Span>
         )}
       </div>
@@ -57,7 +59,7 @@ const ProjectItem = ({ type, started, title, route }) => {
   );
 };
 
-const ProjectSection = ({ group, projects, caveat }) => {
+const ProjectSection = ({ group, projects }) => {
   return (
     <div className="mb10">
       <div className="flex">
@@ -67,17 +69,6 @@ const ProjectSection = ({ group, projects, caveat }) => {
         >
           {group}
         </Heading>
-        {caveat && (
-          <div className="left relative flex flex-column justify-between">
-            <Span
-              className="archive-beige bg-white inline-block"
-              kind="kishibashi"
-            >
-              *
-            </Span>
-            <Span>{caveat}</Span>
-          </div>
-        )}
       </div>
       <ul className="pl5">
         {projects.map((project, i) => {
@@ -121,23 +112,16 @@ const Archive = () => {
           </Paragraph>
         </Filled>
         <div className="col-10">
-          <>
-            {projectYears.map((year, i) => {
-              const projectsByYear = projects.filter((p) => p.year === year);
-              const caveat2016 =
-                "This is a kind of “proto SuSu” because we weren’t SuSu yet, but working on stuff.";
-
-              return (
-                <ProjectSection
-                  key={`year-${i}`}
-                  group={year}
-                  projects={projectsByYear}
-                  caveat={year === 2016 && caveat2016}
-                />
-              );
-            })}
-            {/* <ProjectSection group={'Things'} projects={things} /> */}
-          </>
+          {projectYears.map((year, i) => {
+            const projectsByYear = projects.filter((p) => p.year === year);
+            return (
+              <ProjectSection
+                key={`year-${i}`}
+                group={year}
+                projects={projectsByYear}
+              />
+            );
+          })}
         </div>
       </Grid>
       <div
@@ -170,22 +154,10 @@ const Archive = () => {
           <Polaroids />
         </div>
       </Grid>
-      <Speckled grid className="py10 py20-md" backgroundColor="archiveBrown400">
-        <div className="col-10 col-4-sm archive-beige">
-          <Heading className="mb3" kind="bigfreedia">
-            We Have News(usu)letter
-          </Heading>
-          <Paragraph kind="danny">
-            We send a cute little note when we have something great to show you.
-            Our guess is there will be like, 2 a year? Very easy commitment on
-            your end.
-          </Paragraph>
-        </div>
-        <div className="col-10 col-5-sm col-offset-5-sm">
-          <MailchimpForm />
-        </div>
-      </Speckled>
-      <Grid className="py40">
+      <Things />
+      <MailchimpForm />
+      <Social />
+      <Grid className="pb40">
         <Filled className="col-6 col-offset-2 z10">
           <Heading className="mb3" kind="bigfreedia">
             Okay, that’s it.
@@ -194,9 +166,9 @@ const Archive = () => {
             You’re done, this is the bottom… our entire archive to date. Thanks
             for stopping by, it was very thoughtful of you. We love hearing from
             folks— please{" "}
-            <a className="weight-600" href="mailto:email@susu.computer">
+            <TextLink bold href="mailto:email@susu.computer">
               email a hello!
-            </a>
+            </TextLink>
           </Paragraph>
         </Filled>
       </Grid>

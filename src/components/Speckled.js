@@ -12,6 +12,7 @@ const Speckled = ({
   const colors = {
     beige: styles("bg-archive-beige"),
     archiveBrown400: styles("bg-archive-brown-400"),
+    archiveBrown900: styles("bg-archive-brown-900"),
   };
 
   const classes = styles(className, colors[backgroundColor], "bg-repeat");

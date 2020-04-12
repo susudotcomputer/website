@@ -68,7 +68,7 @@ const TEXT_STYLES = {
 
 export const Text = ({
   tag: Tag,
-  kind,
+  kind = "danny",
   children,
   style,
   className,
@@ -76,6 +76,15 @@ export const Text = ({
   italic = false,
   ...rest
 }) => {
+  if (Tag === "a") {
+    console.log(
+      "bold",
+      bold ? TEXT_STYLES[kind].bold : TEXT_STYLES[kind].normal
+    );
+  }
+  if (Tag === "a") {
+    console.log("link children", children);
+  }
   let kindClasses;
   if (kind) {
     kindClasses = styles(
@@ -93,6 +102,7 @@ export const Text = ({
   );
 };
 
+export const Label = (props) => <Text tag="label" {...props} />;
 export const Paragraph = (props) => <Text tag="p" {...props} />;
 export const Strong = (props) => <Text tag="strong" bold {...props} />;
 export const Em = (props) => <Text tag="em" italic {...props} />;
@@ -108,15 +118,22 @@ export const Heading = (props) => {
   return <Text tag={`h${level}`} {...props} />;
 };
 
-export const Link = (props) => {
-  const { color, ...rest } = props;
+export const TextLink = (props) => {
+  const { color, href, className, ...rest } = props;
   const linkColor = {
     black: styles("black hover-archive-brown-400"),
     beige: styles("archive-beige hover-archive-brown-400"),
   };
   const classes = styles(
+    "text-underline",
     color ? linkColor[color] : linkColor["black"],
-    props.className
+    className
   );
-  return <Text tag="a" href={props.href} className={classes} {...rest} />;
+  return <Text tag="a" href={href} className={classes} {...rest} />;
+};
+
+export const Ul = (props) => {
+  const { className, ...rest } = props;
+  const classes = styles(className, "list-circle");
+  return <ul className={classes} {...rest} />;
 };
