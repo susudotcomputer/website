@@ -12,12 +12,12 @@ const baseTheme = {
       "pointer p0 h9px min-w6 flex1 border border1px border-archive-brown-400"
     ),
     active: styles("bg-archive-brown-400"),
-    inactive: styles("bg-white")
+    inactive: styles("bg-white"),
   },
   arrowStyles: {
     base: styles("border-none fill-archive-brown-400 pointer"),
     active: styles("o100p"),
-    inactive: styles("o25p")
+    inactive: styles("o25p"),
   },
   arrowLeft: () => (
     <SVG
@@ -31,7 +31,7 @@ const baseTheme = {
       src={rightArrow}
     />
   ),
-  bgColor: "bg-black"
+  bgColor: "",
 };
 
 const NavButton = ({ className, onClick, children }) => {
@@ -51,7 +51,7 @@ export const Carousel = (theme = baseTheme) => ({
   wrapperClassNames,
   childWrapperClassName,
   overlayComponent,
-  children
+  children,
 }) => {
   const OverlayComponent = overlayComponent;
   const [activeImage, setActiveImage] = useState(0);
@@ -111,7 +111,7 @@ export const Carousel = (theme = baseTheme) => ({
                 >
                   {React.cloneElement(child, {
                     ...child.props,
-                    className: baseChildClasses
+                    className: baseChildClasses,
                   })}
                 </div>
               );
@@ -129,7 +129,7 @@ export const Carousel = (theme = baseTheme) => ({
           className={theme.dotWrapperStyles}
           style={{
             display: "grid",
-            gridAutoFlow: "column"
+            gridAutoFlow: "column",
           }}
         >
           {children.map((_, i) => {

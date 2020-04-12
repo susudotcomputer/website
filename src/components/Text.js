@@ -76,15 +76,6 @@ export const Text = ({
   italic = false,
   ...rest
 }) => {
-  if (Tag === "a") {
-    console.log(
-      "bold",
-      bold ? TEXT_STYLES[kind].bold : TEXT_STYLES[kind].normal
-    );
-  }
-  if (Tag === "a") {
-    console.log("link children", children);
-  }
   let kindClasses;
   if (kind) {
     kindClasses = styles(

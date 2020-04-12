@@ -123,6 +123,8 @@ const burger = {
   neonImage: burgerNeon,
   svg: burgerSVG,
   position: "57% 66%",
+  note: "Kilian made such a great burger. Legendary.",
+  noteClasses: styles("col-3 col-offset-3"),
 };
 
 const cigarette = {

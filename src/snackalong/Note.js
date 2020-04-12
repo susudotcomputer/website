@@ -10,47 +10,47 @@ const Note = ({ children, direction = "rightBelow", className }) => {
       arrowDirection: "scaleY(-1) scaleX(-1)",
       arrowCentering: styles("l-40px"),
       arrowPosition: styles("flex-column"),
-      textRotation: "rotate(5deg)"
+      textRotation: "rotate(5deg)",
     },
     leftBelow: {
       arrowDirection: "scaleY(-1) scaleX(1) rotate(40deg)",
       arrowCentering: styles("r-40px t-30px"),
       arrowPosition: styles("flex-column"),
-      textRotation: "rotate(-5deg)"
+      textRotation: "rotate(-5deg)",
     },
     rightAbove: {
       parent: styles("justify-end"),
       arrowDirection: "scaleX(-1)",
       arrowCentering: styles("l-40px"),
       arrowPosition: styles("flex-column-reverse"),
-      textRotation: "rotate(-5deg)"
+      textRotation: "rotate(-5deg)",
     },
     leftAbove: {
       arrowCentering: styles("r-30px"),
       arrowPosition: styles("flex-column-reverse"),
-      textRotation: "rotate(-5deg)"
+      textRotation: "rotate(-5deg)",
     },
     centerAbove: {
       arrowCentering: styles("self-center t-10px"),
       arrowPosition: styles("flex-column-reverse"),
-      textRotation: "rotate(-5deg)"
+      textRotation: "rotate(-5deg)",
     },
     centerAboveFlip: {
       arrowCentering: styles("self-center t-10px l-40px"),
       arrowPosition: styles("flex-column-reverse"),
       textRotation: "rotate(-5deg)",
-      arrowDirection: "scaleX(-1)"
+      arrowDirection: "scaleX(-1)",
     },
     leftUp: {
       arrowDirection: "scaleY(-1) scaleX(-1) rotate(65deg)",
-      arrowCentering: styles("l-40px"),
-      arrowPosition: styles("flex-row-reverse items-end")
+      arrowCentering: styles("l-20px t-3px"),
+      arrowPosition: styles("flex-row-reverse items-end"),
     },
     leftUpUp: {
       arrowDirection: "scaleY(-1) scaleX(-1) rotate(110deg)",
       arrowCentering: styles("t-80px"),
-      arrowPosition: styles("flex-row-reverse items-end")
-    }
+      arrowPosition: styles("flex-row-reverse items-end"),
+    },
   };
 
   const {
@@ -59,7 +59,7 @@ const Note = ({ children, direction = "rightBelow", className }) => {
     arrowCentering = "",
     arrowPosition = "",
     textRotation = "",
-    textDirection = ""
+    textDirection = "",
   } = directions[direction];
 
   return (
