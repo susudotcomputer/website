@@ -17,6 +17,7 @@ $archive-beige: #eee6d2;
     border-radius: 0.4rem;
     border: 0;
     font-size: 1rem;
+    font-family: "Share Tech Mono", monospace;
   }
 
   label {
@@ -27,7 +28,7 @@ $archive-beige: #eee6d2;
 
   button {
     background-color: $archive-brown-400;
-    color: $archive-brown-900;
+    color: $archive-beige;
     text-align: center;
     padding: 1.2rem;
     display: inline-block;
@@ -35,6 +36,11 @@ $archive-beige: #eee6d2;
     border-radius: 0.4rem;
     font-size: 1rem;
     cursor: pointer;
+
+    &:hover {
+      background-color: $archive-beige;
+      color: $archive-brown-900;
+    }
   }
 }
 

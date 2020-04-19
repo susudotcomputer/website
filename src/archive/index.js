@@ -8,7 +8,7 @@ import { Link } from "@reach/router";
 import speckled from "../assets/speckled.png";
 import timelapse from "./assets/timelapse-fixed.mp4";
 import AutoplayVideo from "../components/AutoplayVideo";
-import MailchimpForm from "./mailchimpForm";
+import { Newsletter } from "./Newsletter";
 import styles from "../utils/css";
 import { Meta } from "../utils/Meta";
 import "./assets/styles.scss";
@@ -154,10 +154,10 @@ const Archive = () => {
           <Polaroids />
         </div>
       </Grid>
+      <Newsletter />
       <Things />
-      <MailchimpForm />
       <Social />
-      <Grid className="pb40">
+      <Grid className="pt75vh pb35vh">
         <Filled className="col-6 col-offset-2 z10">
           <Heading className="mb3" kind="bigfreedia">
             Okay, that’s it.
@@ -173,7 +173,7 @@ const Archive = () => {
         </Filled>
       </Grid>
       <Grid>
-        <div className="col-10 py10 text-center">
+        <div className="col-10 pb10 text-center">
           <Link className=" fz38px" to="/phil">
             🏭
           </Link>

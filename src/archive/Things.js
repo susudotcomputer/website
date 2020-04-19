@@ -4,8 +4,8 @@ import { Heading, Paragraph, Ul, Li, Span, TextLink } from "../components/Text";
 
 export const Things = () => {
   return (
-    <Grid className="pb20">
-      <div className="col-5 px5">
+    <Grid className="py10 py30-md">
+      <div className="col-10 col-8-sm col-offset-1-sm col-5-md col-offset-0-md px5 mb10 mb0-md">
         <Heading className="mb3" kind="bigfreedia">
           🌐 SuSuniverse
         </Heading>
@@ -46,7 +46,7 @@ export const Things = () => {
           </Li>
         </Ul>
       </div>
-      <div className="col-5 px5">
+      <div className="col-10 col-8-sm col-offset-1-sm col-5-md col-offset-5-md px5">
         <Heading className="mb3" kind="bigfreedia">
           🎉 Good Time, Fun Times
         </Heading>

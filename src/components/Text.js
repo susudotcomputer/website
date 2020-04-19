@@ -29,7 +29,7 @@ const TEXT_STYLES = {
     italic: styles("font-italic"),
   },
   kishibashi: {
-    classes: styles("font-mono fz130px ls-6px smooth-antialiased"),
+    classes: styles("font-mono fz100px fz130px-md ls-6px smooth-antialiased"),
     bold: styles("weight-600"),
     normal: styles("weight-400"),
     italic: styles("font-italic"),

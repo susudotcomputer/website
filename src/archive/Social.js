@@ -11,7 +11,11 @@ import twitter from "../assets/twitter.svg";
 export const Social = () => {
   return (
     <Grid className="py20">
-      <Filled className={styles("col-10 col-6-sm col-offset-2-sm")}>
+      <Filled
+        className={styles(
+          "col-10 col-8-sm col-offset-1-sm col-4-md col-offset-1-md"
+        )}
+      >
         <Heading kind="bigfreedia" className="mb2">
           Keep up with us in other places
         </Heading>
@@ -24,10 +28,10 @@ export const Social = () => {
           first. SO SMASH DAT FOLLOW BUTTON.
         </Paragraph>
       </Filled>
-      <div className="col-10 col-6-sm col-offset-2-sm col-6-lg col-offset-2-lg flex flex-column flex-row-md justify-around items-start-md mb3">
+      <div className="col-8 col-offset-1 col-6-sm col-offset-2-sm col-3-md col-offset-6-md mb3 flex flex-column justify-center">
         <Button
           href="https://instagram.com/susudotcomputer"
-          className="relative flex items-center pl4 pr5 mb5 mb0-lg justify-center"
+          className="relative flex items-center justify-center pl4 pr5 mb5 w100p"
           size="medium"
           color="black"
         >
@@ -39,7 +43,7 @@ export const Social = () => {
         </Button>
         <Button
           href="mailto:email@susu.computer"
-          className="relative flex items-center pl4 pr5 justify-center"
+          className="relative flex items-center justify-center pl4 pr5 w100p"
           size="medium"
           color="black"
         >
