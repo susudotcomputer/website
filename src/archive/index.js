@@ -61,7 +61,7 @@ const ProjectItem = ({ type, started, title, route, caveat }) => {
 
 const ProjectSection = ({ group, projects }) => {
   return (
-    <div className="mb10">
+    <div className="mb5 mb10-sm">
       <div className="flex">
         <Heading
           className="archive-beige bg-white inline-block"
@@ -70,7 +70,7 @@ const ProjectSection = ({ group, projects }) => {
           {group}
         </Heading>
       </div>
-      <ul className="pl5">
+      <ul className="pl2 pr2 pl5-sm pr0-sm">
         {projects.map((project, i) => {
           return <ProjectItem key={`project-${i}`} {...project} />;
         })}
@@ -88,13 +88,13 @@ const Archive = () => {
         url="https://susu.computer/archive"
       />
 
-      <Grid className="pt25vh relative">
+      <Grid className="pt10vh pt25vh-md relative">
         <div className="w101p absolute t0 h50vh fade-white-transparent" />
         <div className="col-10 z10 mb10">
           <img className="w200px mx-auto block" src={susuLogo} />
         </div>
 
-        <Filled className="col-6 col-offset-2 z10 mb20">
+        <Filled className="col-10 col-6-sm col-offset-2-sm z10 mb10 mb20-sm">
           <Heading className="mb3" kind="bigfreedia">
             Hello! Welcome to our archive!
           </Heading>
@@ -128,7 +128,7 @@ const Archive = () => {
         className="bg-archive-beige"
         style={{ backgroundImage: `url(${speckled})`, backgroundSize: "800px" }}
       >
-        <Grid lines={false} className="py10">
+        <Grid lines={false} className="py3 py10-sm mb5">
           <div className="col-10 clip">
             <AutoplayVideo
               src={timelapse}
@@ -140,8 +140,8 @@ const Archive = () => {
 
       <Bios />
 
-      <Grid className="py20">
-        <Filled className="col-6 col-offset-2 mb5">
+      <Grid className="pb20">
+        <Filled className="col-10 col-offset-0 col-6-sm col-offset-2-sm mb5">
           <Heading level={3} kind="bigfreedia" className="mb3">
             Visitors to our Long Island City studio
           </Heading>
@@ -158,7 +158,7 @@ const Archive = () => {
       <Things />
       <Social />
       <Grid className="pt75vh pb35vh">
-        <Filled className="col-6 col-offset-2 z10">
+        <Filled className="col-10 col-6-sm col-offset-2-sm z10">
           <Heading className="mb3" kind="bigfreedia">
             Okay, that’s it.
           </Heading>

@@ -4,11 +4,9 @@ import Speckled from "../components/Speckled";
 
 export const Newsletter = () => {
   return (
-    <Speckled grid backgroundColor="archiveBrown900" className="py10 py20-md">
+    <Speckled grid backgroundColor="archiveBrown900" className="py5 py20-md">
       <div className="col-10 col-5-sm archive-beige">
-        <Heading className="mb3" kind="kishibashi">
-          Sign up for email from us
-        </Heading>
+        <Heading kind="kishibashi">Sign up for email from us</Heading>
       </div>
       <div className="col-10 col-4-sm col-offset-6-sm archive-beige justify-center flex flex-column">
         <Paragraph kind="danny" className="mb5">

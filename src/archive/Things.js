@@ -1,18 +1,19 @@
 import React from "react";
 import Grid from "../components/Grid";
 import { Heading, Paragraph, Ul, Li, Span, TextLink } from "../components/Text";
+import Filled from "../components/Filled";
 
 export const Things = () => {
   return (
     <Grid className="py10 py30-md">
-      <div className="col-10 col-8-sm col-offset-1-sm col-5-md col-offset-0-md px5 mb10 mb0-md">
+      <Filled className="col-10 col-8-sm col-offset-1-sm col-5-md col-offset-0-md mb10 mb0-md">
         <Heading className="mb3" kind="bigfreedia">
           🌐 SuSuniverse
         </Heading>
         <Paragraph className="mb3" kind="danny">
           These are our people who make great things.
         </Paragraph>
-        <Ul>
+        <Ul className="pl2 pl0-sm">
           <Li className="list-circle list-inside mb3" kind="danny">
             Our friend <Span kind="chromesparks">Natasha Fedorova</Span> does
             great illustration work for us sometimes but more importantly runs{" "}
@@ -45,8 +46,8 @@ export const Things = () => {
             .
           </Li>
         </Ul>
-      </div>
-      <div className="col-10 col-8-sm col-offset-1-sm col-5-md col-offset-5-md px5">
+      </Filled>
+      <Filled className="col-10 col-8-sm col-offset-1-sm col-5-md col-offset-5-md">
         <Heading className="mb3" kind="bigfreedia">
           🎉 Good Time, Fun Times
         </Heading>
@@ -54,7 +55,7 @@ export const Things = () => {
           We endorse these people/things/places/sounds/characters 10,000% and
           you should check them out.
         </Paragraph>
-        <Ul>
+        <Ul className="pl2 pl0-sm">
           <Li className="list-circle list-inside mb3" kind="danny">
             <TextLink href="https://swelldive.nyc" kind="chromesparks">
               Swell Dive
@@ -107,7 +108,7 @@ export const Things = () => {
             — Everyone needs a go-to stamp maker.{" "}
           </Li>
         </Ul>
-      </div>
+      </Filled>
     </Grid>
   );
 };

@@ -7,9 +7,9 @@ import kilianHeadshot from "./assets/headshot-kilian.jpg";
 
 export const Bios = () => {
   return (
-    <Grid className="pt20 pb10">
+    <Grid className="pt20-sm pb10">
       <Filled className="col-10 col-5-sm col-5-lg col-offset-0-lg">
-        <div className="px3 px0-md">
+        <div className="">
           <Span kind="bigfreedia" className="block mb3">
             Kilian McMahon (Su)
           </Span>
@@ -28,7 +28,7 @@ export const Bios = () => {
       </Filled>
 
       <Filled className="col-10 col-5-sm col-5-lg">
-        <div className="px3 px0-md">
+        <div className="">
           <Span kind="bigfreedia" className="block mb3">
             Nathan Maggio (Su)
           </Span>
@@ -40,7 +40,7 @@ export const Bios = () => {
             favorite things: outer space, emoji, buddhism, long train rides,
             photography, and live music.
           </Paragraph>
-          <Paragraph kind="danny" className="mb5">
+          <Paragraph kind="danny" className="mb0 mb5-sm">
             Previously he was the senior creative lead for the Elizabeth Warren
             campaign, a creative director at Blue State, the art director for
             Funny Or Die, and a waiter at Outback Steakhouse.
