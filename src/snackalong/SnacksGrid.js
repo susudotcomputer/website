@@ -11,7 +11,7 @@ import { useIntersectionObserver } from "../hooks/useObserver";
 
 const blankItem = {
   svg: "",
-  photo: ""
+  photo: "",
 };
 
 const snacksArr = [...snacks, blankItem, blankItem];
@@ -28,7 +28,7 @@ const SnacksGrid = () => {
           textGapBottom
         )}
       >
-        <Heading kind="bigfreedia" className="col-6 col-offset-2 mb4">
+        <Heading kind="bigfreedia" className="col-6 col-offset-2 mb2 mb4-sm">
           All 👏 Of 👏 The 👏 Foods 👏
         </Heading>
         <Paragraph kind="danny" className="mb4">

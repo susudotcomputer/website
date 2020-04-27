@@ -8,18 +8,23 @@ import rusty from "./assets/playing-cards-rusty.png";
 import linus from "./assets/playing-cards-linus.png";
 import benedict from "./assets/playing-cards-benedict.png";
 
-const RatioBox = ({ children, className, aspectRatio }) => {
+const RatioBox = ({ children, className, aspectRatio, style }) => {
   const child = React.Children.only(children);
-  const childrenWithOnClick = React.cloneElement(child, {
+  const childrenWithAspectRatio = React.cloneElement(child, {
     className: styles(child.props.className, "aspect-ratio__object"),
   });
 
   return (
-    <div className={className}>
-      <div className={`${aspectRatio} aspect-ratio`}>{childrenWithOnClick}</div>
+    <div style={style} className={className}>
+      <div className={`${aspectRatio} aspect-ratio`}>
+        {childrenWithAspectRatio}
+      </div>
     </div>
   );
 };
+
+const getRandomBetweenRange = (min, max, precision = 2) =>
+  (Math.random() * (min - max) + max).toFixed(precision);
 
 export const PlayingCards = () => {
   const { targetRef, didIntersect } = useIntersectionObserver();
@@ -30,7 +35,7 @@ export const PlayingCards = () => {
     <div ref={targetRef} className="bg-archive-brown-900 py10">
       <Grid lines={false} className="archive-beige">
         <div className="col-10 col-4-sm col-offset-3-lg col-4-lg self-center">
-          <Heading kind="bigfreedia" className="mb4">
+          <Heading kind="bigfreedia" className="mb2 mb4-sm">
             Those cards tho!
           </Heading>
           <Paragraph kind="danny" className="mb8 lh24px">
@@ -50,31 +55,25 @@ export const PlayingCards = () => {
           </Paragraph>
         </div>
         <div className="col-10 col-5-sm col-offset-5-sm col-offset-0-lg col-10-lg playing-cards-grid">
-          <RatioBox aspectRatio={styles("aspect-ratio--8x11")}>
-            <img
-              className={playingCardClasses}
-              src={didIntersect ? danny : ""}
-            />
-          </RatioBox>
-          <RatioBox aspectRatio={styles("aspect-ratio--8x11")}>
-            <img
-              className={playingCardClasses}
-              src={didIntersect ? rusty : ""}
-            />
-          </RatioBox>
-          <RatioBox aspectRatio={styles("aspect-ratio--8x11")}>
-            <img
-              className={playingCardClasses}
-              src={didIntersect ? linus : ""}
-            />
-          </RatioBox>
-
-          <RatioBox aspectRatio={styles("aspect-ratio--8x11")}>
-            <img
-              className={playingCardClasses}
-              src={didIntersect ? benedict : ""}
-            />
-          </RatioBox>
+          {[danny, rusty, linus, benedict].map((card, i) => {
+            const rotation = getRandomBetweenRange(-0.5, 1.5);
+            const vertical = getRandomBetweenRange(-5, 5);
+            return (
+              <RatioBox
+                key={`card-${i}`}
+                aspectRatio={styles("aspect-ratio--8x11")}
+                style={{
+                  transform: `rotate(${rotation}deg)`,
+                  top: `${vertical}px`,
+                }}
+              >
+                <img
+                  className={playingCardClasses}
+                  src={didIntersect ? card : ""}
+                />
+              </RatioBox>
+            );
+          })}
         </div>
       </Grid>
     </div>

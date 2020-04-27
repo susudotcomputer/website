@@ -11,7 +11,7 @@ const WhatIs = ({ className }) => {
         <Note direction="leftBelow">Okay, here we go.</Note>
       </div>
       <Filled className="col-10 col-8-sm col-offset-1-sm col-6-md col-offset-2-md">
-        <Heading kind="bigfreedia" className="mb4">
+        <Heading kind="bigfreedia" className="mb2 mb4-sm">
           What is a Snackalong?
         </Heading>
         <Paragraph kind="danny" className="mb4 lh24px">

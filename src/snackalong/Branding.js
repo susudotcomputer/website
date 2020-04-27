@@ -41,7 +41,7 @@ const SnackalongLogo = () => (
 
 const Branding = ({ className }) => {
   const { targetRef, didIntersect } = useIntersectionObserver({
-    rootMargin: "50%"
+    rootMargin: "50%",
   });
   return (
     <Grid className={className}>
@@ -72,7 +72,7 @@ const Branding = ({ className }) => {
         </Carousel>
       </div>
       <Filled className="col-10 col-4-md order-1 order-0-md">
-        <Heading kind="bigfreedia" className="mb4">
+        <Heading kind="bigfreedia" className="mb2 mb4-sm">
           Event branding
         </Heading>
         <Paragraph kind="danny" className="mb4">

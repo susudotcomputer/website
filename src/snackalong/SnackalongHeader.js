@@ -7,7 +7,7 @@ import ArchiveCard from "../components/archive-card/ArchiveCard";
 export const SnackalongHeader = () => {
   return (
     <Grid className="h85vh-md relative">
-      <div className="col-1 relative z1 flex">
+      <div className="col-2 col-1-sm relative z1 flex">
         <SiteLogo className="w100p px2-lg" />
       </div>
 
@@ -34,7 +34,7 @@ export const SnackalongHeader = () => {
             "Composition",
             "Emceeing",
             "Cooking",
-            "Sleuthing"
+            "Sleuthing",
           ]}
         />
       </div>

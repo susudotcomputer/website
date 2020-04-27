@@ -4,7 +4,7 @@ import { Heart } from "./Heart";
 
 const SiteLogo = ({ className }) => {
   return (
-    <div>
+    <div className="w100p">
       <Link to="/archive" className={`hov-target relative block ${className}`}>
         <Heart className="w10p t6 l5" />
         <Heart className="w12p t7 l7 delay100ms" />

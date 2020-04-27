@@ -70,7 +70,7 @@ const Triangle = ({ direction, size, hex, className }) => {
     "borderTop",
     "borderRight",
     "borderBottom",
-    "borderLeft"
+    "borderLeft",
   ];
   const transparentStyles = `${size} solid transparent`;
   const colorStyles = `${size} solid ${hex}`;
@@ -79,7 +79,7 @@ const Triangle = ({ direction, size, hex, className }) => {
     bottomLeft: ["borderBottom", "borderLeft"],
     bottomRight: ["borderBottom", "borderRight"],
     topLeft: ["borderTop", "borderLeft"],
-    topRight: ["borderTop", "borderRight"]
+    topRight: ["borderTop", "borderRight"],
   };
 
   const triangleStyles = borderProps.reduce((accum, prop) => {
@@ -120,7 +120,7 @@ const VideoGraphics = ({ className }) => {
     <Speckled grid className={styles(className, "relative")}>
       <Perforation direction="up" />
       <div className="col-10 col-5-sm pr5-sm mb10 mb0-sm">
-        <Heading kind="bigfreedia" className="col-6 col-offset-2 mb2">
+        <Heading kind="bigfreedia" className="col-6 col-offset-2 mb2 mb4-sm">
           Tada!
         </Heading>
         <Paragraph kind="danny" className="mb4 col-6 col-offset-2">
@@ -152,7 +152,7 @@ const VideoGraphics = ({ className }) => {
             style={{
               backgroundImage: `url(${tadaPoster}`,
               backgroundSize: "cover",
-              backgroundPosition: "center"
+              backgroundPosition: "center",
             }}
           ></div>
           <video
@@ -178,7 +178,7 @@ const VideoGraphics = ({ className }) => {
         </div>
       </div>
       <div className="col-10 col-5-sm pl5-sm">
-        <Heading kind="bigfreedia" className="col-6 col-offset-2 mb2">
+        <Heading kind="bigfreedia" className="col-6 col-offset-2 mb2 mb4-sm">
           Pre-show video logo
         </Heading>
         <Paragraph kind="danny" className="mb4 col-6 col-offset-2">

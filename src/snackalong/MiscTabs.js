@@ -18,7 +18,7 @@ const MiscTabs = ({ className }) => {
           textGapBottom
         )}
       >
-        <Heading kind="bigfreedia" className="mb2">
+        <Heading kind="bigfreedia" className="mb2 mb4-sm">
           Pre-show & post-show materials
         </Heading>
         <Paragraph kind="danny">

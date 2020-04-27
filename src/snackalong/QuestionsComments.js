@@ -16,7 +16,7 @@ const QuestionsComments = ({ className }) => {
       <Filled
         className={styles("col-10 col-6-sm col-offset-2-sm", textGapBottom)}
       >
-        <Heading kind="bigfreedia" className="mb2">
+        <Heading kind="bigfreedia" className="mb2 mb4-sm">
           Have any questions / comments?
         </Heading>
         <Paragraph kind="danny">

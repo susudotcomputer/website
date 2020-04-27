@@ -2,11 +2,17 @@ import React from "react";
 import { Paragraph } from "../components/Text";
 import Grid from "../components/Grid";
 import Speckled from "../components/Speckled";
+import Note from "./Note";
 
 const Footer = () => {
   return (
     <div className="bg-archive-brown-900 pt10 pb10 border2px border-top border-archive-brown-900">
       <Grid lines={false}>
+        <div className="col-2-md col-offset-5-md my5">
+          <Note direction="rightBelow">
+            The movie ends with this song, and so does this web page. Bye!
+          </Note>
+        </div>
         <div className="col-10 col-6-sm col-offset-2-sm h92px mb20 children-bg-archive-brown-900">
           <Speckled className="p1 h92px">
             <iframe

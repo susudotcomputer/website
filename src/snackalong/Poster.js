@@ -15,7 +15,7 @@ const Poster = ({ className }) => {
   return (
     <Grid className={className}>
       <Filled className="col-10 col-4-md">
-        <Heading kind="bigfreedia" className="mb4">
+        <Heading kind="bigfreedia" className="mb2 mb4-sm">
           A new movie poster
         </Heading>
         <Paragraph kind="danny" className="mb4">
