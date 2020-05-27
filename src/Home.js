@@ -26,7 +26,7 @@ const Home = () => {
           backgroundImage: `url(${shadowBoys})`,
         }}
       />
-      <div className="absolute o0p">
+      <div className="absolute o0p white">
         <Link to="/archive" />
         <Link to="/snackalong" />
         <Link to="/phil" />
