@@ -1,10 +1,10 @@
-import React from 'react';
-import Home from './Home';
-import Snackalong from './snackalong/';
-import Sundays from './projects/Sundays';
-import Archive from './archive/';
-import Phil from './Phil';
-import { Router } from '@reach/router';
+import React from "react";
+import Home from "./Home";
+import Snackalong from "./snackalong/";
+import Sundays from "./projects/Sundays";
+import Archive from "./archive/";
+import Phil from "./Phil";
+import { Router } from "@reach/router";
 
 const App = () => {
   return (
