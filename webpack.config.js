@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BatteryWebpackPlugin = require('@battery/webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const config = require('./battery.config').default;
 
 module.exports = {
@@ -18,6 +19,9 @@ module.exports = {
     }
   },
   mode: 'production',
+  optimization: {
+    minimizer: [new TerserPlugin()]
+  },
   resolve: {
     extensions: ['*', '.js', '.jsx'],
     alias: {
